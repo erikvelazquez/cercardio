@@ -1,0 +1,24 @@
+{
+    "cercardiobitiApp": {
+        "socioeconomicLevel" : {
+            "home": {
+                "title": "Niveles Socioeconómicos",
+                "createLabel": "Crear nuevo Nivel Socioeconómico",
+                "createOrEditLabel": "Crear o editar Nivel Socioeconómico",
+                "search": "Buscar por Nivel Socioeconómico"
+            },
+            "created": "Un nuevo Nivel Socioeconómico ha sido creado con el identificador {{ param }}",
+            "updated": "Un Nivel Socioeconómico ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Nivel Socioeconómico ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Nivel Socioeconómico {{ id }}?"
+            },
+            "detail": {
+                "title": "Nivel Socioeconómico"
+            },
+            "code": "Codigo",
+            "name": "Nombre",
+            "isactive": "Activo"
+        }
+    }
+}

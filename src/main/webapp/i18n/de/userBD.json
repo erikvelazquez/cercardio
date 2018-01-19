@@ -1,0 +1,29 @@
+{
+    "cercardiobitiApp": {
+        "userBD" : {
+            "home": {
+                "title": "User BDS",
+                "createLabel": "User BD erstellen",
+                "createOrEditLabel": "User BD erstellen oder bearbeiten",
+                "search": "Suche nach User BD"
+            },
+            "created": "User BD erstellt mit ID {{ param }}",
+            "updated": "User BD aktualisiert mit ID {{ param }}",
+            "deleted": "User BD gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll User BD {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "User BD"
+            },
+            "username": "Username",
+            "name": "Name",
+            "lastname": "Lastname",
+            "email": "Email",
+            "password": "Password",
+            "imagen": "Imagen",
+            "isactive": "Isactive",
+            "createdat": "Createdat"
+        }
+    }
+}

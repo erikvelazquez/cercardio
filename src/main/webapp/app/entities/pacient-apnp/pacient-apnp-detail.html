@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span data-translate="cercardiobitiApp.pacientApnp.detail.title">Pacient Apnp</span> {{vm.pacientApnp.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="cercardiobitiApp.pacientApnp.quantity">Quantity</span></dt>
+        <dd>
+            <span>{{vm.pacientApnp.quantity}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientApnp.datestarts">Datestarts</span></dt>
+        <dd>
+            <span>{{vm.pacientApnp.datestarts | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientApnp.dateend">Dateend</span></dt>
+        <dd>
+            <span>{{vm.pacientApnp.dateend | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientApnp.pacient">Pacient</span></dt>
+        <dd>
+            <a ui-sref="pacient-detail({id:vm.pacientApnp.pacient.id})">{{vm.pacientApnp.pacient.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientApnp.drugAddiction">Drug Addiction</span></dt>
+        <dd>
+            <a ui-sref="drug-addiction-detail({id:vm.pacientApnp.drugAddiction.id})">{{vm.pacientApnp.drugAddiction.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientApnp.backGround">Back Ground</span></dt>
+        <dd>
+            <a ui-sref="background-detail({id:vm.pacientApnp.backGround.id})">{{vm.pacientApnp.backGround.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientApnp.time">Time</span></dt>
+        <dd>
+            <a ui-sref="time-detail({id:vm.pacientApnp.time.id})">{{vm.pacientApnp.time.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="pacient-apnp-detail.edit({id:vm.pacientApnp.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

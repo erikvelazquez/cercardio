@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "background" : {
+            "home": {
+                "title": "Antecedentes",
+                "createLabel": "Crear nuevo Antecedente",
+                "createOrEditLabel": "Crear o editar Antecedente",
+                "search": "Buscar por Antecedente"
+            },
+            "created": "Un nuevo Antecedente ha sido creado con el identificador {{ param }}",
+            "updated": "Un Antecedente ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Antecedente ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Antecedente {{ id }}?"
+            },
+            "detail": {
+                "title": "Antecedente"
+            },
+            "description": "Descripción",
+            "isactive": "Activo"
+        }
+    }
+}

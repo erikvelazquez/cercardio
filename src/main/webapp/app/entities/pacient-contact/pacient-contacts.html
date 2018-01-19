@@ -1,0 +1,105 @@
+<div>
+    <h2 data-translate="cercardiobitiApp.pacientContact.home.title">Pacient Contacts</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="pacient-contact.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="cercardiobitiApp.pacientContact.home.createLabel">
+                        Create new Pacient Contact
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'cercardiobitiApp.pacientContact.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientContact.name">Name</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientContact.lastname">Lastname</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientContact.street">Street</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientContact.streetnumber">Streetnumber</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientContact.suitnumber">Suitnumber</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientContact.phonenumber1">Phonenumber 1</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientContact.phonenumber2">Phonenumber 2</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientContact.email1">Email 1</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientContact.email2">Email 2</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientContact.facebook">Facebook</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientContact.twitter">Twitter</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientContact.instagram">Instagram</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientContact.snapchat">Snapchat</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientContact.linkedin">Linkedin</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientContact.vine">Vine</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientContact.pacient">Pacient</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="pacientContact in vm.pacientContacts track by pacientContact.id">
+                    <td><a ui-sref="pacient-contact-detail({id:pacientContact.id})">{{pacientContact.id}}</a></td>
+                    <td>{{pacientContact.name}}</td>
+                    <td>{{pacientContact.lastname}}</td>
+                    <td>{{pacientContact.street}}</td>
+                    <td>{{pacientContact.streetnumber}}</td>
+                    <td>{{pacientContact.suitnumber}}</td>
+                    <td>{{pacientContact.phonenumber1}}</td>
+                    <td>{{pacientContact.phonenumber2}}</td>
+                    <td>{{pacientContact.email1}}</td>
+                    <td>{{pacientContact.email2}}</td>
+                    <td>{{pacientContact.facebook}}</td>
+                    <td>{{pacientContact.twitter}}</td>
+                    <td>{{pacientContact.instagram}}</td>
+                    <td>{{pacientContact.snapchat}}</td>
+                    <td>{{pacientContact.linkedin}}</td>
+                    <td>{{pacientContact.vine}}</td>
+                    <td>
+                        <a ui-sref="pacient-detail({id:pacientContact.pacient.id})">{{pacientContact.pacient.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="pacient-contact-detail({id:pacientContact.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="pacient-contact.edit({id:pacientContact.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="pacient-contact.delete({id:pacientContact.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,344 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myDiagnosisLabel" data-translate="cercardiobitiApp.diagnosis.home.createOrEditLabel">Create or edit a Diagnosis</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.diagnosis.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.diagnosis.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.letra" for="field_letra">Letra</label>
+            <input type="text" class="form-control" name="letra" id="field_letra"
+                    ng-model="vm.diagnosis.letra"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.catalogkey" for="field_catalogkey">Catalogkey</label>
+            <input type="text" class="form-control" name="catalogkey" id="field_catalogkey"
+                    ng-model="vm.diagnosis.catalogkey"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.asterisco" for="field_asterisco">Asterisco</label>
+            <input type="text" class="form-control" name="asterisco" id="field_asterisco"
+                    ng-model="vm.diagnosis.asterisco"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.nombre" for="field_nombre">Nombre</label>
+            <input type="text" class="form-control" name="nombre" id="field_nombre"
+                    ng-model="vm.diagnosis.nombre"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.lsex" for="field_lsex">Lsex</label>
+            <input type="text" class="form-control" name="lsex" id="field_lsex"
+                    ng-model="vm.diagnosis.lsex"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.linf" for="field_linf">Linf</label>
+            <input type="text" class="form-control" name="linf" id="field_linf"
+                    ng-model="vm.diagnosis.linf"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.lsup" for="field_lsup">Lsup</label>
+            <input type="text" class="form-control" name="lsup" id="field_lsup"
+                    ng-model="vm.diagnosis.lsup"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.trivial" for="field_trivial">Trivial</label>
+            <input type="text" class="form-control" name="trivial" id="field_trivial"
+                    ng-model="vm.diagnosis.trivial"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.erradicado" for="field_erradicado">Erradicado</label>
+            <input type="text" class="form-control" name="erradicado" id="field_erradicado"
+                    ng-model="vm.diagnosis.erradicado"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.ninter" for="field_ninter">Ninter</label>
+            <input type="text" class="form-control" name="ninter" id="field_ninter"
+                    ng-model="vm.diagnosis.ninter"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.nin" for="field_nin">Nin</label>
+            <input type="text" class="form-control" name="nin" id="field_nin"
+                    ng-model="vm.diagnosis.nin"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.ninmtobs" for="field_ninmtobs">Ninmtobs</label>
+            <input type="text" class="form-control" name="ninmtobs" id="field_ninmtobs"
+                    ng-model="vm.diagnosis.ninmtobs"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.nocbd" for="field_nocbd">Nocbd</label>
+            <input type="text" class="form-control" name="nocbd" id="field_nocbd"
+                    ng-model="vm.diagnosis.nocbd"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.noaph" for="field_noaph">Noaph</label>
+            <input type="text" class="form-control" name="noaph" id="field_noaph"
+                    ng-model="vm.diagnosis.noaph"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.fetal" for="field_fetal">Fetal</label>
+            <input type="text" class="form-control" name="fetal" id="field_fetal"
+                    ng-model="vm.diagnosis.fetal"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.capitulo" for="field_capitulo">Capitulo</label>
+            <input type="number" class="form-control" name="capitulo" id="field_capitulo"
+                    ng-model="vm.diagnosis.capitulo"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.lista1" for="field_lista1">Lista 1</label>
+            <input type="number" class="form-control" name="lista1" id="field_lista1"
+                    ng-model="vm.diagnosis.lista1"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.grupo1" for="field_grupo1">Grupo 1</label>
+            <input type="number" class="form-control" name="grupo1" id="field_grupo1"
+                    ng-model="vm.diagnosis.grupo1"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.lista5" for="field_lista5">Lista 5</label>
+            <input type="number" class="form-control" name="lista5" id="field_lista5"
+                    ng-model="vm.diagnosis.lista5"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.actualizacionescie10" for="field_actualizacionescie10">Actualizacionescie 10</label>
+            <input type="text" class="form-control" name="actualizacionescie10" id="field_actualizacionescie10"
+                    ng-model="vm.diagnosis.actualizacionescie10"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.yearmodifi" for="field_yearmodifi">Yearmodifi</label>
+            <input type="text" class="form-control" name="yearmodifi" id="field_yearmodifi"
+                    ng-model="vm.diagnosis.yearmodifi"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.yearaplicacion" for="field_yearaplicacion">Yearaplicacion</label>
+            <input type="text" class="form-control" name="yearaplicacion" id="field_yearaplicacion"
+                    ng-model="vm.diagnosis.yearaplicacion"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.valid" for="field_valid">Valid</label>
+            <input type="text" class="form-control" name="valid" id="field_valid"
+                    ng-model="vm.diagnosis.valid"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.prinmorta" for="field_prinmorta">Prinmorta</label>
+            <input type="number" class="form-control" name="prinmorta" id="field_prinmorta"
+                    ng-model="vm.diagnosis.prinmorta"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.prinmorbi" for="field_prinmorbi">Prinmorbi</label>
+            <input type="number" class="form-control" name="prinmorbi" id="field_prinmorbi"
+                    ng-model="vm.diagnosis.prinmorbi"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.lmmorbi" for="field_lmmorbi">Lmmorbi</label>
+            <input type="text" class="form-control" name="lmmorbi" id="field_lmmorbi"
+                    ng-model="vm.diagnosis.lmmorbi"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.lmmorta" for="field_lmmorta">Lmmorta</label>
+            <input type="text" class="form-control" name="lmmorta" id="field_lmmorta"
+                    ng-model="vm.diagnosis.lmmorta"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.lgbd165" for="field_lgbd165">Lgbd 165</label>
+            <input type="text" class="form-control" name="lgbd165" id="field_lgbd165"
+                    ng-model="vm.diagnosis.lgbd165"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.iomsbeck" for="field_iomsbeck">Iomsbeck</label>
+            <input type="number" class="form-control" name="iomsbeck" id="field_iomsbeck"
+                    ng-model="vm.diagnosis.iomsbeck"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.lgbd190" for="field_lgbd190">Lgbd 190</label>
+            <input type="text" class="form-control" name="lgbd190" id="field_lgbd190"
+                    ng-model="vm.diagnosis.lgbd190"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.notdiaria" for="field_notdiaria">Notdiaria</label>
+            <input type="text" class="form-control" name="notdiaria" id="field_notdiaria"
+                    ng-model="vm.diagnosis.notdiaria"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.notsemanal" for="field_notsemanal">Notsemanal</label>
+            <input type="text" class="form-control" name="notsemanal" id="field_notsemanal"
+                    ng-model="vm.diagnosis.notsemanal"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.sistemaespecial" for="field_sistemaespecial">Sistemaespecial</label>
+            <input type="text" class="form-control" name="sistemaespecial" id="field_sistemaespecial"
+                    ng-model="vm.diagnosis.sistemaespecial"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.birmm" for="field_birmm">Birmm</label>
+            <input type="text" class="form-control" name="birmm" id="field_birmm"
+                    ng-model="vm.diagnosis.birmm"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.causatype" for="field_causatype">Causatype</label>
+            <input type="number" class="form-control" name="causatype" id="field_causatype"
+                    ng-model="vm.diagnosis.causatype"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.epimorta" for="field_epimorta">Epimorta</label>
+            <input type="text" class="form-control" name="epimorta" id="field_epimorta"
+                    ng-model="vm.diagnosis.epimorta"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.edasiras5Anios" for="field_edasiras5Anios">Edasiras 5 Anios</label>
+            <input type="text" class="form-control" name="edasiras5Anios" id="field_edasiras5Anios"
+                    ng-model="vm.diagnosis.edasiras5Anios"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.csvematernasseedepid" for="field_csvematernasseedepid">Csvematernasseedepid</label>
+            <input type="text" class="form-control" name="csvematernasseedepid" id="field_csvematernasseedepid"
+                    ng-model="vm.diagnosis.csvematernasseedepid"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.epimortam5" for="field_epimortam5">Epimortam 5</label>
+            <input type="text" class="form-control" name="epimortam5" id="field_epimortam5"
+                    ng-model="vm.diagnosis.epimortam5"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.epimorbi" for="field_epimorbi">Epimorbi</label>
+            <input type="text" class="form-control" name="epimorbi" id="field_epimorbi"
+                    ng-model="vm.diagnosis.epimorbi"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.defmaternas" for="field_defmaternas">Defmaternas</label>
+            <input type="number" class="form-control" name="defmaternas" id="field_defmaternas"
+                    ng-model="vm.diagnosis.defmaternas"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.escauses" for="field_escauses">Escauses</label>
+            <input type="text" class="form-control" name="escauses" id="field_escauses"
+                    ng-model="vm.diagnosis.escauses"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.numcauses" for="field_numcauses">Numcauses</label>
+            <input type="text" class="form-control" name="numcauses" id="field_numcauses"
+                    ng-model="vm.diagnosis.numcauses"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.essuivemorta" for="field_essuivemorta">Essuivemorta</label>
+            <input type="text" class="form-control" name="essuivemorta" id="field_essuivemorta"
+                    ng-model="vm.diagnosis.essuivemorta"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.essuivemorb" for="field_essuivemorb">Essuivemorb</label>
+            <input type="text" class="form-control" name="essuivemorb" id="field_essuivemorb"
+                    ng-model="vm.diagnosis.essuivemorb"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.epiclave" for="field_epiclave">Epiclave</label>
+            <input type="text" class="form-control" name="epiclave" id="field_epiclave"
+                    ng-model="vm.diagnosis.epiclave"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.epiclavedesc" for="field_epiclavedesc">Epiclavedesc</label>
+            <input type="text" class="form-control" name="epiclavedesc" id="field_epiclavedesc"
+                    ng-model="vm.diagnosis.epiclavedesc"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.essuivenotin" for="field_essuivenotin">Essuivenotin</label>
+            <input type="text" class="form-control" name="essuivenotin" id="field_essuivenotin"
+                    ng-model="vm.diagnosis.essuivenotin"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.essuiveestepi" for="field_essuiveestepi">Essuiveestepi</label>
+            <input type="text" class="form-control" name="essuiveestepi" id="field_essuiveestepi"
+                    ng-model="vm.diagnosis.essuiveestepi"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.essuiveestbrote" for="field_essuiveestbrote">Essuiveestbrote</label>
+            <input type="text" class="form-control" name="essuiveestbrote" id="field_essuiveestbrote"
+                    ng-model="vm.diagnosis.essuiveestbrote"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.sinac" for="field_sinac">Sinac</label>
+            <input type="text" class="form-control" name="sinac" id="field_sinac"
+                    ng-model="vm.diagnosis.sinac"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.daga" for="field_daga">Daga</label>
+            <input type="text" class="form-control" name="daga" id="field_daga"
+                    ng-model="vm.diagnosis.daga"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.diagnosis.manifestaenfer" for="field_manifestaenfer">Manifestaenfer</label>
+            <input type="text" class="form-control" name="manifestaenfer" id="field_manifestaenfer"
+                    ng-model="vm.diagnosis.manifestaenfer"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

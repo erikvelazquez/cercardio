@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "livingPlace" : {
+            "home": {
+                "title": "Lugar de vida",
+                "createLabel": "Crear nuevo Lugar de vida",
+                "createOrEditLabel": "Crear o editar Lugar de vida",
+                "search": "Search for Lugar de vida"
+            },
+            "created": "Un nuevo Lugar de vida ha sido creado con el identificador {{ param }}",
+            "updated": "Un Lugar de vida ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Lugar de vida ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Lugar de vida {{ id }}?"
+            },
+            "detail": {
+                "title": "Lugar de vida"
+            },
+            "description": "Descripción",
+            "price": "Precio"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "cercardiobitiApp": {
+        "pacientMedicalData" : {
+            "home": {
+                "title": "Pacient Medical Data",
+                "createLabel": "Pacient Medical Data erstellen",
+                "createOrEditLabel": "Pacient Medical Data erstellen oder bearbeiten",
+                "search": "Suche nach Pacient Medical Data"
+            },
+            "created": "Pacient Medical Data erstellt mit ID {{ param }}",
+            "updated": "Pacient Medical Data aktualisiert mit ID {{ param }}",
+            "deleted": "Pacient Medical Data gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Pacient Medical Data {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Pacient Medical Data"
+            },
+            "diseases": "Diseases",
+            "surgicalinterventions": "Surgicalinterventions",
+            "useofdrugs": "Useofdrugs",
+            "allergies": "Allergies",
+            "ahffather": "Ahffather",
+            "ahfmother": "Ahfmother",
+            "ahfothers": "Ahfothers",
+            "pacient": "Pacient",
+            "bloodGroup": "Blood Group",
+            "disabilities": "Disabilities"
+        }
+    }
+}

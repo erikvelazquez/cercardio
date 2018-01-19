@@ -1,0 +1,132 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myPacientGeneralsLabel" data-translate="cercardiobitiApp.pacientGenerals.home.createOrEditLabel">Create or edit a Pacient Generals</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.pacientGenerals.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.pacientGenerals.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientGenerals.curp" for="field_curp">Curp</label>
+            <input type="text" class="form-control" name="curp" id="field_curp"
+                    ng-model="vm.pacientGenerals.curp"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientGenerals.rfc" for="field_rfc">Rfc</label>
+            <input type="text" class="form-control" name="rfc" id="field_rfc"
+                    ng-model="vm.pacientGenerals.rfc"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientGenerals.dateofbirth" for="field_dateofbirth">Dateofbirth</label>
+                <div class="input-group">
+                    <input id="field_dateofbirth" type="text" class="form-control" name="dateofbirth" uib-datepicker-popup="{{dateformat}}" ng-model="vm.pacientGenerals.dateofbirth" is-open="vm.datePickerOpenStatus.dateofbirth"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dateofbirth')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientGenerals.placeofbirth" for="field_placeofbirth">Placeofbirth</label>
+            <input type="text" class="form-control" name="placeofbirth" id="field_placeofbirth"
+                    ng-model="vm.pacientGenerals.placeofbirth"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientGenerals.privatenumber" for="field_privatenumber">Privatenumber</label>
+            <input type="text" class="form-control" name="privatenumber" id="field_privatenumber"
+                    ng-model="vm.pacientGenerals.privatenumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientGenerals.socialnumber" for="field_socialnumber">Socialnumber</label>
+            <input type="text" class="form-control" name="socialnumber" id="field_socialnumber"
+                    ng-model="vm.pacientGenerals.socialnumber"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.pacientGenerals.userBD" for="field_userBD">User BD</label>
+            <select class="form-control" id="field_userBD" name="userBD" ng-model="vm.pacientGenerals.userBD" ng-options="userBD as userBD.id for userBD in vm.userbds | orderBy:'id' track by userBD.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.pacientGenerals.gender" for="field_gender">Gender</label>
+            <select class="form-control" id="field_gender" name="gender" ng-model="vm.pacientGenerals.gender" ng-options="gender as gender.id for gender in vm.genders track by gender.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.pacientGenerals.civilstatus" for="field_civilstatus">Civilstatus</label>
+            <select class="form-control" id="field_civilstatus" name="civilstatus" ng-model="vm.pacientGenerals.civilstatus" ng-options="civilStatus as civilStatus.id for civilStatus in vm.civilstatuses track by civilStatus.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.pacientGenerals.religion" for="field_religion">Religion</label>
+            <select class="form-control" id="field_religion" name="religion" ng-model="vm.pacientGenerals.religion" ng-options="religion as religion.id for religion in vm.religions track by religion.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.pacientGenerals.ethnicGroup" for="field_ethnicGroup">Ethnic Group</label>
+            <select class="form-control" id="field_ethnicGroup" name="ethnicGroup" ng-model="vm.pacientGenerals.ethnicGroup" ng-options="ethnicGroup as ethnicGroup.id for ethnicGroup in vm.ethnicgroups track by ethnicGroup.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.pacientGenerals.academicDegree" for="field_academicDegree">Academic Degree</label>
+            <select class="form-control" id="field_academicDegree" name="academicDegree" ng-model="vm.pacientGenerals.academicDegree" ng-options="academicDegree as academicDegree.id for academicDegree in vm.academicdegrees track by academicDegree.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.pacientGenerals.socioeconomicLevel" for="field_socioeconomicLevel">Socioeconomic Level</label>
+            <select class="form-control" id="field_socioeconomicLevel" name="socioeconomicLevel" ng-model="vm.pacientGenerals.socioeconomicLevel" ng-options="socioeconomicLevel as socioeconomicLevel.id for socioeconomicLevel in vm.socioeconomiclevels track by socioeconomicLevel.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.pacientGenerals.occupation" for="field_occupation">Occupation</label>
+            <select class="form-control" id="field_occupation" name="occupation" ng-model="vm.pacientGenerals.occupation" ng-options="occupation as occupation.id for occupation in vm.occupations track by occupation.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.pacientGenerals.livingPlace" for="field_livingPlace">Living Place</label>
+            <select class="form-control" id="field_livingPlace" name="livingPlace" ng-model="vm.pacientGenerals.livingPlace" ng-options="livingPlace as livingPlace.id for livingPlace in vm.livingplaces track by livingPlace.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.pacientGenerals.privateHealthInsurance" for="field_privateHealthInsurance">Private Health Insurance</label>
+            <select class="form-control" id="field_privateHealthInsurance" name="privateHealthInsurance" ng-model="vm.pacientGenerals.privateHealthInsurance" ng-options="privateHealthInsurance as privateHealthInsurance.id for privateHealthInsurance in vm.privatehealthinsurances track by privateHealthInsurance.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.pacientGenerals.socialHealthInsurance" for="field_socialHealthInsurance">Social Health Insurance</label>
+            <select class="form-control" id="field_socialHealthInsurance" name="socialHealthInsurance" ng-model="vm.pacientGenerals.socialHealthInsurance" ng-options="socialHealthInsurance as socialHealthInsurance.id for socialHealthInsurance in vm.socialhealthinsurances track by socialHealthInsurance.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

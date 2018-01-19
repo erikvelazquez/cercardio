@@ -1,0 +1,59 @@
+
+<div>
+    <h2><span data-translate="cercardiobitiApp.pacientMedicalData.detail.title">Pacient Medical Data</span> {{vm.pacientMedicalData.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="cercardiobitiApp.pacientMedicalData.diseases">Diseases</span></dt>
+        <dd>
+            <span>{{vm.pacientMedicalData.diseases}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientMedicalData.surgicalinterventions">Surgicalinterventions</span></dt>
+        <dd>
+            <span>{{vm.pacientMedicalData.surgicalinterventions}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientMedicalData.useofdrugs">Useofdrugs</span></dt>
+        <dd>
+            <span>{{vm.pacientMedicalData.useofdrugs}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientMedicalData.allergies">Allergies</span></dt>
+        <dd>
+            <span>{{vm.pacientMedicalData.allergies}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientMedicalData.ahffather">Ahffather</span></dt>
+        <dd>
+            <span>{{vm.pacientMedicalData.ahffather}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientMedicalData.ahfmother">Ahfmother</span></dt>
+        <dd>
+            <span>{{vm.pacientMedicalData.ahfmother}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientMedicalData.ahfothers">Ahfothers</span></dt>
+        <dd>
+            <span>{{vm.pacientMedicalData.ahfothers}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientMedicalData.pacient">Pacient</span></dt>
+        <dd>
+            <a ui-sref="pacient-detail({id:vm.pacientMedicalData.pacient.id})">{{vm.pacientMedicalData.pacient.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientMedicalData.bloodGroup">Blood Group</span></dt>
+        <dd>
+            <a ui-sref="blood-group-detail({id:vm.pacientMedicalData.bloodGroup.id})">{{vm.pacientMedicalData.bloodGroup.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientMedicalData.disabilities">Disabilities</span></dt>
+        <dd>
+            <a ui-sref="disabilities-detail({id:vm.pacientMedicalData.disabilities.id})">{{vm.pacientMedicalData.disabilities.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="pacient-medical-data-detail.edit({id:vm.pacientMedicalData.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

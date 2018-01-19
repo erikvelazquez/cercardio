@@ -1,0 +1,119 @@
+<div>
+    <h2 data-translate="cercardiobitiApp.appreciation.home.title">Appreciations</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="appreciation.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="cercardiobitiApp.appreciation.home.createLabel">
+                        Create new Appreciation
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'cercardiobitiApp.appreciation.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="cercardiobitiApp.appreciation.height">Height</span></th>
+                    <th><span data-translate="cercardiobitiApp.appreciation.weight">Weight</span></th>
+                    <th><span data-translate="cercardiobitiApp.appreciation.size">Size</span></th>
+                    <th><span data-translate="cercardiobitiApp.appreciation.bmi">Bmi</span></th>
+                    <th><span data-translate="cercardiobitiApp.appreciation.temperature">Temperature</span></th>
+                    <th><span data-translate="cercardiobitiApp.appreciation.saturation">Saturation</span></th>
+                    <th><span data-translate="cercardiobitiApp.appreciation.bloodpressuere">Bloodpressuere</span></th>
+                    <th><span data-translate="cercardiobitiApp.appreciation.heartrate">Heartrate</span></th>
+                    <th><span data-translate="cercardiobitiApp.appreciation.breathingfrequency">Breathingfrequency</span></th>
+                    <th><span data-translate="cercardiobitiApp.appreciation.others">Others</span></th>
+                    <th><span data-translate="cercardiobitiApp.appreciation.head">Head</span></th>
+                    <th><span data-translate="cercardiobitiApp.appreciation.neck">Neck</span></th>
+                    <th><span data-translate="cercardiobitiApp.appreciation.chest">Chest</span></th>
+                    <th><span data-translate="cercardiobitiApp.appreciation.abdomen">Abdomen</span></th>
+                    <th><span data-translate="cercardiobitiApp.appreciation.bodypart">Bodypart</span></th>
+                    <th><span data-translate="cercardiobitiApp.appreciation.genitals">Genitals</span></th>
+                    <th><span data-translate="cercardiobitiApp.appreciation.othersphysical">Othersphysical</span></th>
+                    <th><span data-translate="cercardiobitiApp.appreciation.createdat">Createdat</span></th>
+                    <th><span data-translate="cercardiobitiApp.appreciation.pacient">Pacient</span></th>
+                    <th><span data-translate="cercardiobitiApp.appreciation.medic">Medic</span></th>
+                    <th><span data-translate="cercardiobitiApp.appreciation.reservation">Reservation</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="appreciation in vm.appreciations track by appreciation.id">
+                    <td><a ui-sref="appreciation-detail({id:appreciation.id})">{{appreciation.id}}</a></td>
+                    <td>{{appreciation.height}}</td>
+                    <td>{{appreciation.weight}}</td>
+                    <td>{{appreciation.size}}</td>
+                    <td>{{appreciation.bmi}}</td>
+                    <td>{{appreciation.temperature}}</td>
+                    <td>{{appreciation.saturation}}</td>
+                    <td>{{appreciation.bloodpressuere}}</td>
+                    <td>{{appreciation.heartrate}}</td>
+                    <td>{{appreciation.breathingfrequency}}</td>
+                    <td>{{appreciation.others}}</td>
+                    <td>{{appreciation.head}}</td>
+                    <td>{{appreciation.neck}}</td>
+                    <td>{{appreciation.chest}}</td>
+                    <td>{{appreciation.abdomen}}</td>
+                    <td>{{appreciation.bodypart}}</td>
+                    <td>{{appreciation.genitals}}</td>
+                    <td>{{appreciation.othersphysical}}</td>
+                    <td>{{appreciation.createdat | date:'medium'}}</td>
+                    <td>
+                        <a ui-sref="pacient-detail({id:appreciation.pacient.id})">{{appreciation.pacient.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="medic-detail({id:appreciation.medic.id})">{{appreciation.medic.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="reservation-detail({id:appreciation.reservation.id})">{{appreciation.reservation.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="appreciation-detail({id:appreciation.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="appreciation.edit({id:appreciation.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="appreciation.delete({id:appreciation.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

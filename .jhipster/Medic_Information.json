@@ -1,0 +1,145 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "medic",
+            "otherEntityName": "medic",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "medic_Information"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "cp",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "street",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "extnumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "intnumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phone1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phone2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "facebook",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "twitter",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "instagram",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "snapchat",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "linkedin",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "vine",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "recomended",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cvuconacyt",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cedula",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cedulaesp",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "curp",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rfc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "birthday",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "externalhospitals",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "subid",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "highid",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "medicalinsurance",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "socialinsurance",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "responsibilityinsurance",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sINconacyt",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "medicalinnumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "socialinnumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "responsibilityinnumber",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171228232422",
+    "entityTableName": "medic_information",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

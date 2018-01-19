@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "disabilities" : {
+            "home": {
+                "title": "Disabilities",
+                "createLabel": "Créer un nouveau Disabilities",
+                "createOrEditLabel": "Créer ou éditer un Disabilities",
+                "search": "Recherche pour Disabilities"
+            },
+            "created": "Un nouveau Disabilities a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Disabilities avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Disabilities avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Disabilities {{ id }} ?"
+            },
+            "detail": {
+                "title": "Disabilities"
+            },
+            "subgroup": "Subgroup",
+            "disability": "Disability"
+        }
+    }
+}

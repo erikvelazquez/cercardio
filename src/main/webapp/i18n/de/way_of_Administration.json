@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "way_of_Administration" : {
+            "home": {
+                "title": "Way Of Administrations",
+                "createLabel": "Way Of Administration erstellen",
+                "createOrEditLabel": "Way Of Administration erstellen oder bearbeiten",
+                "search": "Suche nach Way Of Administration"
+            },
+            "created": "Way Of Administration erstellt mit ID {{ param }}",
+            "updated": "Way Of Administration aktualisiert mit ID {{ param }}",
+            "deleted": "Way Of Administration gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Way Of Administration {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Way Of Administration"
+            },
+            "wayofadministration": "Wayofadministration",
+            "isactive": "Isactive"
+        }
+    }
+}

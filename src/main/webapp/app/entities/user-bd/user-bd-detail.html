@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span data-translate="cercardiobitiApp.userBD.detail.title">User BD</span> {{vm.userBD.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="cercardiobitiApp.userBD.username">Username</span></dt>
+        <dd>
+            <span>{{vm.userBD.username}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.userBD.name">Name</span></dt>
+        <dd>
+            <span>{{vm.userBD.name}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.userBD.lastname">Lastname</span></dt>
+        <dd>
+            <span>{{vm.userBD.lastname}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.userBD.email">Email</span></dt>
+        <dd>
+            <span>{{vm.userBD.email}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.userBD.password">Password</span></dt>
+        <dd>
+            <span>{{vm.userBD.password}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.userBD.imagen">Imagen</span></dt>
+        <dd>
+            <span>{{vm.userBD.imagen}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.userBD.isactive">Isactive</span></dt>
+        <dd>
+            <span>{{vm.userBD.isactive}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.userBD.createdat">Createdat</span></dt>
+        <dd>
+            <span>{{vm.userBD.createdat | date:'medium'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="user-bd-detail.edit({id:vm.userBD.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

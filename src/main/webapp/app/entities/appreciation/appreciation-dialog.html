@@ -1,0 +1,150 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myAppreciationLabel" data-translate="cercardiobitiApp.appreciation.home.createOrEditLabel">Create or edit a Appreciation</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.appreciation.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.appreciation.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.appreciation.height" for="field_height">Height</label>
+            <input type="number" class="form-control" name="height" id="field_height"
+                    ng-model="vm.appreciation.height"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.appreciation.weight" for="field_weight">Weight</label>
+            <input type="number" class="form-control" name="weight" id="field_weight"
+                    ng-model="vm.appreciation.weight"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.appreciation.size" for="field_size">Size</label>
+            <input type="number" class="form-control" name="size" id="field_size"
+                    ng-model="vm.appreciation.size"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.appreciation.bmi" for="field_bmi">Bmi</label>
+            <input type="number" class="form-control" name="bmi" id="field_bmi"
+                    ng-model="vm.appreciation.bmi"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.appreciation.temperature" for="field_temperature">Temperature</label>
+            <input type="number" class="form-control" name="temperature" id="field_temperature"
+                    ng-model="vm.appreciation.temperature"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.appreciation.saturation" for="field_saturation">Saturation</label>
+            <input type="number" class="form-control" name="saturation" id="field_saturation"
+                    ng-model="vm.appreciation.saturation"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.appreciation.bloodpressuere" for="field_bloodpressuere">Bloodpressuere</label>
+            <input type="number" class="form-control" name="bloodpressuere" id="field_bloodpressuere"
+                    ng-model="vm.appreciation.bloodpressuere"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.appreciation.heartrate" for="field_heartrate">Heartrate</label>
+            <input type="number" class="form-control" name="heartrate" id="field_heartrate"
+                    ng-model="vm.appreciation.heartrate"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.appreciation.breathingfrequency" for="field_breathingfrequency">Breathingfrequency</label>
+            <input type="number" class="form-control" name="breathingfrequency" id="field_breathingfrequency"
+                    ng-model="vm.appreciation.breathingfrequency"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.appreciation.others" for="field_others">Others</label>
+            <input type="text" class="form-control" name="others" id="field_others"
+                    ng-model="vm.appreciation.others"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.appreciation.head" for="field_head">Head</label>
+            <input type="text" class="form-control" name="head" id="field_head"
+                    ng-model="vm.appreciation.head"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.appreciation.neck" for="field_neck">Neck</label>
+            <input type="text" class="form-control" name="neck" id="field_neck"
+                    ng-model="vm.appreciation.neck"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.appreciation.chest" for="field_chest">Chest</label>
+            <input type="text" class="form-control" name="chest" id="field_chest"
+                    ng-model="vm.appreciation.chest"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.appreciation.abdomen" for="field_abdomen">Abdomen</label>
+            <input type="text" class="form-control" name="abdomen" id="field_abdomen"
+                    ng-model="vm.appreciation.abdomen"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.appreciation.bodypart" for="field_bodypart">Bodypart</label>
+            <input type="text" class="form-control" name="bodypart" id="field_bodypart"
+                    ng-model="vm.appreciation.bodypart"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.appreciation.genitals" for="field_genitals">Genitals</label>
+            <input type="text" class="form-control" name="genitals" id="field_genitals"
+                    ng-model="vm.appreciation.genitals"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.appreciation.othersphysical" for="field_othersphysical">Othersphysical</label>
+            <input type="text" class="form-control" name="othersphysical" id="field_othersphysical"
+                    ng-model="vm.appreciation.othersphysical"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.appreciation.createdat" for="field_createdat">Createdat</label>
+                <div class="input-group">
+                    <input id="field_createdat" type="text" class="form-control" name="createdat" datetime-picker="{{dateformat}}" ng-model="vm.appreciation.createdat" is-open="vm.datePickerOpenStatus.createdat"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createdat')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.appreciation.pacient" for="field_pacient">Pacient</label>
+            <select class="form-control" id="field_pacient" name="pacient" ng-model="vm.appreciation.pacient" ng-options="pacient as pacient.id for pacient in vm.pacients track by pacient.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.appreciation.medic" for="field_medic">Medic</label>
+            <select class="form-control" id="field_medic" name="medic" ng-model="vm.appreciation.medic" ng-options="medic as medic.id for medic in vm.medics track by medic.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

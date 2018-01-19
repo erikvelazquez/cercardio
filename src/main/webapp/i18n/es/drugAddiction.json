@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "drugAddiction" : {
+            "home": {
+                "title": "Adicción",
+                "createLabel": "Crear nuevo Adicción",
+                "createOrEditLabel": "Crear o editar Adicción",
+                "search": "Search for Adicción"
+            },
+            "created": "Un nuevo Adicción ha sido creado con el identificador {{ param }}",
+            "updated": "Un Adicción ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Adicción ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Adicción {{ id }}?"
+            },
+            "detail": {
+                "title": "Adicción"
+            },
+            "description": "Descripción",
+            "isactive": "Activo"
+        }
+    }
+}

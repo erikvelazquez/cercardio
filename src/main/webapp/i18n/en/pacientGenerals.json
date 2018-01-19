@@ -1,0 +1,38 @@
+{
+    "cercardiobitiApp": {
+        "pacientGenerals" : {
+            "home": {
+                "title": "Pacient Generals",
+                "createLabel": "Create a new Pacient Generals",
+                "createOrEditLabel": "Create or edit a Pacient Generals",
+                "search": "Search for Pacient Generals"
+            },
+            "created": "A new Pacient Generals is created with identifier {{ param }}",
+            "updated": "A Pacient Generals is updated with identifier {{ param }}",
+            "deleted": "A Pacient Generals is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Pacient Generals {{ id }}?"
+            },
+            "detail": {
+                "title": "Pacient Generals"
+            },
+            "curp": "Curp",
+            "rfc": "Rfc",
+            "dateofbirth": "Dateofbirth",
+            "placeofbirth": "Placeofbirth",
+            "privatenumber": "Privatenumber",
+            "socialnumber": "Socialnumber",
+            "userBD": "User BD",
+            "gender": "Gender",
+            "civilstatus": "Civilstatus",
+            "religion": "Religion",
+            "ethnicGroup": "Ethnic Group",
+            "academicDegree": "Academic Degree",
+            "socioeconomicLevel": "Socioeconomic Level",
+            "occupation": "Occupation",
+            "livingPlace": "Living Place",
+            "privateHealthInsurance": "Private Health Insurance",
+            "socialHealthInsurance": "Social Health Insurance"
+        }
+    }
+}

@@ -1,0 +1,122 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myMedicineLabel" data-translate="cercardiobitiApp.medicine.home.createOrEditLabel">Create or edit a Medicine</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.medicine.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.medicine.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicine.tipoinsumo" for="field_tipoinsumo">Tipoinsumo</label>
+            <input type="text" class="form-control" name="tipoinsumo" id="field_tipoinsumo"
+                    ng-model="vm.medicine.tipoinsumo"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicine.dentrofueracuadro" for="field_dentrofueracuadro">Dentrofueracuadro</label>
+            <input type="text" class="form-control" name="dentrofueracuadro" id="field_dentrofueracuadro"
+                    ng-model="vm.medicine.dentrofueracuadro"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicine.nogrupoterapeutico" for="field_nogrupoterapeutico">Nogrupoterapeutico</label>
+            <input type="number" class="form-control" name="nogrupoterapeutico" id="field_nogrupoterapeutico"
+                    ng-model="vm.medicine.nogrupoterapeutico"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicine.nombregrupoterapeutico" for="field_nombregrupoterapeutico">Nombregrupoterapeutico</label>
+            <input type="text" class="form-control" name="nombregrupoterapeutico" id="field_nombregrupoterapeutico"
+                    ng-model="vm.medicine.nombregrupoterapeutico"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicine.nivelatencion" for="field_nivelatencion">Nivelatencion</label>
+            <input type="text" class="form-control" name="nivelatencion" id="field_nivelatencion"
+                    ng-model="vm.medicine.nivelatencion"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicine.clavecodigo" for="field_clavecodigo">Clavecodigo</label>
+            <input type="text" class="form-control" name="clavecodigo" id="field_clavecodigo"
+                    ng-model="vm.medicine.clavecodigo"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicine.subclavecodigo" for="field_subclavecodigo">Subclavecodigo</label>
+            <input type="text" class="form-control" name="subclavecodigo" id="field_subclavecodigo"
+                    ng-model="vm.medicine.subclavecodigo"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicine.nombregenerico" for="field_nombregenerico">Nombregenerico</label>
+            <input type="text" class="form-control" name="nombregenerico" id="field_nombregenerico"
+                    ng-model="vm.medicine.nombregenerico"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicine.formafarmaceutica" for="field_formafarmaceutica">Formafarmaceutica</label>
+            <input type="text" class="form-control" name="formafarmaceutica" id="field_formafarmaceutica"
+                    ng-model="vm.medicine.formafarmaceutica"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicine.concentracion" for="field_concentracion">Concentracion</label>
+            <input type="text" class="form-control" name="concentracion" id="field_concentracion"
+                    ng-model="vm.medicine.concentracion"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicine.presentacion" for="field_presentacion">Presentacion</label>
+            <input type="text" class="form-control" name="presentacion" id="field_presentacion"
+                    ng-model="vm.medicine.presentacion"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicine.principalindicacion" for="field_principalindicacion">Principalindicacion</label>
+            <input type="text" class="form-control" name="principalindicacion" id="field_principalindicacion"
+                    ng-model="vm.medicine.principalindicacion"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicine.demasindicaciones" for="field_demasindicaciones">Demasindicaciones</label>
+            <input type="text" class="form-control" name="demasindicaciones" id="field_demasindicaciones"
+                    ng-model="vm.medicine.demasindicaciones"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicine.tipoactualizacion" for="field_tipoactualizacion">Tipoactualizacion</label>
+            <input type="text" class="form-control" name="tipoactualizacion" id="field_tipoactualizacion"
+                    ng-model="vm.medicine.tipoactualizacion"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicine.noactualizacion" for="field_noactualizacion">Noactualizacion</label>
+            <input type="text" class="form-control" name="noactualizacion" id="field_noactualizacion"
+                    ng-model="vm.medicine.noactualizacion"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicine.descripcion" for="field_descripcion">Descripcion</label>
+            <input type="text" class="form-control" name="descripcion" id="field_descripcion"
+                    ng-model="vm.medicine.descripcion"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

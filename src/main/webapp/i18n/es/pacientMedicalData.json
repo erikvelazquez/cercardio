@@ -1,0 +1,32 @@
+{
+    "cercardiobitiApp": {
+        "pacientMedicalData" : {
+            "home": {
+                "title": "Pacient Medical Data",
+                "createLabel": "Crear nuevo Pacient Medical Data",
+                "createOrEditLabel": "Crear o editar Pacient Medical Data",
+                "search": "Search for Pacient Medical Data"
+            },
+            "created": "Un nuevo Pacient Medical Data ha sido creado con el identificador {{ param }}",
+            "updated": "Un Pacient Medical Data ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Pacient Medical Data ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Pacient Medical Data {{ id }}?"
+            },
+            "detail": {
+                "title": "Pacient Medical Data"
+            },
+            "diseases": "Diseases",
+            "surgicalinterventions": "Surgicalinterventions",
+            "useofdrugs": "Useofdrugs",
+            "allergies": "Allergies",
+            "ahffather": "Ahffather",
+            "ahfmother": "Ahfmother",
+            "ahfothers": "Ahfothers",
+            "pacient": "Pacient",
+            "userBD": "User BD",
+            "bloodGroup": "Blood Group",
+            "disabilities": "Disabilities"
+        }
+    }
+}

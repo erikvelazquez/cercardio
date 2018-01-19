@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "occupation" : {
+            "home": {
+                "title": "Occupations",
+                "createLabel": "Occupation erstellen",
+                "createOrEditLabel": "Occupation erstellen oder bearbeiten",
+                "search": "Suche nach Occupation"
+            },
+            "created": "Occupation erstellt mit ID {{ param }}",
+            "updated": "Occupation aktualisiert mit ID {{ param }}",
+            "deleted": "Occupation gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Occupation {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Occupation"
+            },
+            "description": "Description",
+            "isactive": "Isactive"
+        }
+    }
+}

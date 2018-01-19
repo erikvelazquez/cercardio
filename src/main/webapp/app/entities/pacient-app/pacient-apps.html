@@ -1,0 +1,85 @@
+<div>
+    <h2 data-translate="cercardiobitiApp.pacientApp.home.title">Pacient Apps</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="pacient-app.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="cercardiobitiApp.pacientApp.home.createLabel">
+                        Create new Pacient App
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'cercardiobitiApp.pacientApp.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientApp.chronicdegenerative">Chronicdegenerative</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientApp.traumatic">Traumatic</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientApp.gynecologicalobstetrics">Gynecologicalobstetrics</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientApp.others">Others</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientApp.daytime">Daytime</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientApp.pacient">Pacient</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="pacientApp in vm.pacientApps track by pacientApp.id">
+                    <td><a ui-sref="pacient-app-detail({id:pacientApp.id})">{{pacientApp.id}}</a></td>
+                    <td>{{pacientApp.chronicdegenerative}}</td>
+                    <td>{{pacientApp.traumatic}}</td>
+                    <td>{{pacientApp.gynecologicalobstetrics}}</td>
+                    <td>{{pacientApp.others}}</td>
+                    <td>{{pacientApp.daytime | date:'medium'}}</td>
+                    <td>
+                        <a ui-sref="pacient-detail({id:pacientApp.pacient.id})">{{pacientApp.pacient.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="pacient-app-detail({id:pacientApp.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="pacient-app.edit({id:pacientApp.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="pacient-app.delete({id:pacientApp.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "livingPlace" : {
+            "home": {
+                "title": "LivingPlaces",
+                "createLabel": "Créer un nouveau Living Place",
+                "createOrEditLabel": "Créer ou éditer un Living Place",
+                "search": "Recherche pour Living Place"
+            },
+            "created": "Un nouveau Living Place a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Living Place avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Living Place avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Living Place {{ id }} ?"
+            },
+            "detail": {
+                "title": "Living Place"
+            },
+            "description": "Description",
+            "price": "Price"
+        }
+    }
+}

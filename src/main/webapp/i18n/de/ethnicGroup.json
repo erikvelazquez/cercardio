@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "ethnicGroup" : {
+            "home": {
+                "title": "Ethnic Groups",
+                "createLabel": "Ethnic Group erstellen",
+                "createOrEditLabel": "Ethnic Group erstellen oder bearbeiten",
+                "search": "Suche nach Ethnic Group"
+            },
+            "created": "Ethnic Group erstellt mit ID {{ param }}",
+            "updated": "Ethnic Group aktualisiert mit ID {{ param }}",
+            "deleted": "Ethnic Group gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Ethnic Group {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Ethnic Group"
+            },
+            "description": "Description",
+            "isactive": "Isactive"
+        }
+    }
+}

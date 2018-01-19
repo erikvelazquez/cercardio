@@ -1,0 +1,33 @@
+{
+    "cercardiobitiApp": {
+        "pacientMedicalAnalysis" : {
+            "home": {
+                "title": "Análisis Médico del Paciente",
+                "createLabel": "Crear nuevo Análisis Médico",
+                "createOrEditLabel": "Crear o editar Análisis Médico",
+                "search": "Buscar por Análisis Médico"
+            },
+            "created": "Un nuevo Análisis Médico ha sido creado con el identificador {{ param }}",
+            "updated": "Un Análisis Médico ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Análisis Médico ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Análisis Médico {{ id }}?"
+            },
+            "detail": {
+                "title": "Análisis Médico"
+            },
+            "presentation": "Presentación",
+            "subjective": "Subjectiva",
+            "objective": "Objectiva",
+            "analysis": "Análisis",
+            "disease": "Enfermedad",
+            "tests": "Prueba",
+            "treatment": "Tratamiento",
+            "medicine": "Medicina",
+            "daytime": "Fecha y Hora",
+            "medic": "Médico",
+            "pacient": "Paciente",
+            "reservation": "Cita"
+        }
+    }
+}

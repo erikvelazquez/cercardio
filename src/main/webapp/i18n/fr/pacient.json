@@ -1,0 +1,54 @@
+{
+    "cercardiobitiApp": {
+        "pacient" : {
+            "home": {
+                "title": "Pacients",
+                "createLabel": "Créer un nouveau Pacient",
+                "createOrEditLabel": "Créer ou éditer un Pacient",
+                "search": "Recherche pour Pacient"
+            },
+            "created": "Un nouveau Pacient a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Pacient avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Pacient avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Pacient {{ id }} ?"
+            },
+            "detail": {
+                "title": "Pacient"
+            },
+            "cp": "Cp",
+            "colony": "Colony",
+            "street": "Street",
+            "streetnumber": "Streetnumber",
+            "suitnumber": "Suitnumber",
+            "phonenumber1": "Phonenumber 1",
+            "phonenumber2": "Phonenumber 2",
+            "email1": "Email 1",
+            "email2": "Email 2",
+            "curp": "Curp",
+            "rfc": "Rfc",
+            "dateofbirth": "Dateofbirth",
+            "placeofbirth": "Placeofbirth",
+            "privatenumber": "Privatenumber",
+            "socialnumber": "Socialnumber",
+            "facebook": "Facebook",
+            "twitter": "Twitter",
+            "instagram": "Instagram",
+            "snapchat": "Snapchat",
+            "linkedin": "Linkedin",
+            "vine": "Vine",
+            "userBD": "User BD",
+            "company": "Company",
+            "gender": "Gender",
+            "civilstatus": "Civilstatus",
+            "religion": "Religion",
+            "ethnicGroup": "Ethnic Group",
+            "academicDegree": "Academic Degree",
+            "socioeconomicLevel": "Socioeconomic Level",
+            "occupation": "Occupation",
+            "livingPlace": "Living Place",
+            "privateHealthInsurance": "Private Health Insurance",
+            "socialHealthInsurance": "Social Health Insurance"
+        }
+    }
+}

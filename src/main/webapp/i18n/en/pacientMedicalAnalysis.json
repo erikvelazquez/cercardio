@@ -1,0 +1,32 @@
+{
+    "cercardiobitiApp": {
+        "pacientMedicalAnalysis" : {
+            "home": {
+                "title": "Pacient Medical Analyses",
+                "createLabel": "Create a new Pacient Medical Analysis",
+                "createOrEditLabel": "Create or edit a Pacient Medical Analysis",
+                "search": "Search for Pacient Medical Analysis"
+            },
+            "created": "A new Pacient Medical Analysis is created with identifier {{ param }}",
+            "updated": "A Pacient Medical Analysis is updated with identifier {{ param }}",
+            "deleted": "A Pacient Medical Analysis is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Pacient Medical Analysis {{ id }}?"
+            },
+            "detail": {
+                "title": "Pacient Medical Analysis"
+            },
+            "presentation": "Presentation",
+            "subjective": "Subjective",
+            "objective": "Objective",
+            "analysis": "Analysis",
+            "disease": "Disease",
+            "tests": "Tests",
+            "treatment": "Treatment",
+            "medicine": "Medicine",
+            "daytime": "Daytime",
+            "medic": "Medic",
+            "pacient": "Pacient"
+        }
+    }
+}

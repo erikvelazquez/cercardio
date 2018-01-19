@@ -1,0 +1,27 @@
+{
+    "cercardiobitiApp": {
+        "programs" : {
+            "home": {
+                "title": "Programs",
+                "createLabel": "Créer un nouveau Programs",
+                "createOrEditLabel": "Créer ou éditer un Programs",
+                "search": "Recherche pour Programs"
+            },
+            "created": "Un nouveau Programs a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Programs avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Programs avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Programs {{ id }} ?"
+            },
+            "detail": {
+                "title": "Programs"
+            },
+            "description": "Description",
+            "url": "Url",
+            "icon": "Icon",
+            "programparentid": "Programparentid",
+            "byorder": "Byorder",
+            "isactive": "Isactive"
+        }
+    }
+}

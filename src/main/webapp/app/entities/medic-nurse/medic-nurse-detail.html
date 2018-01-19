@@ -1,0 +1,33 @@
+
+<div>
+    <h2><span data-translate="cercardiobitiApp.medicNurse.detail.title">Medic Nurse</span> {{vm.medicNurse.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="cercardiobitiApp.medicNurse.idnurse">Idnurse</span></dt>
+        <dd>
+            <span>{{vm.medicNurse.idnurse}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medicNurse.medic">Medic</span></dt>
+        <dd>
+            <a ui-sref="medic-detail({id:vm.medicNurse.medic.id})">{{vm.medicNurse.medic.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medicNurse.nurse">Nurse</span></dt>
+        <dd>
+            <span ng-repeat="nurse in vm.medicNurse.nurses">
+                <a ui-sref="nurse-detail({id: nurse.id})">{{nurse.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="medic-nurse-detail.edit({id:vm.medicNurse.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

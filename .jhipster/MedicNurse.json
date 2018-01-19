@@ -1,0 +1,33 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "medic",
+            "otherEntityName": "medic",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "medicNurse"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "",
+            "relationshipName": "nurse",
+            "otherEntityName": "nurse",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "idnurse",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20171127223240",
+    "entityTableName": "medic_nurse",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

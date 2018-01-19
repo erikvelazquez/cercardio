@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "gender" : {
+            "home": {
+                "title": "Genders",
+                "createLabel": "Gender erstellen",
+                "createOrEditLabel": "Gender erstellen oder bearbeiten",
+                "search": "Suche nach Gender"
+            },
+            "created": "Gender erstellt mit ID {{ param }}",
+            "updated": "Gender aktualisiert mit ID {{ param }}",
+            "deleted": "Gender gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Gender {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Gender"
+            },
+            "description": "Description",
+            "isactive": "Isactive"
+        }
+    }
+}

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity Diagnosis.
+    -->
+    <changeSet id="20171228232342-1" author="jhipster">
+        <createTable tableName="diagnosis">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="letra" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="catalogkey" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="asterisco" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="nombre" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="lsex" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="linf" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="lsup" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="trivial" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="erradicado" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ninter" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="nin" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ninmtobs" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="nocbd" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="noaph" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="fetal" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="capitulo" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="lista_1" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="grupo_1" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="lista_5" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="actualizacionescie_10" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="yearmodifi" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="yearaplicacion" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="valid" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="prinmorta" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="prinmorbi" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="lmmorbi" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="lmmorta" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="lgbd_165" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="iomsbeck" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="lgbd_190" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="notdiaria" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="notsemanal" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="sistemaespecial" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="birmm" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="causatype" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="epimorta" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="edasiras_5_anios" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="csvematernasseedepid" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="epimortam_5" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="epimorbi" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="defmaternas" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="escauses" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="numcauses" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="essuivemorta" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="essuivemorb" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="epiclave" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="epiclavedesc" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="essuivenotin" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="essuiveestepi" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="essuiveestbrote" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="sinac" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="daga" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="manifestaenfer" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+</databaseChangeLog>

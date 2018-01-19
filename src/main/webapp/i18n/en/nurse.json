@@ -1,0 +1,40 @@
+{
+    "cercardiobitiApp": {
+        "nurse" : {
+            "home": {
+                "title": "Nurses",
+                "createLabel": "Create a new Nurse",
+                "createOrEditLabel": "Create or edit a Nurse",
+                "search": "Search for Nurse"
+            },
+            "created": "A new Nurse is created with identifier {{ param }}",
+            "updated": "A Nurse is updated with identifier {{ param }}",
+            "deleted": "A Nurse is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Nurse {{ id }}?"
+            },
+            "detail": {
+                "title": "Nurse"
+            },
+            "cpid": "Cpid",
+            "colony": "Colony",
+            "street": "Street",
+            "streetnumber": "Streetnumber",
+            "suitnumber": "Suitnumber",
+            "phonenumber1": "Phonenumber 1",
+            "phonenumber2": "Phonenumber 2",
+            "email1": "Email 1",
+            "email2": "Email 2",
+            "facebook": "Facebook",
+            "twitter": "Twitter",
+            "instagram": "Instagram",
+            "snapchat": "Snapchat",
+            "linkedin": "Linkedin",
+            "vine": "Vine",
+            "createdat": "Createdat",
+            "userBD": "User BD",
+            "company": "Company",
+            "gender": "Gender"
+        }
+    }
+}

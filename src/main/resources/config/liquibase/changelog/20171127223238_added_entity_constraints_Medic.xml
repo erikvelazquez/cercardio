@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Medic.
+    -->
+    <changeSet id="20171127223238-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="userbd_id"
+                                 baseTableName="medic"
+                                 constraintName="fk_medic_userbd_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_bd"/>
+
+        <addForeignKeyConstraint baseColumnNames="company_id"
+                                 baseTableName="medic"
+                                 constraintName="fk_medic_company_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="company"/>
+
+        <addForeignKeyConstraint baseColumnNames="ethnic_group_id"
+                                 baseTableName="medic"
+                                 constraintName="fk_medic_ethnic_group_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ethnic_group"/>
+
+        <addForeignKeyConstraint baseColumnNames="gender_id"
+                                 baseTableName="medic"
+                                 constraintName="fk_medic_gender_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="gender"/>
+
+        <addForeignKeyConstraint baseColumnNames="category_id"
+                                 baseTableName="medic"
+                                 constraintName="fk_medic_category_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="category"/>
+
+    </changeSet>
+</databaseChangeLog>

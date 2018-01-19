@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "times" : {
+            "home": {
+                "title": "Times",
+                "createLabel": "Times erstellen",
+                "createOrEditLabel": "Times erstellen oder bearbeiten",
+                "search": "Suche nach Times"
+            },
+            "created": "Times erstellt mit ID {{ param }}",
+            "updated": "Times aktualisiert mit ID {{ param }}",
+            "deleted": "Times gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Times {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Times"
+            },
+            "hour": "Hour",
+            "isactive": "Isactive"
+        }
+    }
+}

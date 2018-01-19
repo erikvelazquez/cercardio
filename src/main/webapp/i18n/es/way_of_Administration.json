@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "way_of_Administration" : {
+            "home": {
+                "title": "Maneras de Administrar",
+                "createLabel": "Crear nueva Maneras de Administrar",
+                "createOrEditLabel": "Crear o editar Maneras de Administrar",
+                "search": "Buscar por Maneras de Administrar"
+            },
+            "created": "Un nuevo Maneras de Administrar ha sido creado con el identificador {{ param }}",
+            "updated": "Un Maneras de Administrar ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Maneras de Administrar ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Maneras de Administrar {{ id }}?"
+            },
+            "detail": {
+                "title": "Maneras de Administrar"
+            },
+            "wayofadministration": "Maneras de Administrar",
+            "isactive": "Activo"
+        }
+    }
+}

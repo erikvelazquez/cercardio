@@ -1,0 +1,96 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myMedicalAnalysisLabel" data-translate="cercardiobitiApp.medicalAnalysis.home.createOrEditLabel">Create or edit a Medical Analysis</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.medicalAnalysis.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.medicalAnalysis.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicalAnalysis.presentation" for="field_presentation">Presentation</label>
+            <input type="text" class="form-control" name="presentation" id="field_presentation"
+                    ng-model="vm.medicalAnalysis.presentation"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicalAnalysis.subjective" for="field_subjective">Subjective</label>
+            <input type="text" class="form-control" name="subjective" id="field_subjective"
+                    ng-model="vm.medicalAnalysis.subjective"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicalAnalysis.objective" for="field_objective">Objective</label>
+            <input type="text" class="form-control" name="objective" id="field_objective"
+                    ng-model="vm.medicalAnalysis.objective"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicalAnalysis.analysis" for="field_analysis">Analysis</label>
+            <input type="text" class="form-control" name="analysis" id="field_analysis"
+                    ng-model="vm.medicalAnalysis.analysis"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicalAnalysis.disease" for="field_disease">Disease</label>
+            <input type="text" class="form-control" name="disease" id="field_disease"
+                    ng-model="vm.medicalAnalysis.disease"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicalAnalysis.tests" for="field_tests">Tests</label>
+            <input type="text" class="form-control" name="tests" id="field_tests"
+                    ng-model="vm.medicalAnalysis.tests"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicalAnalysis.treatment" for="field_treatment">Treatment</label>
+            <input type="text" class="form-control" name="treatment" id="field_treatment"
+                    ng-model="vm.medicalAnalysis.treatment"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicalAnalysis.medicine" for="field_medicine">Medicine</label>
+            <input type="text" class="form-control" name="medicine" id="field_medicine"
+                    ng-model="vm.medicalAnalysis.medicine"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medicalAnalysis.daytime" for="field_daytime">Daytime</label>
+                <div class="input-group">
+                    <input id="field_daytime" type="text" class="form-control" name="daytime" datetime-picker="{{dateformat}}" ng-model="vm.medicalAnalysis.daytime" is-open="vm.datePickerOpenStatus.daytime"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('daytime')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.medicalAnalysis.medic" for="field_medic">Medic</label>
+            <select class="form-control" id="field_medic" name="medic" ng-model="vm.medicalAnalysis.medic" ng-options="medic as medic.id for medic in vm.medics | orderBy:'id' track by medic.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.medicalAnalysis.pacient" for="field_pacient">Pacient</label>
+            <select class="form-control" id="field_pacient" name="pacient" ng-model="vm.medicalAnalysis.pacient" ng-options="pacient as pacient.id for pacient in vm.pacients | orderBy:'id' track by pacient.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

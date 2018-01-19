@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "socialHealthInsurance" : {
+            "home": {
+                "title": "Social Health Insurances",
+                "createLabel": "Create a new Social Health Insurance",
+                "createOrEditLabel": "Create or edit a Social Health Insurance",
+                "search": "Search for Social Health Insurance"
+            },
+            "created": "A new Social Health Insurance is created with identifier {{ param }}",
+            "updated": "A Social Health Insurance is updated with identifier {{ param }}",
+            "deleted": "A Social Health Insurance is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Social Health Insurance {{ id }}?"
+            },
+            "detail": {
+                "title": "Social Health Insurance"
+            },
+            "name": "Name",
+            "isactive": "Isactive"
+        }
+    }
+}

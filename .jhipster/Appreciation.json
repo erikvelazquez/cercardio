@@ -1,0 +1,97 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "pacient",
+            "otherEntityName": "pacient",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "medic",
+            "otherEntityName": "medic",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "height",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "weight",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "size",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "bmi",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "temperature",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "saturation",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "bloodpressuere",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "heartrate",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "breathingfrequency",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "others",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "head",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "neck",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "chest",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "abdomen",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bodypart",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "genitals",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "othersphysical",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createdat",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20171127223228",
+    "entityTableName": "appreciation",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

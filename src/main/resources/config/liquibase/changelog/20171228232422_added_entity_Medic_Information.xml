@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity Medic_Information.
+    -->
+    <changeSet id="20171228232422-1" author="jhipster">
+        <createTable tableName="medic_information">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="cp" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="street" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="extnumber" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="intnumber" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="phone_1" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="phone_2" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="email_1" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="email_2" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="facebook" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="twitter" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="instagram" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="snapchat" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="linkedin" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="vine" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="recomended" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cvuconacyt" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cedula" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cedulaesp" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="curp" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="rfc" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="birthday" type="date">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="externalhospitals" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="subid" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="highid" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="medicalinsurance" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="socialinsurance" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="responsibilityinsurance" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_i_nconacyt" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="medicalinnumber" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="socialinnumber" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="responsibilityinnumber" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="medic_id" type="bigint">
+                <constraints unique="true" nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+</databaseChangeLog>

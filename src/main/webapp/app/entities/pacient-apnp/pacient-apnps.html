@@ -1,0 +1,93 @@
+<div>
+    <h2 data-translate="cercardiobitiApp.pacientApnp.home.title">Pacient Apnps</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="pacient-apnp.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="cercardiobitiApp.pacientApnp.home.createLabel">
+                        Create new Pacient Apnp
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'cercardiobitiApp.pacientApnp.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientApnp.quantity">Quantity</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientApnp.datestarts">Datestarts</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientApnp.dateend">Dateend</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientApnp.pacient">Pacient</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientApnp.drugAddiction">Drug Addiction</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientApnp.backGround">Back Ground</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientApnp.time">Time</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="pacientApnp in vm.pacientApnps track by pacientApnp.id">
+                    <td><a ui-sref="pacient-apnp-detail({id:pacientApnp.id})">{{pacientApnp.id}}</a></td>
+                    <td>{{pacientApnp.quantity}}</td>
+                        <td>{{pacientApnp.datestarts | date:'mediumDate'}}</td>
+                        <td>{{pacientApnp.dateend | date:'mediumDate'}}</td>
+                    <td>
+                        <a ui-sref="pacient-detail({id:pacientApnp.pacient.id})">{{pacientApnp.pacient.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="drug-addiction-detail({id:pacientApnp.drugAddiction.id})">{{pacientApnp.drugAddiction.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="background-detail({id:pacientApnp.backGround.id})">{{pacientApnp.backGround.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="time-detail({id:pacientApnp.time.id})">{{pacientApnp.time.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="pacient-apnp-detail({id:pacientApnp.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="pacient-apnp.edit({id:pacientApnp.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="pacient-apnp.delete({id:pacientApnp.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

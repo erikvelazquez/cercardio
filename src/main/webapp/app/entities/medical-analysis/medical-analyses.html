@@ -1,0 +1,97 @@
+<div>
+    <h2 data-translate="cercardiobitiApp.medicalAnalysis.home.title">Medical Analyses</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="medical-analysis.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="cercardiobitiApp.medicalAnalysis.home.createLabel">
+                        Create new Medical Analysis
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'cercardiobitiApp.medicalAnalysis.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicalAnalysis.presentation">Presentation</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicalAnalysis.subjective">Subjective</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicalAnalysis.objective">Objective</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicalAnalysis.analysis">Analysis</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicalAnalysis.disease">Disease</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicalAnalysis.tests">Tests</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicalAnalysis.treatment">Treatment</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicalAnalysis.medicine">Medicine</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicalAnalysis.daytime">Daytime</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicalAnalysis.medic">Medic</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicalAnalysis.pacient">Pacient</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="medicalAnalysis in vm.medicalAnalyses track by medicalAnalysis.id">
+                    <td><a ui-sref="medical-analysis-detail({id:medicalAnalysis.id})">{{medicalAnalysis.id}}</a></td>
+                    <td>{{medicalAnalysis.presentation}}</td>
+                    <td>{{medicalAnalysis.subjective}}</td>
+                    <td>{{medicalAnalysis.objective}}</td>
+                    <td>{{medicalAnalysis.analysis}}</td>
+                    <td>{{medicalAnalysis.disease}}</td>
+                    <td>{{medicalAnalysis.tests}}</td>
+                    <td>{{medicalAnalysis.treatment}}</td>
+                    <td>{{medicalAnalysis.medicine}}</td>
+                    <td>{{medicalAnalysis.daytime | date:'medium'}}</td>
+                    <td>
+                        <a ui-sref="medic-detail({id:medicalAnalysis.medic.id})">{{medicalAnalysis.medic.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="pacient-detail({id:medicalAnalysis.pacient.id})">{{medicalAnalysis.pacient.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="medical-analysis-detail({id:medicalAnalysis.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="medical-analysis.edit({id:medicalAnalysis.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="medical-analysis.delete({id:medicalAnalysis.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

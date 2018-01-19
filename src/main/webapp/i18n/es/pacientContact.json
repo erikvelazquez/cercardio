@@ -1,0 +1,37 @@
+{
+    "cercardiobitiApp": {
+        "pacientContact" : {
+            "home": {
+                "title": "Pacient Contacts",
+                "createLabel": "Crear nuevo Pacient Contact",
+                "createOrEditLabel": "Crear o editar Pacient Contact",
+                "search": "Search for Pacient Contact"
+            },
+            "created": "Un nuevo Pacient Contact ha sido creado con el identificador {{ param }}",
+            "updated": "Un Pacient Contact ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Pacient Contact ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Pacient Contact {{ id }}?"
+            },
+            "detail": {
+                "title": "Pacient Contact"
+            },
+            "name": "Name",
+            "lastname": "Lastname",
+            "street": "Street",
+            "streetnumber": "Streetnumber",
+            "suitnumber": "Suitnumber",
+            "phonenumber1": "Phonenumber 1",
+            "phonenumber2": "Phonenumber 2",
+            "email1": "Email 1",
+            "email2": "Email 2",
+            "facebook": "Facebook",
+            "twitter": "Twitter",
+            "instagram": "Instagram",
+            "snapchat": "Snapchat",
+            "linkedin": "Linkedin",
+            "vine": "Vine",
+            "userBD": "User BD"
+        }
+    }
+}

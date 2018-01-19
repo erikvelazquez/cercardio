@@ -1,0 +1,24 @@
+{
+    "cercardiobitiApp": {
+        "socioeconomicLevel" : {
+            "home": {
+                "title": "Socioeconomic Levels",
+                "createLabel": "Socioeconomic Level erstellen",
+                "createOrEditLabel": "Socioeconomic Level erstellen oder bearbeiten",
+                "search": "Suche nach Socioeconomic Level"
+            },
+            "created": "Socioeconomic Level erstellt mit ID {{ param }}",
+            "updated": "Socioeconomic Level aktualisiert mit ID {{ param }}",
+            "deleted": "Socioeconomic Level gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Socioeconomic Level {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Socioeconomic Level"
+            },
+            "code": "Code",
+            "name": "Name",
+            "isactive": "Isactive"
+        }
+    }
+}

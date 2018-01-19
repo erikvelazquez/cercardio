@@ -1,0 +1,53 @@
+{
+    "cercardiobitiApp": {
+        "medic_Information" : {
+            "home": {
+                "title": "Medic_Informations",
+                "createLabel": "Créer un nouveau Medic Information",
+                "createOrEditLabel": "Créer ou éditer un Medic Information",
+                "search": "Recherche pour Medic Information"
+            },
+            "created": "Un nouveau Medic Information a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Medic Information avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Medic Information avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Medic Information {{ id }} ?"
+            },
+            "detail": {
+                "title": "Medic Information"
+            },
+            "cp": "Cp",
+            "street": "Street",
+            "extnumber": "Extnumber",
+            "intnumber": "Intnumber",
+            "phone1": "Phone 1",
+            "phone2": "Phone 2",
+            "email1": "Email 1",
+            "email2": "Email 2",
+            "facebook": "Facebook",
+            "twitter": "Twitter",
+            "instagram": "Instagram",
+            "snapchat": "Snapchat",
+            "linkedin": "Linkedin",
+            "vine": "Vine",
+            "recomended": "Recomended",
+            "cvuconacyt": "Cvuconacyt",
+            "cedula": "Cedula",
+            "cedulaesp": "Cedulaesp",
+            "curp": "Curp",
+            "rfc": "Rfc",
+            "birthday": "Birthday",
+            "externalhospitals": "Externalhospitals",
+            "subid": "Subid",
+            "highid": "Highid",
+            "medicalinsurance": "Medicalinsurance",
+            "socialinsurance": "Socialinsurance",
+            "responsibilityinsurance": "Responsibilityinsurance",
+            "sINconacyt": "S I Nconacyt",
+            "medicalinnumber": "Medicalinnumber",
+            "socialinnumber": "Socialinnumber",
+            "responsibilityinnumber": "Responsibilityinnumber",
+            "medic": "Medic"
+        }
+    }
+}

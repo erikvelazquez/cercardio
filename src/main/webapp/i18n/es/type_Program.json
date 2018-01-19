@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "type_Program" : {
+            "home": {
+                "title": "Tipos de Programas",
+                "createLabel": "Crear nuevo Type Program",
+                "createOrEditLabel": "Crear o editar Type Program",
+                "search": "Search for Type Program"
+            },
+            "created": "Un nuevo Type Program ha sido creado con el identificador {{ param }}",
+            "updated": "Un Type Program ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Type Program ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Type Program {{ id }}?"
+            },
+            "detail": {
+                "title": "Type Program"
+            },
+            "name": "Name",
+            "isactive": "Isactive"
+        }
+    }
+}

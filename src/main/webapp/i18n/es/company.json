@@ -1,0 +1,24 @@
+{
+    "cercardiobitiApp": {
+        "company" : {
+            "home": {
+                "title": "Companías",
+                "createLabel": "Crear nueva Companía",
+                "createOrEditLabel": "Crear o editar Companía",
+                "search": "Buscar por Companía"
+            },
+            "created": "Un nuevo Companía ha sido creado con el identificador {{ param }}",
+            "updated": "Un Companía ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Companía ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Companía {{ id }}?"
+            },
+            "detail": {
+                "title": "Companía"
+            },
+            "name": "Name",
+            "rfc": "RFC",
+            "isactive": "Activo"
+        }
+    }
+}

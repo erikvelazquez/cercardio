@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "domicile" : {
+            "home": {
+                "title": "Domiciles",
+                "createLabel": "Create a new Domicile",
+                "createOrEditLabel": "Create or edit a Domicile",
+                "search": "Search for Domicile"
+            },
+            "created": "A new Domicile is created with identifier {{ param }}",
+            "updated": "A Domicile is updated with identifier {{ param }}",
+            "deleted": "A Domicile is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Domicile {{ id }}?"
+            },
+            "detail": {
+                "title": "Domicile"
+            },
+            "domicile": "Domicile",
+            "isactive": "Isactive"
+        }
+    }
+}

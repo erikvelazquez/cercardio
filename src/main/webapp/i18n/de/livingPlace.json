@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "livingPlace" : {
+            "home": {
+                "title": "Living Places",
+                "createLabel": "Living Place erstellen",
+                "createOrEditLabel": "Living Place erstellen oder bearbeiten",
+                "search": "Suche nach Living Place"
+            },
+            "created": "Living Place erstellt mit ID {{ param }}",
+            "updated": "Living Place aktualisiert mit ID {{ param }}",
+            "deleted": "Living Place gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Living Place {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Living Place"
+            },
+            "description": "Description",
+            "price": "Price"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "occupation" : {
+            "home": {
+                "title": "Ocupaciones",
+                "createLabel": "Crear nueva Ocupación",
+                "createOrEditLabel": "Crear o editar Ocupación",
+                "search": "Search for Ocupación"
+            },
+            "created": "Un nuevo Ocupación ha sido creado con el identificador {{ param }}",
+            "updated": "Un Ocupación ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Ocupación ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Ocupación {{ id }}?"
+            },
+            "detail": {
+                "title": "Ocupación"
+            },
+            "description": "Descripción",
+            "isactive": "Activo"
+        }
+    }
+}

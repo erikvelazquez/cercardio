@@ -1,0 +1,32 @@
+{
+    "cercardiobitiApp": {
+        "medicalAnalysis" : {
+            "home": {
+                "title": "MedicalAnalyses",
+                "createLabel": "Créer un nouveau Medical Analysis",
+                "createOrEditLabel": "Créer ou éditer un Medical Analysis",
+                "search": "Recherche pour Medical Analysis"
+            },
+            "created": "Un nouveau Medical Analysis a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Medical Analysis avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Medical Analysis avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Medical Analysis {{ id }} ?"
+            },
+            "detail": {
+                "title": "Medical Analysis"
+            },
+            "presentation": "Presentation",
+            "subjective": "Subjective",
+            "objective": "Objective",
+            "analysis": "Analysis",
+            "disease": "Disease",
+            "tests": "Tests",
+            "treatment": "Treatment",
+            "medicine": "Medicine",
+            "daytime": "Daytime",
+            "medic": "Medic",
+            "pacient": "Pacient"
+        }
+    }
+}

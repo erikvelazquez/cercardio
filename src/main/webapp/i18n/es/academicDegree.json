@@ -1,0 +1,24 @@
+{
+    "cercardiobitiApp": {
+        "academicDegree" : {
+            "home": {
+                "title": "Grado Académico",
+                "createLabel": "Crear nuevo Grado Académico",
+                "createOrEditLabel": "Crear o editar Grado Académico",
+                "search": "Buscar por Grado Académico"
+            },
+            "created": "Un nuevo Grado Académico ha sido creado con el identificador {{ param }}",
+            "updated": "Un Grado Académico ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Grado Académico ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Grado Académico {{ id }}?"
+            },
+            "detail": {
+                "title": "Grado Académico"
+            },
+            "description": "Descripción",
+            "isactive": "Activo",
+            "createdat": "Fecha de Creación"
+        }
+    }
+}

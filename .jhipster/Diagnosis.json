@@ -1,0 +1,224 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "letra",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "catalogkey",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "asterisco",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lsex",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "linf",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lsup",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "trivial",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "erradicado",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ninter",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nin",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ninmtobs",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nocbd",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "noaph",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fetal",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "capitulo",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "lista1",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "grupo1",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "lista5",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "actualizacionescie10",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "yearmodifi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "yearaplicacion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "valid",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prinmorta",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "prinmorbi",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "lmmorbi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lmmorta",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lgbd165",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "iomsbeck",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "lgbd190",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "notdiaria",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "notsemanal",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sistemaespecial",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "birmm",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "causatype",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "epimorta",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "edasiras5Anios",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "csvematernasseedepid",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "epimortam5",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "epimorbi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "defmaternas",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "escauses",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numcauses",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "essuivemorta",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "essuivemorb",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "epiclave",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "epiclavedesc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "essuivenotin",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "essuiveestepi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "essuiveestbrote",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sinac",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "daga",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "manifestaenfer",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171228232342",
+    "entityTableName": "diagnosis",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

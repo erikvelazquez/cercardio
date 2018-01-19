@@ -1,0 +1,121 @@
+<div>
+    <h2 data-translate="cercardiobitiApp.medic.home.title">Medics</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="medic.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="cercardiobitiApp.medic.home.createLabel">
+                        Create new Medic
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'cercardiobitiApp.medic.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic.colony">Colony</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic.street">Street</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic.streetnumber">Streetnumber</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic.suitnumber">Suitnumber</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic.phonenumber1">Phonenumber 1</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic.phonenumber2">Phonenumber 2</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic.email1">Email 1</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic.email2">Email 2</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic.facebook">Facebook</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic.twitter">Twitter</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic.instagram">Instagram</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic.snapchat">Snapchat</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic.linkedin">Linkedin</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic.vine">Vine</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic.createdat">Createdat</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic.userBD">User BD</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic.company">Company</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic.ethnicGroup">Ethnic Group</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic.gender">Gender</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic.category">Category</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="medic in vm.medics track by medic.id">
+                    <td><a ui-sref="medic-detail({id:medic.id})">{{medic.id}}</a></td>
+                    <td>{{medic.colony}}</td>
+                    <td>{{medic.street}}</td>
+                    <td>{{medic.streetnumber}}</td>
+                    <td>{{medic.suitnumber}}</td>
+                    <td>{{medic.phonenumber1}}</td>
+                    <td>{{medic.phonenumber2}}</td>
+                    <td>{{medic.email1}}</td>
+                    <td>{{medic.email2}}</td>
+                    <td>{{medic.facebook}}</td>
+                    <td>{{medic.twitter}}</td>
+                    <td>{{medic.instagram}}</td>
+                    <td>{{medic.snapchat}}</td>
+                    <td>{{medic.linkedin}}</td>
+                    <td>{{medic.vine}}</td>
+                    <td>{{medic.createdat | date:'medium'}}</td>
+                    <td>
+                        <a ui-sref="user-bd-detail({id:medic.userBD.id})">{{medic.userBD.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="company-detail({id:medic.company.id})">{{medic.company.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="ethnic-group-detail({id:medic.ethnicGroup.id})">{{medic.ethnicGroup.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="gender-detail({id:medic.gender.id})">{{medic.gender.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="category-detail({id:medic.category.id})">{{medic.category.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="medic-detail({id:medic.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="medic.edit({id:medic.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="medic.delete({id:medic.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

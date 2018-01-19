@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span data-translate="cercardiobitiApp.pacientApp.detail.title">Pacient App</span> {{vm.pacientApp.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="cercardiobitiApp.pacientApp.chronicdegenerative">Chronicdegenerative</span></dt>
+        <dd>
+            <span>{{vm.pacientApp.chronicdegenerative}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientApp.traumatic">Traumatic</span></dt>
+        <dd>
+            <span>{{vm.pacientApp.traumatic}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientApp.gynecologicalobstetrics">Gynecologicalobstetrics</span></dt>
+        <dd>
+            <span>{{vm.pacientApp.gynecologicalobstetrics}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientApp.others">Others</span></dt>
+        <dd>
+            <span>{{vm.pacientApp.others}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientApp.daytime">Daytime</span></dt>
+        <dd>
+            <span>{{vm.pacientApp.daytime | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientApp.pacient">Pacient</span></dt>
+        <dd>
+            <a ui-sref="pacient-detail({id:vm.pacientApp.pacient.id})">{{vm.pacientApp.pacient.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="pacient-app-detail.edit({id:vm.pacientApp.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

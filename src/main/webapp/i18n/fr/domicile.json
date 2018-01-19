@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "domicile" : {
+            "home": {
+                "title": "Domiciles",
+                "createLabel": "Créer un nouveau Domicile",
+                "createOrEditLabel": "Créer ou éditer un Domicile",
+                "search": "Recherche pour Domicile"
+            },
+            "created": "Un nouveau Domicile a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Domicile avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Domicile avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Domicile {{ id }} ?"
+            },
+            "detail": {
+                "title": "Domicile"
+            },
+            "domicile": "Domicile",
+            "isactive": "Isactive"
+        }
+    }
+}

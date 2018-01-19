@@ -1,0 +1,137 @@
+<div>
+    <h2 data-translate="cercardiobitiApp.medic_Information.home.title">Medic Informations</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="medic-information.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="cercardiobitiApp.medic_Information.home.createLabel">
+                        Create new Medic Information
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'cercardiobitiApp.medic_Information.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.cp">Cp</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.street">Street</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.extnumber">Extnumber</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.intnumber">Intnumber</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.phone1">Phone 1</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.phone2">Phone 2</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.email1">Email 1</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.email2">Email 2</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.facebook">Facebook</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.twitter">Twitter</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.instagram">Instagram</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.snapchat">Snapchat</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.linkedin">Linkedin</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.vine">Vine</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.recomended">Recomended</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.cvuconacyt">Cvuconacyt</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.cedula">Cedula</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.cedulaesp">Cedulaesp</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.curp">Curp</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.rfc">Rfc</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.birthday">Birthday</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.externalhospitals">Externalhospitals</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.subid">Subid</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.highid">Highid</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.medicalinsurance">Medicalinsurance</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.socialinsurance">Socialinsurance</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.responsibilityinsurance">Responsibilityinsurance</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.sINconacyt">S I Nconacyt</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.medicalinnumber">Medicalinnumber</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.socialinnumber">Socialinnumber</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.responsibilityinnumber">Responsibilityinnumber</span></th>
+                    <th><span data-translate="cercardiobitiApp.medic_Information.medic">Medic</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="medic_Information in vm.medic_Informations track by medic_Information.id">
+                    <td><a ui-sref="medic-information-detail({id:medic_Information.id})">{{medic_Information.id}}</a></td>
+                    <td>{{medic_Information.cp}}</td>
+                    <td>{{medic_Information.street}}</td>
+                    <td>{{medic_Information.extnumber}}</td>
+                    <td>{{medic_Information.intnumber}}</td>
+                    <td>{{medic_Information.phone1}}</td>
+                    <td>{{medic_Information.phone2}}</td>
+                    <td>{{medic_Information.email1}}</td>
+                    <td>{{medic_Information.email2}}</td>
+                    <td>{{medic_Information.facebook}}</td>
+                    <td>{{medic_Information.twitter}}</td>
+                    <td>{{medic_Information.instagram}}</td>
+                    <td>{{medic_Information.snapchat}}</td>
+                    <td>{{medic_Information.linkedin}}</td>
+                    <td>{{medic_Information.vine}}</td>
+                    <td>{{medic_Information.recomended}}</td>
+                    <td>{{medic_Information.cvuconacyt}}</td>
+                    <td>{{medic_Information.cedula}}</td>
+                    <td>{{medic_Information.cedulaesp}}</td>
+                    <td>{{medic_Information.curp}}</td>
+                    <td>{{medic_Information.rfc}}</td>
+                        <td>{{medic_Information.birthday | date:'mediumDate'}}</td>
+                    <td>{{medic_Information.externalhospitals}}</td>
+                    <td>{{medic_Information.subid}}</td>
+                    <td>{{medic_Information.highid}}</td>
+                    <td>{{medic_Information.medicalinsurance}}</td>
+                    <td>{{medic_Information.socialinsurance}}</td>
+                    <td>{{medic_Information.responsibilityinsurance}}</td>
+                    <td>{{medic_Information.sINconacyt}}</td>
+                    <td>{{medic_Information.medicalinnumber}}</td>
+                    <td>{{medic_Information.socialinnumber}}</td>
+                    <td>{{medic_Information.responsibilityinnumber}}</td>
+                    <td>
+                        <a ui-sref="medic-detail({id:medic_Information.medic.id})">{{medic_Information.medic.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="medic-information-detail({id:medic_Information.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="medic-information.edit({id:medic_Information.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="medic-information.delete({id:medic_Information.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

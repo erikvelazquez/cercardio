@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "civilStatus" : {
+            "home": {
+                "title": "CivilStatuses",
+                "createLabel": "Créer un nouveau Civil Status",
+                "createOrEditLabel": "Créer ou éditer un Civil Status",
+                "search": "Recherche pour Civil Status"
+            },
+            "created": "Un nouveau Civil Status a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Civil Status avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Civil Status avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Civil Status {{ id }} ?"
+            },
+            "detail": {
+                "title": "Civil Status"
+            },
+            "description": "Description",
+            "isactive": "Isactive"
+        }
+    }
+}

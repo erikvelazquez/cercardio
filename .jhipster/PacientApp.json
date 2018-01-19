@@ -1,0 +1,41 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "pacient",
+            "otherEntityName": "pacient",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "pacientApp"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "chronicdegenerative",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "traumatic",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gynecologicalobstetrics",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "others",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "daytime",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20171127223246",
+    "entityTableName": "pacient_app",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

@@ -1,0 +1,27 @@
+
+<div>
+    <h2><span data-translate="cercardiobitiApp.way_of_Administration.detail.title">Way Of Administration</span> {{vm.way_of_Administration.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="cercardiobitiApp.way_of_Administration.wayofadministration">Wayofadministration</span></dt>
+        <dd>
+            <span>{{vm.way_of_Administration.wayofadministration}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.way_of_Administration.isactive">Isactive</span></dt>
+        <dd>
+            <span>{{vm.way_of_Administration.isactive}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="way-of-administration-detail.edit({id:vm.way_of_Administration.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

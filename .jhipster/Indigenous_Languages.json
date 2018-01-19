@@ -1,0 +1,20 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "catalogkey",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "indigenouslanguage",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171228232419",
+    "entityTableName": "indigenous_languages",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

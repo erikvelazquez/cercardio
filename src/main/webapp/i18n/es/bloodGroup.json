@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "bloodGroup" : {
+            "home": {
+                "title": "Grupo Sanguineo",
+                "createLabel": "Crear nuevo Grupo Sanguineo",
+                "createOrEditLabel": "Crear o editar Grupo Sanguineo",
+                "search": "Buscar por Grupo Sanguineo"
+            },
+            "created": "Un nuevo Grupo Sanguineo ha sido creado con el identificador {{ param }}",
+            "updated": "Un Grupo Sanguineo ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Grupo Sanguineo ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Grupo Sanguineo {{ id }}?"
+            },
+            "detail": {
+                "title": "Grupo Sanguineo"
+            },
+            "description": "Descripción",
+            "isactive": "Activo"
+        }
+    }
+}

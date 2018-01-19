@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity PacientApnp.
+    -->
+    <changeSet id="20171127223245-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="pacient_id"
+                                 baseTableName="pacient_apnp"
+                                 constraintName="fk_pacient_apnp_pacient_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="pacient"/>
+
+        <addForeignKeyConstraint baseColumnNames="drug_addiction_id"
+                                 baseTableName="pacient_apnp"
+                                 constraintName="fk_pacient_apnp_drug_addiction_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="drug_addiction"/>
+
+        <addForeignKeyConstraint baseColumnNames="back_ground_id"
+                                 baseTableName="pacient_apnp"
+                                 constraintName="fk_pacient_apnp_back_ground_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="background"/>
+
+        <addForeignKeyConstraint baseColumnNames="time_id"
+                                 baseTableName="pacient_apnp"
+                                 constraintName="fk_pacient_apnp_time_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="time"/>
+
+    </changeSet>
+</databaseChangeLog>

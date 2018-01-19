@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "drugAddiction" : {
+            "home": {
+                "title": "DrugAddictions",
+                "createLabel": "Créer un nouveau Drug Addiction",
+                "createOrEditLabel": "Créer ou éditer un Drug Addiction",
+                "search": "Recherche pour Drug Addiction"
+            },
+            "created": "Un nouveau Drug Addiction a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Drug Addiction avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Drug Addiction avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Drug Addiction {{ id }} ?"
+            },
+            "detail": {
+                "title": "Drug Addiction"
+            },
+            "description": "Description",
+            "isactive": "Isactive"
+        }
+    }
+}

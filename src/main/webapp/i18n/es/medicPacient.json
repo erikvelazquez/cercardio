@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApps": {
+        "medicPacient" : {
+            "home": {
+                "title": "Medic Pacients",
+                "createLabel": "Crear nuevo Medic Pacient",
+                "createOrEditLabel": "Crear o editar Medic Pacient",
+                "search": "Search for Medic Pacient"
+            },
+            "created": "Un nuevo Medic Pacient ha sido creado con el identificador {{ param }}",
+            "updated": "Un Medic Pacient ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Medic Pacient ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Medic Pacient {{ id }}?"
+            },
+            "detail": {
+                "title": "Medic Pacient"
+            },
+            "medic": "Medic",
+            "pacient": "Pacient"
+        }
+    }
+}

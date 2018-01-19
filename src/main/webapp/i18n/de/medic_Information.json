@@ -1,0 +1,53 @@
+{
+    "cercardiobitiApp": {
+        "medic_Information" : {
+            "home": {
+                "title": "Medic Informations",
+                "createLabel": "Medic Information erstellen",
+                "createOrEditLabel": "Medic Information erstellen oder bearbeiten",
+                "search": "Suche nach Medic Information"
+            },
+            "created": "Medic Information erstellt mit ID {{ param }}",
+            "updated": "Medic Information aktualisiert mit ID {{ param }}",
+            "deleted": "Medic Information gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Medic Information {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Medic Information"
+            },
+            "cp": "Cp",
+            "street": "Street",
+            "extnumber": "Extnumber",
+            "intnumber": "Intnumber",
+            "phone1": "Phone 1",
+            "phone2": "Phone 2",
+            "email1": "Email 1",
+            "email2": "Email 2",
+            "facebook": "Facebook",
+            "twitter": "Twitter",
+            "instagram": "Instagram",
+            "snapchat": "Snapchat",
+            "linkedin": "Linkedin",
+            "vine": "Vine",
+            "recomended": "Recomended",
+            "cvuconacyt": "Cvuconacyt",
+            "cedula": "Cedula",
+            "cedulaesp": "Cedulaesp",
+            "curp": "Curp",
+            "rfc": "Rfc",
+            "birthday": "Birthday",
+            "externalhospitals": "Externalhospitals",
+            "subid": "Subid",
+            "highid": "Highid",
+            "medicalinsurance": "Medicalinsurance",
+            "socialinsurance": "Socialinsurance",
+            "responsibilityinsurance": "Responsibilityinsurance",
+            "sINconacyt": "S I Nconacyt",
+            "medicalinnumber": "Medicalinnumber",
+            "socialinnumber": "Socialinnumber",
+            "responsibilityinnumber": "Responsibilityinnumber",
+            "medic": "Medic"
+        }
+    }
+}

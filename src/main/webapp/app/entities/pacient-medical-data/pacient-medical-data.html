@@ -1,0 +1,97 @@
+<div>
+    <h2 data-translate="cercardiobitiApp.pacientMedicalData.home.title">Pacient Medical Data</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="pacient-medical-data.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="cercardiobitiApp.pacientMedicalData.home.createLabel">
+                        Create new Pacient Medical Data
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'cercardiobitiApp.pacientMedicalData.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientMedicalData.diseases">Diseases</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientMedicalData.surgicalinterventions">Surgicalinterventions</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientMedicalData.useofdrugs">Useofdrugs</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientMedicalData.allergies">Allergies</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientMedicalData.ahffather">Ahffather</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientMedicalData.ahfmother">Ahfmother</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientMedicalData.ahfothers">Ahfothers</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientMedicalData.pacient">Pacient</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientMedicalData.bloodGroup">Blood Group</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientMedicalData.disabilities">Disabilities</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="pacientMedicalData in vm.pacientMedicalData track by pacientMedicalData.id">
+                    <td><a ui-sref="pacient-medical-data-detail({id:pacientMedicalData.id})">{{pacientMedicalData.id}}</a></td>
+                    <td>{{pacientMedicalData.diseases}}</td>
+                    <td>{{pacientMedicalData.surgicalinterventions}}</td>
+                    <td>{{pacientMedicalData.useofdrugs}}</td>
+                    <td>{{pacientMedicalData.allergies}}</td>
+                    <td>{{pacientMedicalData.ahffather}}</td>
+                    <td>{{pacientMedicalData.ahfmother}}</td>
+                    <td>{{pacientMedicalData.ahfothers}}</td>
+                    <td>
+                        <a ui-sref="pacient-detail({id:pacientMedicalData.pacient.id})">{{pacientMedicalData.pacient.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="blood-group-detail({id:pacientMedicalData.bloodGroup.id})">{{pacientMedicalData.bloodGroup.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="disabilities-detail({id:pacientMedicalData.disabilities.id})">{{pacientMedicalData.disabilities.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="pacient-medical-data-detail({id:pacientMedicalData.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="pacient-medical-data.edit({id:pacientMedicalData.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="pacient-medical-data.delete({id:pacientMedicalData.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

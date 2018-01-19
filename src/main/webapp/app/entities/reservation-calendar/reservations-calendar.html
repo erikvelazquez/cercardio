@@ -1,0 +1,106 @@
+
+<div>
+    <h2 data-translate="cercardiobitiApp.reservationCalendar.home.title">Calendar</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="reservation-calendar.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="cercardiobitiApp.reservationCalendar.home.createLabel">
+                        Create new Reservation
+                    </span>
+                </button>
+            </div>
+
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'cercardiobitiApp.reservationCalendar.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="cercardiobitiApp.reservationCalendar.title">Title</span></th>
+                    <th><span data-translate="cercardiobitiApp.reservationCalendar.note">Note</span></th>
+                    <th><span data-translate="cercardiobitiApp.reservationCalendar.dateat">Dateat</span></th>
+                    <th><span data-translate="cercardiobitiApp.reservationCalendar.timeat">Timeat</span></th>
+                    <th><span data-translate="cercardiobitiApp.reservationCalendar.createdat">Createdat</span></th>
+                    <th><span data-translate="cercardiobitiApp.reservationCalendar.symtoms">Symtoms</span></th>
+                    <th><span data-translate="cercardiobitiApp.reservationCalendar.medicaments">Medicaments</span></th>
+                    <th><span data-translate="cercardiobitiApp.reservationCalendar.cost">Cost</span></th>
+                    <th><span data-translate="cercardiobitiApp.reservationCalendar.pacient">Pacient</span></th>
+                    <th><span data-translate="cercardiobitiApp.reservationCalendar.medic">Medic</span></th>
+                    <th><span data-translate="cercardiobitiApp.reservationCalendar.status">Status</span></th>
+                    <th><span data-translate="cercardiobitiApp.reservationCalendar.payment">Payment</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="reservation in vm.reservations track by reservation.id">
+                    <td><a ui-sref="reservation-detail({id:reservation.id})">{{reservation.id}}</a></td>
+                    <td>{{reservation.title}}</td>
+                    <td>{{reservation.note}}</td>
+                        <td>{{reservation.dateat | date:'mediumDate'}}</td>
+                    <td>{{reservation.timeat | date:'medium'}}</td>
+                    <td>{{reservation.createdat | date:'medium'}}</td>
+                    <td>{{reservation.symtoms}}</td>
+                    <td>{{reservation.medicaments}}</td>
+                    <td>{{reservation.cost}}</td>
+                    <td>
+                        <a ui-sref="pacient-detail({id:reservation.pacient.id})">{{reservation.pacient.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="medic-detail({id:reservation.medic.id})">{{reservation.medic.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="status-detail({id:reservation.status.id})">{{reservation.status.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="payment-detail({id:reservation.payment.id})">{{reservation.payment.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="reservation-detail({id:reservation.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="reservation-calendar.edit({id:reservation.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="reservation.delete({id:reservation.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

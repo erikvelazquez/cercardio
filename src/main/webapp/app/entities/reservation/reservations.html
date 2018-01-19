@@ -1,0 +1,118 @@
+<div>
+    <h2 data-translate="cercardiobitiApp.reservation.home.title">Reservations</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-success" ui-sref="reservation.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="cercardiobitiApp.reservation.home.createLabel">
+                        Create new Reservation
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'cercardiobitiApp.reservation.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="cercardiobitiApp.reservation.id">id</span></th> 
+                    <th><span data-translate="cercardiobitiApp.reservation.title">Title</span></th>
+                    <th><span data-translate="cercardiobitiApp.reservation.pacient">Pacient</span></th>
+                    <th><span data-translate="cercardiobitiApp.reservation.medic">Medic</span></th>
+                    <th><span data-translate="cercardiobitiApp.reservation.dateat">Dateat</span></th> 
+                    <th><span data-translate="cercardiobitiApp.reservation.status">Status</span></th>
+                    <th><span data-translate="cercardiobitiApp.reservation.payment">Payment</span></th>
+                    <!-- <th><span >Appreciation</span></th> -->
+                    <!-- <th><span >PacientmedicalAnalysis</span></th> -->
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="reservation in vm.reservations track by reservation.id">
+                    <td>{{reservation.id}}</td>
+                    <td>{{reservation.title}}</td>
+                    <td><span>{{reservation.pacient.userBD.name +' '+reservation.pacient.userBD.lastname}}</span></td>
+                    <td><span>{{reservation.medic.userBD.name +' '+reservation.medic.userBD.lastname}}</span></td>
+                    <td>{{reservation.dateat | date:'mediumDate'}}</td>
+                    <td><span>{{reservation.status.name}}</span></td>
+                    <td><span>{{reservation.payment.name}}</span></td>
+                    <!-- <td><span>{{!reservation.appreciation.id  + ' ' + reservation.appreciation.id }}</span></td> -->
+                    <!-- <td><span>{{!reservation.pacientMedicalAnalysis.id + ' ' + reservation.pacientMedicalAnalysis.id}}</span></td> -->
+                    
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="reservation-detail({id:reservation.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="reservation.edit({id:reservation.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+
+                            <button type="submit"
+                                    ui-sref="appreciation.agregar_valoraracion({id:reservation.id})"
+                                    class="btn btn-success btn-sm" ng-show="!reservation.appreciation.id">
+                                <span class="glyphicon glyphicon-plus"></span>
+                                <span class="hidden-sm-down" >Valoraración</span>
+                            </button>
+
+                            <button type="submit"
+                                    ui-sref="appreciation.editar_valoracion({id:reservation.id})"
+                                    class="btn btn-primary btn-sm" ng-show="reservation.appreciation.id">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down">Valoraración</span>
+                            </button>
+
+                             <button type="submit"
+                                    ui-sref="reservation.agregar_analisis({id:reservation.id})"
+                                    class="btn btn-success btn-sm" ng-show="!reservation.pacientMedicalAnalysis.id">
+                                <span class="glyphicon glyphicon-plus"></span>
+                                <span class="hidden-sm-down" >Análisis</span>
+                            </button>
+
+                            <button type="submit"
+                                    ui-sref="reservation.editar_analisis({id:reservation.id})"
+                                    class="btn btn-primary btn-sm" ng-show="reservation.pacientMedicalAnalysis.id">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" >Análisis</span>
+                            </button>
+                            
+                            <button type="submit"
+                                    ui-sref="reservation.delete({id:reservation.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button> 
+                           
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

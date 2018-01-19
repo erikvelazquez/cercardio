@@ -1,0 +1,99 @@
+
+<div>
+    <h2><span data-translate="cercardiobitiApp.appreciation.detail.title">Appreciation</span> {{vm.appreciation.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="cercardiobitiApp.appreciation.height">Height</span></dt>
+        <dd>
+            <span>{{vm.appreciation.height}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.appreciation.weight">Weight</span></dt>
+        <dd>
+            <span>{{vm.appreciation.weight}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.appreciation.size">Size</span></dt>
+        <dd>
+            <span>{{vm.appreciation.size}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.appreciation.bmi">Bmi</span></dt>
+        <dd>
+            <span>{{vm.appreciation.bmi}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.appreciation.temperature">Temperature</span></dt>
+        <dd>
+            <span>{{vm.appreciation.temperature}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.appreciation.saturation">Saturation</span></dt>
+        <dd>
+            <span>{{vm.appreciation.saturation}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.appreciation.bloodpressuere">Bloodpressuere</span></dt>
+        <dd>
+            <span>{{vm.appreciation.bloodpressuere}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.appreciation.heartrate">Heartrate</span></dt>
+        <dd>
+            <span>{{vm.appreciation.heartrate}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.appreciation.breathingfrequency">Breathingfrequency</span></dt>
+        <dd>
+            <span>{{vm.appreciation.breathingfrequency}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.appreciation.others">Others</span></dt>
+        <dd>
+            <span>{{vm.appreciation.others}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.appreciation.head">Head</span></dt>
+        <dd>
+            <span>{{vm.appreciation.head}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.appreciation.neck">Neck</span></dt>
+        <dd>
+            <span>{{vm.appreciation.neck}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.appreciation.chest">Chest</span></dt>
+        <dd>
+            <span>{{vm.appreciation.chest}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.appreciation.abdomen">Abdomen</span></dt>
+        <dd>
+            <span>{{vm.appreciation.abdomen}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.appreciation.bodypart">Bodypart</span></dt>
+        <dd>
+            <span>{{vm.appreciation.bodypart}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.appreciation.genitals">Genitals</span></dt>
+        <dd>
+            <span>{{vm.appreciation.genitals}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.appreciation.othersphysical">Othersphysical</span></dt>
+        <dd>
+            <span>{{vm.appreciation.othersphysical}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.appreciation.createdat">Createdat</span></dt>
+        <dd>
+            <span>{{vm.appreciation.createdat | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.appreciation.pacient">Pacient</span></dt>
+        <dd>
+            <a ui-sref="pacient-detail({id:vm.appreciation.pacient.id})">{{vm.appreciation.pacient.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.appreciation.medic">Medic</span></dt>
+        <dd>
+            <a ui-sref="medic-detail({id:vm.appreciation.medic.id})">{{vm.appreciation.medic.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="appreciation-detail.edit({id:vm.appreciation.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

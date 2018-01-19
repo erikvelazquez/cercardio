@@ -1,0 +1,76 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "tipoinsumo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dentrofueracuadro",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nogrupoterapeutico",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "nombregrupoterapeutico",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nivelatencion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "clavecodigo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "subclavecodigo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nombregenerico",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "formafarmaceutica",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "concentracion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "presentacion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "principalindicacion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "demasindicaciones",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tipoactualizacion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "noactualizacion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171228232421",
+    "entityTableName": "medicine",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

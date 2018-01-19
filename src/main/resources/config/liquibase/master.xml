@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223227_added_entity_AcademicDegree.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223228_added_entity_Appreciation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223229_added_entity_Background.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223230_added_entity_BloodGroup.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223231_added_entity_Category.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223232_added_entity_CivilStatus.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223233_added_entity_Disabilities.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223234_added_entity_DrugAddiction.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223235_added_entity_EthnicGroup.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223236_added_entity_Gender.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223237_added_entity_LivingPlace.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223238_added_entity_Medic.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223239_added_entity_MedicalAnalysis.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223240_added_entity_MedicNurse.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223241_added_entity_MedicPacient.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223242_added_entity_Nurse.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223243_added_entity_Occupation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223244_added_entity_Pacient.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223245_added_entity_PacientApnp.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223246_added_entity_PacientApp.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223247_added_entity_PacientContact.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223248_added_entity_PacientGenerals.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223249_added_entity_PacientLaboratoy.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223250_added_entity_PacientMedicalData.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223251_added_entity_Payment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223252_added_entity_PrivateHealthInsurance.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223253_added_entity_Religion.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223254_added_entity_Reservation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223255_added_entity_SocialHealthInsurance.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223256_added_entity_SocioeconomicLevel.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223257_added_entity_Status.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223258_added_entity_Time.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223259_added_entity_UserBD.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171221153812_added_entity_Company.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171228232200_added_entity_Company.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171228232342_added_entity_Diagnosis.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171228232418_added_entity_Domicile.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171228232419_added_entity_Indigenous_Languages.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171228232420_added_entity_Medical_Procedures.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171228232421_added_entity_Medicine.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171228232422_added_entity_Medic_Information.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171228232423_added_entity_Programs.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171228232424_added_entity_Type_Program.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171228232425_added_entity_Way_of_Administration.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180108183120_added_entity_PacientMedicalAnalysis.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180109001015_added_entity_Times.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180109234948_added_entity_Timers.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20171127223228_added_entity_constraints_Appreciation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223238_added_entity_constraints_Medic.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223239_added_entity_constraints_MedicalAnalysis.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223240_added_entity_constraints_MedicNurse.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223241_added_entity_constraints_MedicPacient.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223242_added_entity_constraints_Nurse.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223244_added_entity_constraints_Pacient.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223245_added_entity_constraints_PacientApnp.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223246_added_entity_constraints_PacientApp.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223247_added_entity_constraints_PacientContact.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223248_added_entity_constraints_PacientGenerals.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223249_added_entity_constraints_PacientLaboratoy.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223250_added_entity_constraints_PacientMedicalData.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223254_added_entity_constraints_Reservation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171127223236_added_entity_constraints_Gender.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171228232422_added_entity_constraints_Medic_Information.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171228232423_added_entity_constraints_Programs.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171228232424_added_entity_constraints_Type_Program.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180108183120_added_entity_constraints_PacientMedicalAnalysis.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+</databaseChangeLog>

@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "timers" : {
+            "home": {
+                "title": "Timers",
+                "createLabel": "Créer un nouveau Timers",
+                "createOrEditLabel": "Créer ou éditer un Timers",
+                "search": "Recherche pour Timers"
+            },
+            "created": "Un nouveau Timers a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Timers avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Timers avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Timers {{ id }} ?"
+            },
+            "detail": {
+                "title": "Timers"
+            },
+            "description": "Description",
+            "isactive": "Isactive"
+        }
+    }
+}

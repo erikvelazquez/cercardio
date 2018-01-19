@@ -1,0 +1,153 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myMedicLabel" data-translate="cercardiobitiApp.medic.home.createOrEditLabel">Create or edit a Medic</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.medic.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.medic.id" readonly />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.medic.userBD" for="field_userBD">User BD</label>
+            <select class="form-control" id="field_userBD" name="userBD" ng-model="vm.medic.userBD" ng-options="userBD as userBD.name + ' ' + userBD.lastname for userBD in vm.userbds | orderBy:'id' track by userBD.id">
+                <option value=""></option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medic.colony" for="field_colony">Colony</label>
+            <input type="text" class="form-control" name="colony" id="field_colony"
+                    ng-model="vm.medic.colony"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medic.street" for="field_street">Street</label>
+            <input type="text" class="form-control" name="street" id="field_street"
+                    ng-model="vm.medic.street"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medic.streetnumber" for="field_streetnumber">Streetnumber</label>
+            <input type="text" class="form-control" name="streetnumber" id="field_streetnumber"
+                    ng-model="vm.medic.streetnumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medic.suitnumber" for="field_suitnumber">Suitnumber</label>
+            <input type="text" class="form-control" name="suitnumber" id="field_suitnumber"
+                    ng-model="vm.medic.suitnumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medic.phonenumber1" for="field_phonenumber1">Phonenumber 1</label>
+            <input type="number" class="form-control" name="phonenumber1" id="field_phonenumber1"
+                    ng-model="vm.medic.phonenumber1"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medic.phonenumber2" for="field_phonenumber2">Phonenumber 2</label>
+            <input type="number" class="form-control" name="phonenumber2" id="field_phonenumber2"
+                    ng-model="vm.medic.phonenumber2"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medic.email1" for="field_email1">Email 1</label>
+            <input type="text" class="form-control" name="email1" id="field_email1"
+                    ng-model="vm.medic.email1"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medic.email2" for="field_email2">Email 2</label>
+            <input type="text" class="form-control" name="email2" id="field_email2"
+                    ng-model="vm.medic.email2"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medic.facebook" for="field_facebook">Facebook</label>
+            <input type="text" class="form-control" name="facebook" id="field_facebook"
+                    ng-model="vm.medic.facebook"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medic.twitter" for="field_twitter">Twitter</label>
+            <input type="text" class="form-control" name="twitter" id="field_twitter"
+                    ng-model="vm.medic.twitter"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medic.instagram" for="field_instagram">Instagram</label>
+            <input type="text" class="form-control" name="instagram" id="field_instagram"
+                    ng-model="vm.medic.instagram"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medic.snapchat" for="field_snapchat">Snapchat</label>
+            <input type="text" class="form-control" name="snapchat" id="field_snapchat"
+                    ng-model="vm.medic.snapchat"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medic.linkedin" for="field_linkedin">Linkedin</label>
+            <input type="text" class="form-control" name="linkedin" id="field_linkedin"
+                    ng-model="vm.medic.linkedin"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medic.vine" for="field_vine">Vine</label>
+            <input type="text" class="form-control" name="vine" id="field_vine"
+                    ng-model="vm.medic.vine"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medic.createdat" for="field_createdat">Createdat</label>
+                <div class="input-group">
+                    <input id="field_createdat" type="text" class="form-control" name="createdat" datetime-picker="{{dateformat}}" ng-model="vm.medic.createdat" is-open="vm.datePickerOpenStatus.createdat"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createdat')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+       
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.medic.company" for="field_company">Company</label>
+            <select class="form-control" id="field_company" name="company" ng-model="vm.medic.company" ng-options="company as company.id for company in vm.companies track by company.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.medic.ethnicGroup" for="field_ethnicGroup">Ethnic Group</label>
+            <select class="form-control" id="field_ethnicGroup" name="ethnicGroup" ng-model="vm.medic.ethnicGroup" ng-options="ethnicGroup as ethnicGroup.id for ethnicGroup in vm.ethnicgroups track by ethnicGroup.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.medic.gender" for="field_gender">Gender</label>
+            <select class="form-control" id="field_gender" name="gender" ng-model="vm.medic.gender" ng-options="gender as gender.id for gender in vm.genders track by gender.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.medic.category" for="field_category">Category</label>
+            <select class="form-control" id="field_category" name="category" ng-model="vm.medic.category" ng-options="category as category.id for category in vm.categories track by category.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

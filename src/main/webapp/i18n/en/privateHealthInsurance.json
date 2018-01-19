@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "privateHealthInsurance" : {
+            "home": {
+                "title": "Private Health Insurances",
+                "createLabel": "Create a new Private Health Insurance",
+                "createOrEditLabel": "Create or edit a Private Health Insurance",
+                "search": "Search for Private Health Insurance"
+            },
+            "created": "A new Private Health Insurance is created with identifier {{ param }}",
+            "updated": "A Private Health Insurance is updated with identifier {{ param }}",
+            "deleted": "A Private Health Insurance is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Private Health Insurance {{ id }}?"
+            },
+            "detail": {
+                "title": "Private Health Insurance"
+            },
+            "name": "Name",
+            "isactive": "Isactive"
+        }
+    }
+}

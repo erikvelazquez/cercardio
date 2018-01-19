@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "socialHealthInsurance" : {
+            "home": {
+                "title": "Seguridad Social Pública",
+                "createLabel": "Crear nuevo Seguridad Social Pública",
+                "createOrEditLabel": "Crear o editar Seguridad Social Pública",
+                "search": "Buscar por Seguridad Social Pública"
+            },
+            "created": "Un nuevo Seguridad Social Pública ha sido creado con el identificador {{ param }}",
+            "updated": "Un Seguridad Social Pública ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Seguridad Social Pública ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Seguridad Social Pública {{ id }}?"
+            },
+            "detail": {
+                "title": "Seguridad Social Pública"
+            },
+            "name": "Nombre",
+            "isactive": "Activo"
+        }
+    }
+}

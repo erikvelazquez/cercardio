@@ -1,0 +1,87 @@
+<div>
+    <h2 data-translate="cercardiobitiApp.userBD.home.title">User BDS</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="user-bd.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="cercardiobitiApp.userBD.home.createLabel">
+                        Create new User BD
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'cercardiobitiApp.userBD.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="cercardiobitiApp.userBD.username">Username</span></th>
+                    <th><span data-translate="cercardiobitiApp.userBD.name">Name</span></th>
+                    <th><span data-translate="cercardiobitiApp.userBD.lastname">Lastname</span></th>
+                    <th><span data-translate="cercardiobitiApp.userBD.email">Email</span></th>
+                    <th><span data-translate="cercardiobitiApp.userBD.password">Password</span></th>
+                    <th><span data-translate="cercardiobitiApp.userBD.imagen">Imagen</span></th>
+                    <th><span data-translate="cercardiobitiApp.userBD.isactive">Isactive</span></th>
+                    <th><span data-translate="cercardiobitiApp.userBD.createdat">Createdat</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="userBD in vm.userBDS track by userBD.id">
+                    <td><a ui-sref="user-bd-detail({id:userBD.id})">{{userBD.id}}</a></td>
+                    <td>{{userBD.username}}</td>
+                    <td>{{userBD.name}}</td>
+                    <td>{{userBD.lastname}}</td>
+                    <td>{{userBD.email}}</td>
+                    <td>{{userBD.password}}</td>
+                    <td>{{userBD.imagen}}</td>
+                    <td>{{userBD.isactive}}</td>
+                    <td>{{userBD.createdat | date:'medium'}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="user-bd-detail({id:userBD.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="user-bd.edit({id:userBD.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="user-bd.delete({id:userBD.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

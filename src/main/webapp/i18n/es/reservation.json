@@ -1,0 +1,103 @@
+{
+    "cercardiobitiApp": {
+        "reservation" : {
+            "home": {
+                "title": "Citas",
+                "createLabel": "Nueva",
+                "createOrEditLabel": "Editar",
+                "search": "Buscar por Cita"
+            },
+            "created": "Un nueva Cita ha sido creada con el identificador {{ param }}",
+            "updated": "Un Cita ha sido actualizada con el identificador {{ param }}",
+            "deleted": "Un Cita ha sido eliminada con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Cita {{ id }}?"
+            },
+            "detail": {
+                "title": "Cita"
+            },
+            "id": "id",
+            "title": "Asunto",
+            "note": "Nota",
+            "dateat": "Fecha",
+            "timers": "Hora",
+            "createdat": "Fecha Creación",
+            "symtoms": "Sintomas",
+            "medicaments": "Medicamentos Anteriores a la cita",
+            "cost": "Costo",
+            "pacient": "Paciente",
+            "medic": "Medico",
+            "status": "Estado",
+            "payment": "Pago",
+            "appreciation": "Valoración",
+            "pacientMedicalAnalysis": "Analisis Medico del Paciente"
+        },
+        "appreciation" : {
+            "home": {
+                "title": "Valoraciones",
+                "createLabel": "Crear nueva valoración",
+                "createOrEditLabel": "Crear o editar valoración",
+                "search": "Buscar por valoración"
+            },
+            "created": "Un nuevo valoración ha sido creado con el identificador {{ param }}",
+            "updated": "Un valoración ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un valoración ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar valoración {{ id }}?"
+            },
+            "detail": {
+                "title": "valoración"
+            },
+            "height": "Altura(cm)*",
+            "weight": "Peso(kg)*",
+            "size": "Talla(cm)*",
+            "bmi": "Indice de Masa Corporal *",
+            "temperature": "Temperatura (°c)*",
+            "saturation": "Saturación O2(%)*",
+            "bloodpressuere": "Presión Sanguinea*",
+            "heartrate": "Frecuencia Cardiaca*",
+            "breathingfrequency": "Frecuencia Respiratoria*",
+            "others": "Otras*",
+            "head": "Cabeza",
+            "neck": "Cuello",
+            "chest": "Torax",
+            "abdomen": "Abdomen",
+            "bodypart": "Cuerpo",
+            "genitals": "Genitales",
+            "othersphysical": "Otros Fisicos",
+            "createdat": "Fecha de Creación",
+            "reservation": "Cita",
+            "pacient": "Paciente",
+            "medic": "Médico"
+        },
+        "pacientMedicalAnalysis" : {
+            "home": {
+                "title": "Análisis Médico del Paciente",
+                "createLabel": "Crear nuevo Análisis Médico",
+                "createOrEditLabel": "Crear o editar Análisis Médico",
+                "search": "Buscar por Análisis Médico"
+            },
+            "created": "Un nuevo Análisis Médico ha sido creado con el identificador {{ param }}",
+            "updated": "Un Análisis Médico ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Análisis Médico ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Análisis Médico {{ id }}?"
+            },
+            "detail": {
+                "title": "Análisis Médico"
+            },
+            "presentation": "Presentación",
+            "subjective": "Subjectiva",
+            "objective": "Objectiva",
+            "analysis": "Análisis",
+            "disease": "Enfermedad",
+            "tests": "Prueba",
+            "treatment": "Tratamiento",
+            "medicine": "Medicina",
+            "daytime": "Fecha y Hora",
+            "medic": "Médico",
+            "pacient": "Paciente",
+            "reservation": "Cita"
+        }
+    }
+}

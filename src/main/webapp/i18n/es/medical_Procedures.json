@@ -1,0 +1,38 @@
+{
+    "cercardiobitiApp": {
+        "medical_Procedures" : {
+            "home": {
+                "title": "Medical Procedures",
+                "createLabel": "Crear nuevo Medical Procedures",
+                "createOrEditLabel": "Crear o editar Medical Procedures",
+                "search": "Search for Medical Procedures"
+            },
+            "created": "Un nuevo Medical Procedures ha sido creado con el identificador {{ param }}",
+            "updated": "Un Medical Procedures ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Medical Procedures ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Medical Procedures {{ id }}?"
+            },
+            "detail": {
+                "title": "Medical Procedures"
+            },
+            "catalogkey": "Catalogkey",
+            "pronombre": "Pronombre",
+            "procveedia": "Procveedia",
+            "proedadia": "Proedadia",
+            "procveedfa": "Procveedfa",
+            "proedadfa": "Proedadfa",
+            "sextype": "Sextype",
+            "pornivela": "Pornivela",
+            "procedimientotype": "Procedimientotype",
+            "proprincipal": "Proprincipal",
+            "procapitulo": "Procapitulo",
+            "proseccion": "Proseccion",
+            "procategoria": "Procategoria",
+            "prosubcateg": "Prosubcateg",
+            "progrupolc": "Progrupolc",
+            "proescauses": "Proescauses",
+            "pronumcauses": "Pronumcauses"
+        }
+    }
+}

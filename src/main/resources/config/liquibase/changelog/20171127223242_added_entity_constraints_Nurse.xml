@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Nurse.
+    -->
+    <changeSet id="20171127223242-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="userbd_id"
+                                 baseTableName="nurse"
+                                 constraintName="fk_nurse_userbd_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_bd"/>
+
+        <addForeignKeyConstraint baseColumnNames="company_id"
+                                 baseTableName="nurse"
+                                 constraintName="fk_nurse_company_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="company"/>
+
+        <addForeignKeyConstraint baseColumnNames="gender_id"
+                                 baseTableName="nurse"
+                                 constraintName="fk_nurse_gender_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="gender"/>
+
+    </changeSet>
+</databaseChangeLog>

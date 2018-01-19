@@ -1,0 +1,37 @@
+{
+    "cercardiobitiApp": {
+        "medicine" : {
+            "home": {
+                "title": "Medicines",
+                "createLabel": "Medicine erstellen",
+                "createOrEditLabel": "Medicine erstellen oder bearbeiten",
+                "search": "Suche nach Medicine"
+            },
+            "created": "Medicine erstellt mit ID {{ param }}",
+            "updated": "Medicine aktualisiert mit ID {{ param }}",
+            "deleted": "Medicine gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Medicine {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Medicine"
+            },
+            "tipoinsumo": "Tipoinsumo",
+            "dentrofueracuadro": "Dentrofueracuadro",
+            "nogrupoterapeutico": "Nogrupoterapeutico",
+            "nombregrupoterapeutico": "Nombregrupoterapeutico",
+            "nivelatencion": "Nivelatencion",
+            "clavecodigo": "Clavecodigo",
+            "subclavecodigo": "Subclavecodigo",
+            "nombregenerico": "Nombregenerico",
+            "formafarmaceutica": "Formafarmaceutica",
+            "concentracion": "Concentracion",
+            "presentacion": "Presentacion",
+            "principalindicacion": "Principalindicacion",
+            "demasindicaciones": "Demasindicaciones",
+            "tipoactualizacion": "Tipoactualizacion",
+            "noactualizacion": "Noactualizacion",
+            "descripcion": "Descripcion"
+        }
+    }
+}

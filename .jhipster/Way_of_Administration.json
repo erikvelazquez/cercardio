@@ -1,0 +1,20 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "wayofadministration",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isactive",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20171228232425",
+    "entityTableName": "way_of_administration",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

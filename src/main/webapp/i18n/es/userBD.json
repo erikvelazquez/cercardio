@@ -1,0 +1,30 @@
+{
+    "cercardiobitiApp": {
+        "userBD" : {
+            "home": {
+                "title": "Usuarios",
+                "createLabel": "Crear nuevo usuario",
+                "createOrEditLabel": "Crear o editar Usuario",
+                "search": "Buscar por Usuario"
+            },
+            "created": "Un nuevo Usuario ha sido creado con el identificador {{ param }}",
+            "updated": "Un Usuario ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Usuario ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Usuario {{ id }}?"
+            },
+            "detail": {
+                "title": "Usuario"
+            },
+            "username": "Login",
+            "name": "Nombre",
+            "lastname": "Apellidos",
+            "email": "Email",
+            "password": "Password",
+            "imagen": "Imagen",
+            "isactive": "Activo",
+            "isadmin": "Administrador",
+            "createdat": "Fecha de Creación"
+        }
+    }
+}

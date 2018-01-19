@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "timers" : {
+            "home": {
+                "title": "Timers",
+                "createLabel": "Timers erstellen",
+                "createOrEditLabel": "Timers erstellen oder bearbeiten",
+                "search": "Suche nach Timers"
+            },
+            "created": "Timers erstellt mit ID {{ param }}",
+            "updated": "Timers aktualisiert mit ID {{ param }}",
+            "deleted": "Timers gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Timers {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Timers"
+            },
+            "description": "Description",
+            "isactive": "Isactive"
+        }
+    }
+}

@@ -1,0 +1,103 @@
+<div>
+    <h2 data-translate="cercardiobitiApp.medicine.home.title">Medicines</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="medicine.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="cercardiobitiApp.medicine.home.createLabel">
+                        Create new Medicine
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'cercardiobitiApp.medicine.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicine.tipoinsumo">Tipoinsumo</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicine.dentrofueracuadro">Dentrofueracuadro</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicine.nogrupoterapeutico">Nogrupoterapeutico</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicine.nombregrupoterapeutico">Nombregrupoterapeutico</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicine.nivelatencion">Nivelatencion</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicine.clavecodigo">Clavecodigo</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicine.subclavecodigo">Subclavecodigo</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicine.nombregenerico">Nombregenerico</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicine.formafarmaceutica">Formafarmaceutica</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicine.concentracion">Concentracion</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicine.presentacion">Presentacion</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicine.principalindicacion">Principalindicacion</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicine.demasindicaciones">Demasindicaciones</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicine.tipoactualizacion">Tipoactualizacion</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicine.noactualizacion">Noactualizacion</span></th>
+                    <th><span data-translate="cercardiobitiApp.medicine.descripcion">Descripcion</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="medicine in vm.medicines track by medicine.id">
+                    <td><a ui-sref="medicine-detail({id:medicine.id})">{{medicine.id}}</a></td>
+                    <td>{{medicine.tipoinsumo}}</td>
+                    <td>{{medicine.dentrofueracuadro}}</td>
+                    <td>{{medicine.nogrupoterapeutico}}</td>
+                    <td>{{medicine.nombregrupoterapeutico}}</td>
+                    <td>{{medicine.nivelatencion}}</td>
+                    <td>{{medicine.clavecodigo}}</td>
+                    <td>{{medicine.subclavecodigo}}</td>
+                    <td>{{medicine.nombregenerico}}</td>
+                    <td>{{medicine.formafarmaceutica}}</td>
+                    <td>{{medicine.concentracion}}</td>
+                    <td>{{medicine.presentacion}}</td>
+                    <td>{{medicine.principalindicacion}}</td>
+                    <td>{{medicine.demasindicaciones}}</td>
+                    <td>{{medicine.tipoactualizacion}}</td>
+                    <td>{{medicine.noactualizacion}}</td>
+                    <td>{{medicine.descripcion}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="medicine-detail({id:medicine.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="medicine.edit({id:medicine.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="medicine.delete({id:medicine.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+{
+    "cercardiobitiApp": {
+        "pacientLaboratoy" : {
+            "home": {
+                "title": "Pacient Laboratoys",
+                "createLabel": "Create a new Pacient Laboratoy",
+                "createOrEditLabel": "Create or edit a Pacient Laboratoy",
+                "search": "Search for Pacient Laboratoy"
+            },
+            "created": "A new Pacient Laboratoy is created with identifier {{ param }}",
+            "updated": "A Pacient Laboratoy is updated with identifier {{ param }}",
+            "deleted": "A Pacient Laboratoy is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Pacient Laboratoy {{ id }}?"
+            },
+            "detail": {
+                "title": "Pacient Laboratoy"
+            },
+            "laboratory": "Laboratory",
+            "number": "Number",
+            "dateofelaboration": "Dateofelaboration",
+            "pacient": "Pacient"
+        }
+    }
+}

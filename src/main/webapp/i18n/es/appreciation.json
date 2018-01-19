@@ -1,0 +1,43 @@
+{
+    "cercardiobitiApp": {
+        "appreciation" : {
+            "home": {
+                "title": "Valoraciones",
+                "createLabel": "Crear nueva Valoración",
+                "createOrEditLabel": "Crear o editar Valoración",
+                "editLabel": "Editar Valoración",
+                "search": "Buscar por Valoración"
+            },
+            "created": "Un nuevo Valoración ha sido creado con el identificador {{ param }}",
+            "updated": "Un Valoración ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Valoración ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Valoración {{ id }}?"
+            },
+            "detail": {
+                "title": "Valoración"
+            },
+            "height": "Altura(cm)*",
+            "weight": "Peso(kg)*",
+            "size": "Talla(cm)*",
+            "bmi": "Indice de Masa Corporal *",
+            "temperature": "Temperatura (°c)*",
+            "saturation": "Saturación O2(%)*",
+            "bloodpressuere": "Presión Sanguinea*",
+            "heartrate": "Frecuencia Cardiaca*",
+            "breathingfrequency": "Frecuencia Respiratoria*",
+            "others": "Otras*",
+            "head": "Cabeza",
+            "neck": "Cuello",
+            "chest": "Torax",
+            "abdomen": "Abdomen",
+            "bodypart": "Cuerpo",
+            "genitals": "Genitales",
+            "othersphysical": "Otros Fisicos",
+            "createdat": "Fecha de Creación",
+            "reservation": "Cita",
+            "pacient": "Paciente",
+            "medic": "Médico"
+        }
+    }
+}

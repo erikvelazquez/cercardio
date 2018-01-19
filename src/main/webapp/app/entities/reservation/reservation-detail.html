@@ -1,0 +1,75 @@
+
+<div>
+    <h2><span data-translate="cercardiobitiApp.reservation.detail.title">Reservation</span> {{vm.reservation.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="cercardiobitiApp.reservation.title">Title</span></dt>
+        <dd>
+            <span>{{vm.reservation.title}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.reservation.note">Note</span></dt>
+        <dd>
+            <span>{{vm.reservation.note}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.reservation.dateat">Dateat</span></dt>
+        <dd>
+            <span>{{vm.reservation.dateat | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.reservation.createdat">Createdat</span></dt>
+        <dd>
+            <span>{{vm.reservation.createdat | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.reservation.symtoms">Symtoms</span></dt>
+        <dd>
+            <span>{{vm.reservation.symtoms}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.reservation.medicaments">Medicaments</span></dt>
+        <dd>
+            <span>{{vm.reservation.medicaments}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.reservation.cost">Cost</span></dt>
+        <dd>
+            <span>{{vm.reservation.cost}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.reservation.pacient">Pacient</span></dt>
+        <dd>
+            <a ui-sref="pacient-detail({id:vm.reservation.pacient.id})">{{vm.reservation.pacient.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.reservation.medic">Medic</span></dt>
+        <dd>
+            <a ui-sref="medic-detail({id:vm.reservation.medic.id})">{{vm.reservation.medic.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.reservation.status">Status</span></dt>
+        <dd>
+            <a ui-sref="status-detail({id:vm.reservation.status.id})">{{vm.reservation.status.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.reservation.payment">Payment</span></dt>
+        <dd>
+            <a ui-sref="payment-detail({id:vm.reservation.payment.id})">{{vm.reservation.payment.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.reservation.timers">Timers</span></dt>
+        <dd>
+            <a ui-sref="timers-detail({id:vm.reservation.timers.id})">{{vm.reservation.timers.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.reservation.appreciation">Appreciation</span></dt>
+        <dd>
+            <a ui-sref="appreciation-detail({id:vm.reservation.appreciation.id})">{{vm.reservation.appreciation.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.reservation.pacientMedicalAnalysis">Pacient Medical Analysis</span></dt>
+        <dd>
+            <a ui-sref="pacient-medical-analysis-detail({id:vm.reservation.pacientMedicalAnalysis.id})">{{vm.reservation.pacientMedicalAnalysis.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="reservation-detail.edit({id:vm.reservation.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

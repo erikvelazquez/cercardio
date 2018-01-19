@@ -1,0 +1,41 @@
+{
+    "cercardiobitiApp": {
+        "appreciation" : {
+            "home": {
+                "title": "Appreciations",
+                "createLabel": "Create a new Appreciation",
+                "createOrEditLabel": "Create or edit a Appreciation",
+                "search": "Search for Appreciation"
+            },
+            "created": "A new Appreciation is created with identifier {{ param }}",
+            "updated": "A Appreciation is updated with identifier {{ param }}",
+            "deleted": "A Appreciation is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Appreciation {{ id }}?"
+            },
+            "detail": {
+                "title": "Appreciation"
+            },
+            "height": "Height",
+            "weight": "Weight",
+            "size": "Size",
+            "bmi": "Bmi",
+            "temperature": "Temperature",
+            "saturation": "Saturation",
+            "bloodpressuere": "Bloodpressuere",
+            "heartrate": "Heartrate",
+            "breathingfrequency": "Breathingfrequency",
+            "others": "Others",
+            "head": "Head",
+            "neck": "Neck",
+            "chest": "Chest",
+            "abdomen": "Abdomen",
+            "bodypart": "Bodypart",
+            "genitals": "Genitals",
+            "othersphysical": "Othersphysical",
+            "createdat": "Createdat",
+            "pacient": "Pacient",
+            "medic": "Medic"
+        }
+    }
+}

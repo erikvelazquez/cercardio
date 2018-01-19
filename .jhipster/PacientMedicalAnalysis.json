@@ -1,0 +1,65 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "medic",
+            "otherEntityName": "medic",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "pacientMedicalAnalysis"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "pacient",
+            "otherEntityName": "pacient",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "pacientMedicalAnalysis"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "presentation",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "subjective",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "objective",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "analysis",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "disease",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tests",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "treatment",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "medicine",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "daytime",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20180108183120",
+    "entityTableName": "pacient_medical_analysis",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

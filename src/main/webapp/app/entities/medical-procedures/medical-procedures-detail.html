@@ -1,0 +1,87 @@
+
+<div>
+    <h2><span data-translate="cercardiobitiApp.medical_Procedures.detail.title">Medical Procedures</span> {{vm.medical_Procedures.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="cercardiobitiApp.medical_Procedures.catalogkey">Catalogkey</span></dt>
+        <dd>
+            <span>{{vm.medical_Procedures.catalogkey}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medical_Procedures.pronombre">Pronombre</span></dt>
+        <dd>
+            <span>{{vm.medical_Procedures.pronombre}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medical_Procedures.procveedia">Procveedia</span></dt>
+        <dd>
+            <span>{{vm.medical_Procedures.procveedia}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medical_Procedures.proedadia">Proedadia</span></dt>
+        <dd>
+            <span>{{vm.medical_Procedures.proedadia}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medical_Procedures.procveedfa">Procveedfa</span></dt>
+        <dd>
+            <span>{{vm.medical_Procedures.procveedfa}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medical_Procedures.proedadfa">Proedadfa</span></dt>
+        <dd>
+            <span>{{vm.medical_Procedures.proedadfa}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medical_Procedures.sextype">Sextype</span></dt>
+        <dd>
+            <span>{{vm.medical_Procedures.sextype}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medical_Procedures.pornivela">Pornivela</span></dt>
+        <dd>
+            <span>{{vm.medical_Procedures.pornivela}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medical_Procedures.procedimientotype">Procedimientotype</span></dt>
+        <dd>
+            <span>{{vm.medical_Procedures.procedimientotype}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medical_Procedures.proprincipal">Proprincipal</span></dt>
+        <dd>
+            <span>{{vm.medical_Procedures.proprincipal}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medical_Procedures.procapitulo">Procapitulo</span></dt>
+        <dd>
+            <span>{{vm.medical_Procedures.procapitulo}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medical_Procedures.proseccion">Proseccion</span></dt>
+        <dd>
+            <span>{{vm.medical_Procedures.proseccion}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medical_Procedures.procategoria">Procategoria</span></dt>
+        <dd>
+            <span>{{vm.medical_Procedures.procategoria}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medical_Procedures.prosubcateg">Prosubcateg</span></dt>
+        <dd>
+            <span>{{vm.medical_Procedures.prosubcateg}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medical_Procedures.progrupolc">Progrupolc</span></dt>
+        <dd>
+            <span>{{vm.medical_Procedures.progrupolc}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medical_Procedures.proescauses">Proescauses</span></dt>
+        <dd>
+            <span>{{vm.medical_Procedures.proescauses}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medical_Procedures.pronumcauses">Pronumcauses</span></dt>
+        <dd>
+            <span>{{vm.medical_Procedures.pronumcauses}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="medical-procedures-detail.edit({id:vm.medical_Procedures.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

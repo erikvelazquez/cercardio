@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span data-translate="cercardiobitiApp.programs.detail.title">Programs</span> {{vm.programs.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="cercardiobitiApp.programs.description">Description</span></dt>
+        <dd>
+            <span>{{vm.programs.description}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.programs.url">Url</span></dt>
+        <dd>
+            <span>{{vm.programs.url}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.programs.icon">Icon</span></dt>
+        <dd>
+            <span>{{vm.programs.icon}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.programs.programparentid">Programparentid</span></dt>
+        <dd>
+            <span>{{vm.programs.programparentid}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.programs.byorder">Byorder</span></dt>
+        <dd>
+            <span>{{vm.programs.byorder}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.programs.isactive">Isactive</span></dt>
+        <dd>
+            <span>{{vm.programs.isactive}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="programs-detail.edit({id:vm.programs.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

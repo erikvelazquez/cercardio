@@ -1,0 +1,80 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "catalogkey",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pronombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "procveedia",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "proedadia",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "procveedfa",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "proedadfa",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sextype",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "pornivela",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "procedimientotype",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "proprincipal",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "procapitulo",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "proseccion",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "procategoria",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "prosubcateg",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "progrupolc",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "proescauses",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "pronumcauses",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20171228232420",
+    "entityTableName": "medical_procedures",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

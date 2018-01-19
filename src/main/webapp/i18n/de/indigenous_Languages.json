@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "indigenous_Languages" : {
+            "home": {
+                "title": "Indigenous Languages",
+                "createLabel": "Indigenous Languages erstellen",
+                "createOrEditLabel": "Indigenous Languages erstellen oder bearbeiten",
+                "search": "Suche nach Indigenous Languages"
+            },
+            "created": "Indigenous Languages erstellt mit ID {{ param }}",
+            "updated": "Indigenous Languages aktualisiert mit ID {{ param }}",
+            "deleted": "Indigenous Languages gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Indigenous Languages {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Indigenous Languages"
+            },
+            "catalogkey": "Catalogkey",
+            "indigenouslanguage": "Indigenouslanguage"
+        }
+    }
+}

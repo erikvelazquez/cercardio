@@ -1,0 +1,24 @@
+{
+    "cercardiobitiApp": {
+        "medicNurse" : {
+            "home": {
+                "title": "Medic Nurses",
+                "createLabel": "Crear nuevo Medic Nurse",
+                "createOrEditLabel": "Crear o editar Medic Nurse",
+                "search": "Search for Medic Nurse"
+            },
+            "created": "Un nuevo Medic Nurse ha sido creado con el identificador {{ param }}",
+            "updated": "Un Medic Nurse ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Medic Nurse ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Medic Nurse {{ id }}?"
+            },
+            "detail": {
+                "title": "Medic Nurse"
+            },
+            "idnurse": "Idnurse",
+            "medic": "Medic",
+            "nurse": "Nurse"
+        }
+    }
+}

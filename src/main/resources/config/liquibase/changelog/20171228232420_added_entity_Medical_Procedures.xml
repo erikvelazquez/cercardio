@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity Medical_Procedures.
+    -->
+    <changeSet id="20171228232420-1" author="jhipster">
+        <createTable tableName="medical_procedures">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="catalogkey" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="pronombre" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="procveedia" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="proedadia" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="procveedfa" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="proedadfa" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="sextype" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="pornivela" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="procedimientotype" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="proprincipal" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="procapitulo" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="proseccion" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="procategoria" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="prosubcateg" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="progrupolc" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="proescauses" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="pronumcauses" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+</databaseChangeLog>

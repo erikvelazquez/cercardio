@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity PacientMedicalData.
+    -->
+    <changeSet id="20171127223250-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="pacient_id"
+                                 baseTableName="pacient_medical_data"
+                                 constraintName="fk_pacient_medical_data_pacient_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="pacient"/>
+
+        <addForeignKeyConstraint baseColumnNames="blood_group_id"
+                                 baseTableName="pacient_medical_data"
+                                 constraintName="fk_pacient_medical_data_blood_group_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="blood_group"/>
+
+        <addForeignKeyConstraint baseColumnNames="disabilities_id"
+                                 baseTableName="pacient_medical_data"
+                                 constraintName="fk_pacient_medical_data_disabilities_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="disabilities"/>
+
+    </changeSet>
+</databaseChangeLog>

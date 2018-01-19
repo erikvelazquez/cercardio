@@ -1,0 +1,24 @@
+{
+    "cercardiobitiApp": {
+        "academicDegree" : {
+            "home": {
+                "title": "Academic Degrees",
+                "createLabel": "Academic Degree erstellen",
+                "createOrEditLabel": "Academic Degree erstellen oder bearbeiten",
+                "search": "Suche nach Academic Degree"
+            },
+            "created": "Academic Degree erstellt mit ID {{ param }}",
+            "updated": "Academic Degree aktualisiert mit ID {{ param }}",
+            "deleted": "Academic Degree gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Academic Degree {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Academic Degree"
+            },
+            "description": "Description",
+            "isactive": "Isactive",
+            "createdat": "Createdat"
+        }
+    }
+}

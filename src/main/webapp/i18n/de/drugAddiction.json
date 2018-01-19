@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "drugAddiction" : {
+            "home": {
+                "title": "Drug Addictions",
+                "createLabel": "Drug Addiction erstellen",
+                "createOrEditLabel": "Drug Addiction erstellen oder bearbeiten",
+                "search": "Suche nach Drug Addiction"
+            },
+            "created": "Drug Addiction erstellt mit ID {{ param }}",
+            "updated": "Drug Addiction aktualisiert mit ID {{ param }}",
+            "deleted": "Drug Addiction gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Drug Addiction {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Drug Addiction"
+            },
+            "description": "Description",
+            "isactive": "Isactive"
+        }
+    }
+}

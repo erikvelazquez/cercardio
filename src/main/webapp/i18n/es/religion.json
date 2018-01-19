@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "religion" : {
+            "home": {
+                "title": "Religiones",
+                "createLabel": "Crear nueva Religión",
+                "createOrEditLabel": "Crear o editar Religión",
+                "search": "Search for Religión"
+            },
+            "created": "Un nuevo Religión ha sido creado con el identificador {{ param }}",
+            "updated": "Un Religión ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Religión ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Religión {{ id }}?"
+            },
+            "detail": {
+                "title": "Religión"
+            },
+            "religion": "Religión",
+            "isactive": "Activo"
+        }
+    }
+}

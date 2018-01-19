@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "time" : {
+            "home": {
+                "title": "Times",
+                "createLabel": "Crear nuevo Time",
+                "createOrEditLabel": "Crear o editar Time",
+                "search": "Search for Time"
+            },
+            "created": "Un nuevo Time ha sido creado con el identificador {{ param }}",
+            "updated": "Un Time ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Time ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Time {{ id }}?"
+            },
+            "detail": {
+                "title": "Time"
+            },
+            "description": "Description",
+            "isactive": "Isactive"
+        }
+    }
+}

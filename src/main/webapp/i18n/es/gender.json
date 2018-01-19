@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "gender" : {
+            "home": {
+                "title": "Género",
+                "createLabel": "Crear nuevo Género",
+                "createOrEditLabel": "Crear o editar Género",
+                "search": "Search for Género"
+            },
+            "created": "Un nuevo Género ha sido creado con el identificador {{ param }}",
+            "updated": "Un Género ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Género ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Género {{ id }}?"
+            },
+            "detail": {
+                "title": "Género"
+            },
+            "description": "Descripción",
+            "isactive": "Activo"
+        }
+    }
+}

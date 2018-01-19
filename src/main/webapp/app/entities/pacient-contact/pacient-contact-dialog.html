@@ -1,0 +1,122 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myPacientContactLabel" data-translate="cercardiobitiApp.pacientContact.home.createOrEditLabel">Create or edit a Pacient Contact</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.pacientContact.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.pacientContact.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientContact.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="vm.pacientContact.name"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientContact.lastname" for="field_lastname">Lastname</label>
+            <input type="text" class="form-control" name="lastname" id="field_lastname"
+                    ng-model="vm.pacientContact.lastname"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientContact.street" for="field_street">Street</label>
+            <input type="text" class="form-control" name="street" id="field_street"
+                    ng-model="vm.pacientContact.street"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientContact.streetnumber" for="field_streetnumber">Streetnumber</label>
+            <input type="text" class="form-control" name="streetnumber" id="field_streetnumber"
+                    ng-model="vm.pacientContact.streetnumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientContact.suitnumber" for="field_suitnumber">Suitnumber</label>
+            <input type="text" class="form-control" name="suitnumber" id="field_suitnumber"
+                    ng-model="vm.pacientContact.suitnumber"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientContact.phonenumber1" for="field_phonenumber1">Phonenumber 1</label>
+            <input type="number" class="form-control" name="phonenumber1" id="field_phonenumber1"
+                    ng-model="vm.pacientContact.phonenumber1"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientContact.phonenumber2" for="field_phonenumber2">Phonenumber 2</label>
+            <input type="number" class="form-control" name="phonenumber2" id="field_phonenumber2"
+                    ng-model="vm.pacientContact.phonenumber2"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientContact.email1" for="field_email1">Email 1</label>
+            <input type="text" class="form-control" name="email1" id="field_email1"
+                    ng-model="vm.pacientContact.email1"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientContact.email2" for="field_email2">Email 2</label>
+            <input type="text" class="form-control" name="email2" id="field_email2"
+                    ng-model="vm.pacientContact.email2"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientContact.facebook" for="field_facebook">Facebook</label>
+            <input type="text" class="form-control" name="facebook" id="field_facebook"
+                    ng-model="vm.pacientContact.facebook"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientContact.twitter" for="field_twitter">Twitter</label>
+            <input type="text" class="form-control" name="twitter" id="field_twitter"
+                    ng-model="vm.pacientContact.twitter"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientContact.instagram" for="field_instagram">Instagram</label>
+            <input type="text" class="form-control" name="instagram" id="field_instagram"
+                    ng-model="vm.pacientContact.instagram"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientContact.snapchat" for="field_snapchat">Snapchat</label>
+            <input type="text" class="form-control" name="snapchat" id="field_snapchat"
+                    ng-model="vm.pacientContact.snapchat"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientContact.linkedin" for="field_linkedin">Linkedin</label>
+            <input type="text" class="form-control" name="linkedin" id="field_linkedin"
+                    ng-model="vm.pacientContact.linkedin"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientContact.vine" for="field_vine">Vine</label>
+            <input type="text" class="form-control" name="vine" id="field_vine"
+                    ng-model="vm.pacientContact.vine"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.pacientContact.pacient" for="field_pacient">Pacient</label>
+            <select class="form-control" id="field_pacient" name="pacient" ng-model="vm.pacientContact.pacient" ng-options="pacient as pacient.id for pacient in vm.pacients | orderBy:'id' track by pacient.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

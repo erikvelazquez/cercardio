@@ -1,0 +1,99 @@
+
+<div>
+    <h2><span data-translate="cercardiobitiApp.medic.detail.title">Medic</span> {{vm.medic.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="cercardiobitiApp.medic.colony">Colony</span></dt>
+        <dd>
+            <span>{{vm.medic.colony}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medic.street">Street</span></dt>
+        <dd>
+            <span>{{vm.medic.street}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medic.streetnumber">Streetnumber</span></dt>
+        <dd>
+            <span>{{vm.medic.streetnumber}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medic.suitnumber">Suitnumber</span></dt>
+        <dd>
+            <span>{{vm.medic.suitnumber}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medic.phonenumber1">Phonenumber 1</span></dt>
+        <dd>
+            <span>{{vm.medic.phonenumber1}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medic.phonenumber2">Phonenumber 2</span></dt>
+        <dd>
+            <span>{{vm.medic.phonenumber2}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medic.email1">Email 1</span></dt>
+        <dd>
+            <span>{{vm.medic.email1}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medic.email2">Email 2</span></dt>
+        <dd>
+            <span>{{vm.medic.email2}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medic.facebook">Facebook</span></dt>
+        <dd>
+            <span>{{vm.medic.facebook}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medic.twitter">Twitter</span></dt>
+        <dd>
+            <span>{{vm.medic.twitter}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medic.instagram">Instagram</span></dt>
+        <dd>
+            <span>{{vm.medic.instagram}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medic.snapchat">Snapchat</span></dt>
+        <dd>
+            <span>{{vm.medic.snapchat}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medic.linkedin">Linkedin</span></dt>
+        <dd>
+            <span>{{vm.medic.linkedin}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medic.vine">Vine</span></dt>
+        <dd>
+            <span>{{vm.medic.vine}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medic.createdat">Createdat</span></dt>
+        <dd>
+            <span>{{vm.medic.createdat | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medic.userBD">User BD</span></dt>
+        <dd>
+            <a ui-sref="user-bd-detail({id:vm.medic.userBD.id})">{{vm.medic.userBD.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medic.company">Company</span></dt>
+        <dd>
+            <a ui-sref="company-detail({id:vm.medic.company.id})">{{vm.medic.company.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medic.ethnicGroup">Ethnic Group</span></dt>
+        <dd>
+            <a ui-sref="ethnic-group-detail({id:vm.medic.ethnicGroup.id})">{{vm.medic.ethnicGroup.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medic.gender">Gender</span></dt>
+        <dd>
+            <a ui-sref="gender-detail({id:vm.medic.gender.id})">{{vm.medic.gender.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medic.category">Category</span></dt>
+        <dd>
+            <a ui-sref="category-detail({id:vm.medic.category.id})">{{vm.medic.category.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="medic-detail.edit({id:vm.medic.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

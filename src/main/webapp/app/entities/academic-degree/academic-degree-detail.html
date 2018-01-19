@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="cercardiobitiApp.academicDegree.detail.title">Academic Degree</span> {{vm.academicDegree.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="cercardiobitiApp.academicDegree.description">Description</span></dt>
+        <dd>
+            <span>{{vm.academicDegree.description}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.academicDegree.isactive">Isactive</span></dt>
+        <dd>
+            <span>{{vm.academicDegree.isactive}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.academicDegree.createdat">Createdat</span></dt>
+        <dd>
+            <span>{{vm.academicDegree.createdat | date:'medium'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="academic-degree-detail.edit({id:vm.academicDegree.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

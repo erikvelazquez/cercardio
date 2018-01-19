@@ -1,0 +1,105 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "userBD",
+            "otherEntityName": "userBD",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "pacientGenerals"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "gender",
+            "otherEntityName": "gender",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "civilstatus",
+            "otherEntityName": "civilStatus",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "religion",
+            "otherEntityName": "religion",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "ethnicGroup",
+            "otherEntityName": "ethnicGroup",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "academicDegree",
+            "otherEntityName": "academicDegree",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "socioeconomicLevel",
+            "otherEntityName": "socioeconomicLevel",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "occupation",
+            "otherEntityName": "occupation",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "livingPlace",
+            "otherEntityName": "livingPlace",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "privateHealthInsurance",
+            "otherEntityName": "privateHealthInsurance",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "socialHealthInsurance",
+            "otherEntityName": "socialHealthInsurance",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "curp",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rfc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dateofbirth",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "placeofbirth",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "privatenumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "socialnumber",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171127223248",
+    "entityTableName": "pacient_generals",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

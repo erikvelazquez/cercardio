@@ -1,0 +1,36 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "url",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "icon",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "programparentid",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "byorder",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "isactive",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20171228232423",
+    "entityTableName": "programs",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

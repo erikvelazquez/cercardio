@@ -1,0 +1,151 @@
+
+<div>
+    <h2><span data-translate="cercardiobitiApp.pacient.detail.title">Pacient</span> {{vm.pacient.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="cercardiobitiApp.pacient.cp">Cp</span></dt>
+        <dd>
+            <span>{{vm.pacient.cp}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.colony">Colony</span></dt>
+        <dd>
+            <span>{{vm.pacient.colony}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.street">Street</span></dt>
+        <dd>
+            <span>{{vm.pacient.street}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.streetnumber">Streetnumber</span></dt>
+        <dd>
+            <span>{{vm.pacient.streetnumber}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.suitnumber">Suitnumber</span></dt>
+        <dd>
+            <span>{{vm.pacient.suitnumber}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.phonenumber1">Phonenumber 1</span></dt>
+        <dd>
+            <span>{{vm.pacient.phonenumber1}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.phonenumber2">Phonenumber 2</span></dt>
+        <dd>
+            <span>{{vm.pacient.phonenumber2}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.email1">Email 1</span></dt>
+        <dd>
+            <span>{{vm.pacient.email1}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.email2">Email 2</span></dt>
+        <dd>
+            <span>{{vm.pacient.email2}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.curp">Curp</span></dt>
+        <dd>
+            <span>{{vm.pacient.curp}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.rfc">Rfc</span></dt>
+        <dd>
+            <span>{{vm.pacient.rfc}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.dateofbirth">Dateofbirth</span></dt>
+        <dd>
+            <span>{{vm.pacient.dateofbirth | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.placeofbirth">Placeofbirth</span></dt>
+        <dd>
+            <span>{{vm.pacient.placeofbirth}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.privatenumber">Privatenumber</span></dt>
+        <dd>
+            <span>{{vm.pacient.privatenumber}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.socialnumber">Socialnumber</span></dt>
+        <dd>
+            <span>{{vm.pacient.socialnumber}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.facebook">Facebook</span></dt>
+        <dd>
+            <span>{{vm.pacient.facebook}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.twitter">Twitter</span></dt>
+        <dd>
+            <span>{{vm.pacient.twitter}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.instagram">Instagram</span></dt>
+        <dd>
+            <span>{{vm.pacient.instagram}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.snapchat">Snapchat</span></dt>
+        <dd>
+            <span>{{vm.pacient.snapchat}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.linkedin">Linkedin</span></dt>
+        <dd>
+            <span>{{vm.pacient.linkedin}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.vine">Vine</span></dt>
+        <dd>
+            <span>{{vm.pacient.vine}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.userBD">User BD</span></dt>
+        <dd>
+            <a ui-sref="user-bd-detail({id:vm.pacient.userBD.id})">{{vm.pacient.userBD.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.company">Company</span></dt>
+        <dd>
+            <a ui-sref="company-detail({id:vm.pacient.company.id})">{{vm.pacient.company.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.gender">Gender</span></dt>
+        <dd>
+            <a ui-sref="gender-detail({id:vm.pacient.gender.id})">{{vm.pacient.gender.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.civilstatus">Civilstatus</span></dt>
+        <dd>
+            <a ui-sref="civil-status-detail({id:vm.pacient.civilstatus.id})">{{vm.pacient.civilstatus.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.religion">Religion</span></dt>
+        <dd>
+            <a ui-sref="religion-detail({id:vm.pacient.religion.id})">{{vm.pacient.religion.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.ethnicGroup">Ethnic Group</span></dt>
+        <dd>
+            <a ui-sref="ethnic-group-detail({id:vm.pacient.ethnicGroup.id})">{{vm.pacient.ethnicGroup.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.academicDegree">Academic Degree</span></dt>
+        <dd>
+            <a ui-sref="academic-degree-detail({id:vm.pacient.academicDegree.id})">{{vm.pacient.academicDegree.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.socioeconomicLevel">Socioeconomic Level</span></dt>
+        <dd>
+            <a ui-sref="socioeconomic-level-detail({id:vm.pacient.socioeconomicLevel.id})">{{vm.pacient.socioeconomicLevel.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.occupation">Occupation</span></dt>
+        <dd>
+            <a ui-sref="occupation-detail({id:vm.pacient.occupation.id})">{{vm.pacient.occupation.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.livingPlace">Living Place</span></dt>
+        <dd>
+            <a ui-sref="living-place-detail({id:vm.pacient.livingPlace.id})">{{vm.pacient.livingPlace.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.privateHealthInsurance">Private Health Insurance</span></dt>
+        <dd>
+            <a ui-sref="private-health-insurance-detail({id:vm.pacient.privateHealthInsurance.id})">{{vm.pacient.privateHealthInsurance.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacient.socialHealthInsurance">Social Health Insurance</span></dt>
+        <dd>
+            <a ui-sref="social-health-insurance-detail({id:vm.pacient.socialHealthInsurance.id})">{{vm.pacient.socialHealthInsurance.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="pacient-detail.edit({id:vm.pacient.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

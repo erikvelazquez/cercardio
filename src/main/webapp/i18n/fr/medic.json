@@ -1,0 +1,41 @@
+{
+    "cercardiobitiApp": {
+        "medic" : {
+            "home": {
+                "title": "Medics",
+                "createLabel": "Créer un nouveau Medic",
+                "createOrEditLabel": "Créer ou éditer un Medic",
+                "search": "Recherche pour Medic"
+            },
+            "created": "Un nouveau Medic a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Medic avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Medic avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Medic {{ id }} ?"
+            },
+            "detail": {
+                "title": "Medic"
+            },
+            "colony": "Colony",
+            "street": "Street",
+            "streetnumber": "Streetnumber",
+            "suitnumber": "Suitnumber",
+            "phonenumber1": "Phonenumber 1",
+            "phonenumber2": "Phonenumber 2",
+            "email1": "Email 1",
+            "email2": "Email 2",
+            "facebook": "Facebook",
+            "twitter": "Twitter",
+            "instagram": "Instagram",
+            "snapchat": "Snapchat",
+            "linkedin": "Linkedin",
+            "vine": "Vine",
+            "createdat": "Createdat",
+            "userBD": "User BD",
+            "company": "Company",
+            "ethnicGroup": "Ethnic Group",
+            "gender": "Gender",
+            "category": "Category"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "cercardiobitiApp": {
+        "type_Program" : {
+            "home": {
+                "title": "Type Programs",
+                "createLabel": "Create a new Type Program",
+                "createOrEditLabel": "Create or edit a Type Program",
+                "search": "Search for Type Program"
+            },
+            "created": "A new Type Program is created with identifier {{ param }}",
+            "updated": "A Type Program is updated with identifier {{ param }}",
+            "deleted": "A Type Program is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Type Program {{ id }}?"
+            },
+            "detail": {
+                "title": "Type Program"
+            },
+            "name": "Name",
+            "isactive": "Isactive",
+            "program": "Program"
+        }
+    }
+}

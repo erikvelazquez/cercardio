@@ -1,0 +1,83 @@
+
+<div>
+    <h2><span data-translate="cercardiobitiApp.pacientContact.detail.title">Pacient Contact</span> {{vm.pacientContact.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="cercardiobitiApp.pacientContact.name">Name</span></dt>
+        <dd>
+            <span>{{vm.pacientContact.name}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientContact.lastname">Lastname</span></dt>
+        <dd>
+            <span>{{vm.pacientContact.lastname}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientContact.street">Street</span></dt>
+        <dd>
+            <span>{{vm.pacientContact.street}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientContact.streetnumber">Streetnumber</span></dt>
+        <dd>
+            <span>{{vm.pacientContact.streetnumber}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientContact.suitnumber">Suitnumber</span></dt>
+        <dd>
+            <span>{{vm.pacientContact.suitnumber}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientContact.phonenumber1">Phonenumber 1</span></dt>
+        <dd>
+            <span>{{vm.pacientContact.phonenumber1}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientContact.phonenumber2">Phonenumber 2</span></dt>
+        <dd>
+            <span>{{vm.pacientContact.phonenumber2}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientContact.email1">Email 1</span></dt>
+        <dd>
+            <span>{{vm.pacientContact.email1}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientContact.email2">Email 2</span></dt>
+        <dd>
+            <span>{{vm.pacientContact.email2}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientContact.facebook">Facebook</span></dt>
+        <dd>
+            <span>{{vm.pacientContact.facebook}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientContact.twitter">Twitter</span></dt>
+        <dd>
+            <span>{{vm.pacientContact.twitter}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientContact.instagram">Instagram</span></dt>
+        <dd>
+            <span>{{vm.pacientContact.instagram}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientContact.snapchat">Snapchat</span></dt>
+        <dd>
+            <span>{{vm.pacientContact.snapchat}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientContact.linkedin">Linkedin</span></dt>
+        <dd>
+            <span>{{vm.pacientContact.linkedin}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientContact.vine">Vine</span></dt>
+        <dd>
+            <span>{{vm.pacientContact.vine}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientContact.pacient">Pacient</span></dt>
+        <dd>
+            <a ui-sref="pacient-detail({id:vm.pacientContact.pacient.id})">{{vm.pacientContact.pacient.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="pacient-contact-detail.edit({id:vm.pacientContact.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

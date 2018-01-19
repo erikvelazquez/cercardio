@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "bloodGroup" : {
+            "home": {
+                "title": "BloodGroups",
+                "createLabel": "Créer un nouveau Blood Group",
+                "createOrEditLabel": "Créer ou éditer un Blood Group",
+                "search": "Recherche pour Blood Group"
+            },
+            "created": "Un nouveau Blood Group a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Blood Group avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Blood Group avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Blood Group {{ id }} ?"
+            },
+            "detail": {
+                "title": "Blood Group"
+            },
+            "description": "Description",
+            "isactive": "Isactive"
+        }
+    }
+}

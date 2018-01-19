@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Reservation.
+    -->
+    <changeSet id="20171127223254-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="pacient_id"
+                                 baseTableName="reservation"
+                                 constraintName="fk_reservation_pacient_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="pacient"/>
+
+        <addForeignKeyConstraint baseColumnNames="medic_id"
+                                 baseTableName="reservation"
+                                 constraintName="fk_reservation_medic_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="medic"/>
+
+        <addForeignKeyConstraint baseColumnNames="status_id"
+                                 baseTableName="reservation"
+                                 constraintName="fk_reservation_status_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="status"/>
+
+        <addForeignKeyConstraint baseColumnNames="payment_id"
+                                 baseTableName="reservation"
+                                 constraintName="fk_reservation_payment_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="payment"/>
+
+        <addForeignKeyConstraint baseColumnNames="timers_id"
+                                 baseTableName="reservation"
+                                 constraintName="fk_reservation_timers_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="timers"/>
+
+        <addForeignKeyConstraint baseColumnNames="appreciation_id"
+                                 baseTableName="reservation"
+                                 constraintName="fk_reservation_appreciation_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="appreciation"/>
+
+        <addForeignKeyConstraint baseColumnNames="pacient_medical_analysis_id"
+                                 baseTableName="reservation"
+                                 constraintName="fk_reservation_pacient_medical_analysis_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="pacient_medical_analysis"/>
+
+    </changeSet>
+</databaseChangeLog>

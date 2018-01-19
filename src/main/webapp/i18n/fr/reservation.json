@@ -1,0 +1,35 @@
+{
+    "cercardiobitiApp": {
+        "reservation" : {
+            "home": {
+                "title": "Reservations",
+                "createLabel": "Créer un nouveau Reservation",
+                "createOrEditLabel": "Créer ou éditer un Reservation",
+                "search": "Recherche pour Reservation"
+            },
+            "created": "Un nouveau Reservation a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Reservation avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Reservation avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Reservation {{ id }} ?"
+            },
+            "detail": {
+                "title": "Reservation"
+            },
+            "title": "Title",
+            "note": "Note",
+            "dateat": "Dateat",
+            "createdat": "Createdat",
+            "symtoms": "Symtoms",
+            "medicaments": "Medicaments",
+            "cost": "Cost",
+            "pacient": "Pacient",
+            "medic": "Medic",
+            "status": "Status",
+            "payment": "Payment",
+            "timers": "Timers",
+            "appreciation": "Appreciation",
+            "pacientMedicalAnalysis": "Pacient Medical Analysis"
+        }
+    }
+}

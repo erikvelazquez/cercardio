@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "ethnicGroup" : {
+            "home": {
+                "title": "Grupo Étnico",
+                "createLabel": "Crear nuevo Grupo Étnico",
+                "createOrEditLabel": "Crear o editar Grupo Étnico",
+                "search": "Buscar por Grupo Étnico"
+            },
+            "created": "Un nuevo Grupo Étnico ha sido creado con el identificador {{ param }}",
+            "updated": "Un Grupo Étnico ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Grupo Étnico ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Grupo Étnico {{ id }}?"
+            },
+            "detail": {
+                "title": "Grupo Étnico"
+            },
+            "description": "Descripción",
+            "isactive": "Activo"
+        }
+    }
+}

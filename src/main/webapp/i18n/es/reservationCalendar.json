@@ -1,0 +1,33 @@
+{
+    "cercardiobitiApp": {
+        "reservationCalendar" : {
+            "home": {
+                "title": "Calendario de Citas",
+                "createLabel": "Crear nuevo Cita",
+                "createOrEditLabel": "Crear o editar Cita",
+                "search": "Buscar Citas"
+            },
+            "created": "Una nueva Cita ha sido creada con el identificador {{ param }}",
+            "updated": "Una Cita ha sido actualizada con el identificador {{ param }}",
+            "deleted": "Una Cita ha sido eliminada con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Cita {{ id }}?"
+            },
+            "detail": {
+                "title": "Cita"
+            },
+            "title": "Titulo",
+            "note": "Nota",
+            "dateat": "Fecha",
+            "timeat": "Hora",
+            "createdat": "Fec. Cre",
+            "symtoms": "Sintomas",
+            "medicaments": "Medicamentos",
+            "cost": "Costo",
+            "pacient": "Paciente",
+            "medic": "Medico",
+            "status": "Status",
+            "payment": "Pago"
+        }
+    }
+}

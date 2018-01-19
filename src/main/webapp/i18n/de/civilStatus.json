@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "civilStatus" : {
+            "home": {
+                "title": "Civil Statuses",
+                "createLabel": "Civil Status erstellen",
+                "createOrEditLabel": "Civil Status erstellen oder bearbeiten",
+                "search": "Suche nach Civil Status"
+            },
+            "created": "Civil Status erstellt mit ID {{ param }}",
+            "updated": "Civil Status aktualisiert mit ID {{ param }}",
+            "deleted": "Civil Status gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Civil Status {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Civil Status"
+            },
+            "description": "Description",
+            "isactive": "Isactive"
+        }
+    }
+}

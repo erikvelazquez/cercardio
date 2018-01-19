@@ -1,0 +1,27 @@
+{
+    "cercardiobitiApp": {
+        "pacientApp" : {
+            "home": {
+                "title": "PacientApps",
+                "createLabel": "Créer un nouveau Pacient App",
+                "createOrEditLabel": "Créer ou éditer un Pacient App",
+                "search": "Recherche pour Pacient App"
+            },
+            "created": "Un nouveau Pacient App a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Pacient App avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Pacient App avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Pacient App {{ id }} ?"
+            },
+            "detail": {
+                "title": "Pacient App"
+            },
+            "chronicdegenerative": "Chronicdegenerative",
+            "traumatic": "Traumatic",
+            "gynecologicalobstetrics": "Gynecologicalobstetrics",
+            "others": "Others",
+            "daytime": "Daytime",
+            "pacient": "Pacient"
+        }
+    }
+}

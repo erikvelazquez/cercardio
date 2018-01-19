@@ -1,0 +1,128 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myMedical_ProceduresLabel" data-translate="cercardiobitiApp.medical_Procedures.home.createOrEditLabel">Create or edit a Medical Procedures</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.medical_Procedures.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.medical_Procedures.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medical_Procedures.catalogkey" for="field_catalogkey">Catalogkey</label>
+            <input type="text" class="form-control" name="catalogkey" id="field_catalogkey"
+                    ng-model="vm.medical_Procedures.catalogkey"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medical_Procedures.pronombre" for="field_pronombre">Pronombre</label>
+            <input type="text" class="form-control" name="pronombre" id="field_pronombre"
+                    ng-model="vm.medical_Procedures.pronombre"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medical_Procedures.procveedia" for="field_procveedia">Procveedia</label>
+            <input type="text" class="form-control" name="procveedia" id="field_procveedia"
+                    ng-model="vm.medical_Procedures.procveedia"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medical_Procedures.proedadia" for="field_proedadia">Proedadia</label>
+            <input type="text" class="form-control" name="proedadia" id="field_proedadia"
+                    ng-model="vm.medical_Procedures.proedadia"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medical_Procedures.procveedfa" for="field_procveedfa">Procveedfa</label>
+            <input type="text" class="form-control" name="procveedfa" id="field_procveedfa"
+                    ng-model="vm.medical_Procedures.procveedfa"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medical_Procedures.proedadfa" for="field_proedadfa">Proedadfa</label>
+            <input type="text" class="form-control" name="proedadfa" id="field_proedadfa"
+                    ng-model="vm.medical_Procedures.proedadfa"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medical_Procedures.sextype" for="field_sextype">Sextype</label>
+            <input type="number" class="form-control" name="sextype" id="field_sextype"
+                    ng-model="vm.medical_Procedures.sextype"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medical_Procedures.pornivela" for="field_pornivela">Pornivela</label>
+            <input type="number" class="form-control" name="pornivela" id="field_pornivela"
+                    ng-model="vm.medical_Procedures.pornivela"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medical_Procedures.procedimientotype" for="field_procedimientotype">Procedimientotype</label>
+            <input type="text" class="form-control" name="procedimientotype" id="field_procedimientotype"
+                    ng-model="vm.medical_Procedures.procedimientotype"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medical_Procedures.proprincipal" for="field_proprincipal">Proprincipal</label>
+            <input type="text" class="form-control" name="proprincipal" id="field_proprincipal"
+                    ng-model="vm.medical_Procedures.proprincipal"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medical_Procedures.procapitulo" for="field_procapitulo">Procapitulo</label>
+            <input type="number" class="form-control" name="procapitulo" id="field_procapitulo"
+                    ng-model="vm.medical_Procedures.procapitulo"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medical_Procedures.proseccion" for="field_proseccion">Proseccion</label>
+            <input type="number" class="form-control" name="proseccion" id="field_proseccion"
+                    ng-model="vm.medical_Procedures.proseccion"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medical_Procedures.procategoria" for="field_procategoria">Procategoria</label>
+            <input type="number" class="form-control" name="procategoria" id="field_procategoria"
+                    ng-model="vm.medical_Procedures.procategoria"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medical_Procedures.prosubcateg" for="field_prosubcateg">Prosubcateg</label>
+            <input type="number" class="form-control" name="prosubcateg" id="field_prosubcateg"
+                    ng-model="vm.medical_Procedures.prosubcateg"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medical_Procedures.progrupolc" for="field_progrupolc">Progrupolc</label>
+            <input type="number" class="form-control" name="progrupolc" id="field_progrupolc"
+                    ng-model="vm.medical_Procedures.progrupolc"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medical_Procedures.proescauses" for="field_proescauses">Proescauses</label>
+            <input type="number" class="form-control" name="proescauses" id="field_proescauses"
+                    ng-model="vm.medical_Procedures.proescauses"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.medical_Procedures.pronumcauses" for="field_pronumcauses">Pronumcauses</label>
+            <input type="number" class="form-control" name="pronumcauses" id="field_pronumcauses"
+                    ng-model="vm.medical_Procedures.pronumcauses"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

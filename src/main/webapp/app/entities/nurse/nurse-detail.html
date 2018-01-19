@@ -1,0 +1,96 @@
+
+<div>
+    <h2><span data-translate="cercardiobitiApp.nurse.detail.title">Nurse</span> {{vm.nurse.id + ' - ' + vm.nurse.userBD.name + ' ' + vm.nurse.userBD.lastname}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+       
+        <dt><span data-translate="cercardiobitiApp.nurse.company">Company</span></dt>
+        <dd>
+            <span>{{vm.nurse.company.name}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.nurse.gender">Gender</span></dt>
+        <dd>
+            <span>{{vm.nurse.gender.description}}</span>
+        </dd>
+
+        <dt><span data-translate="cercardiobitiApp.nurse.street">Street</span></dt>
+        <dd>
+            <span>{{vm.nurse.street}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.nurse.streetnumber">Streetnumber</span></dt>
+        <dd>
+            <span>{{vm.nurse.streetnumber}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.nurse.suitnumber">Suitnumber</span></dt>
+        <dd>
+            <span>{{vm.nurse.suitnumber}}</span>
+        </dd>
+
+        <dt><span data-translate="cercardiobitiApp.nurse.cpid">Cpid</span></dt>
+        <dd>
+            <span>{{vm.nurse.cpid}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.nurse.colony">Colony</span></dt>
+        <dd>
+            <span>{{vm.nurse.colony}}</span>
+        </dd>
+        
+        <dt><span data-translate="cercardiobitiApp.nurse.phonenumber1">Phonenumber 1</span></dt>
+        <dd>
+            <span>{{vm.nurse.phonenumber1}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.nurse.phonenumber2">Phonenumber 2</span></dt>
+        <dd>
+            <span>{{vm.nurse.phonenumber2}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.nurse.email1">Email 1</span></dt>
+        <dd>
+            <span>{{vm.nurse.email1}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.nurse.email2">Email 2</span></dt>
+        <dd>
+            <span>{{vm.nurse.email2}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.nurse.facebook">Facebook</span></dt>
+        <dd>
+            <span>{{vm.nurse.facebook}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.nurse.twitter">Twitter</span></dt>
+        <dd>
+            <span>{{vm.nurse.twitter}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.nurse.instagram">Instagram</span></dt>
+        <dd>
+            <span>{{vm.nurse.instagram}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.nurse.snapchat">Snapchat</span></dt>
+        <dd>
+            <span>{{vm.nurse.snapchat}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.nurse.linkedin">Linkedin</span></dt>
+        <dd>
+            <span>{{vm.nurse.linkedin}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.nurse.vine">Vine</span></dt>
+        <dd>
+            <span>{{vm.nurse.vine}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.nurse.createdat">Createdat</span></dt>
+        <dd>
+            <span>{{vm.nurse.createdat | date:'medium'}}</span>
+        </dd>
+        
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="nurse-detail.edit({id:vm.nurse.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

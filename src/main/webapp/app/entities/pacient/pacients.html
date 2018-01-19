@@ -1,0 +1,219 @@
+<div>
+    <h2 data-translate="cercardiobitiApp.pacient.home.title">Pacients</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="pacient.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="cercardiobitiApp.pacient.home.createLabel">
+                        Create new Pacient
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'cercardiobitiApp.pacient.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+         <br>
+
+        <table ng-table="vm.defaultConfigTableParams" 
+               class="table table-bordered table-hover table-striped 
+                      table-condensed responsive no-wrap dtr-inline ng-table-rowselected hide-overflow">               
+          <tr ng-repeat="pacient in $data"
+              ng-click="vm.getData(pacient)">
+              <td data-title="'ID'">{{pacient.id}}</td>
+              <td data-title="'CP'">{{pacient.cp}}</td>
+              <td data-title="'Colonia'">{{pacient.colony}}</td>
+              <td data-title="'Calle'">{{pacient.street}}</td>
+              <td data-title="'Número'">{{pacient.streetnumber}}</td>                
+              <td data-title="'Número de Teléfono'">{{pacient.phonenumber1}}</td>  
+              <td class="text-right">
+                  <div class="btn-group flex-btn-group-container">
+                      <button type="submit"
+                              ng-click="vm.getData(pacient)"
+                              
+                              class="btn btn-info btn-sm">
+                          <span class="glyphicon glyphicon-eye-open"></span>
+                          <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                      </button>
+                      <button type="submit"
+                              ui-sref="pacient.edit({id:pacient.id})"
+                              class="btn btn-primary btn-sm">
+                          <span class="glyphicon glyphicon-pencil"></span>
+                          <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                      </button>
+                      <button type="submit"
+                              ui-sref="pacient.delete({id:pacient.id})"
+                              class="btn btn-danger btn-sm">
+                          <span class="glyphicon glyphicon-remove-circle"></span>
+                          <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                      </button>
+                  </div>
+              </td>              
+          </tr>
+        </table>
+        <div class="col-md-12"> 
+            <div class="text-center">
+                <uib-tabset active="active">
+                    <uib-tab index="0" heading="GENERALES"> 
+                        <div class="col-md-12">
+                            <dl class="dl-horizontal jh-entity-details">
+                                <dt><span data-translate="cercardiobitiApp.pacient.cp">Cp</span></dt>
+                                <dd>
+                                    <span>{{vm.pacientselected.cp}}</span>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.colony">Colony</span></dt>
+                                <dd>
+                                    <span>{{vm.pacientselected.colony}}</span>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.street">Street</span></dt>
+                                <dd>
+                                    <span>{{vm.pacientselected.street}}</span>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.streetnumber">Streetnumber</span></dt>
+                                <dd>
+                                    <span>{{vm.pacientselected.streetnumber}}</span>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.suitnumber">Suitnumber</span></dt>
+                                <dd>
+                                    <span>{{vm.pacientselected.suitnumber}}</span>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.phonenumber1">Phonenumber 1</span></dt>
+                                <dd>
+                                    <span>{{vm.pacientselected.phonenumber1}}</span>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.phonenumber2">Phonenumber 2</span></dt>
+                                <dd>
+                                    <span>{{vm.pacientselected.phonenumber2}}</span>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.email1">Email 1</span></dt>
+                                <dd>
+                                    <span>{{vm.pacientselected.email1}}</span>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.email2">Email 2</span></dt>
+                                <dd>
+                                    <span>{{vm.pacientselected.email2}}</span>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.curp">Curp</span></dt>
+                                <dd>
+                                    <span>{{vm.pacientselected.curp}}</span>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.rfc">Rfc</span></dt>
+                                <dd>
+                                    <span>{{vm.pacientselected.rfc}}</span>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.dateofbirth">Dateofbirth</span></dt>
+                                <dd>
+                                    <span>{{vm.pacientselected.dateofbirth | date:'mediumDate'}}</span>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.placeofbirth">Placeofbirth</span></dt>
+                                <dd>
+                                    <span>{{vm.pacientselected.placeofbirth}}</span>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.privatenumber">Privatenumber</span></dt>
+                                <dd>
+                                    <span>{{vm.pacientselected.privatenumber}}</span>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.socialnumber">Socialnumber</span></dt>
+                                <dd>
+                                    <span>{{vm.pacientselected.socialnumber}}</span>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.facebook">Facebook</span></dt>
+                                <dd>
+                                    <span>{{vm.pacientselected.facebook}}</span>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.twitter">Twitter</span></dt>
+                                <dd>
+                                    <span>{{vm.pacientselected.twitter}}</span>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.instagram">Instagram</span></dt>
+                                <dd>
+                                    <span>{{vm.pacientselected.instagram}}</span>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.snapchat">Snapchat</span></dt>
+                                <dd>
+                                    <span>{{vm.pacientselected.snapchat}}</span>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.linkedin">Linkedin</span></dt>
+                                <dd>
+                                    <span>{{vm.pacientselected.linkedin}}</span>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.vine">Vine</span></dt>
+                                <dd>
+                                    <span>{{vm.pacientselected.vine}}</span>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.userBD">User BD</span></dt>
+                                <dd>
+                                    <a ui-sref="user-bd-detail({id:vm.pacient.userBD.id})">{{vm.pacientselected.userBD.id}}</a>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.company">Company</span></dt>
+                                <dd>
+                                    <a ui-sref="company-detail({id:vm.pacient.company.id})">{{vm.pacientselected.company.id}}</a>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.gender">Gender</span></dt>
+                                <dd>
+                                    <a ui-sref="gender-detail({id:vm.pacient.gender.id})">{{vm.pacientselected.gender.id}}</a>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.civilstatus">Civilstatus</span></dt>
+                                <dd>
+                                    <a ui-sref="civil-status-detail({id:vm.pacient.civilstatus.id})">{{vm.pacientselected.civilstatus.id}}</a>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.religion">Religion</span></dt>
+                                <dd>
+                                    <a ui-sref="religion-detail({id:vm.pacient.religion.id})">{{vm.pacientselected.religion.id}}</a>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.ethnicGroup">Ethnic Group</span></dt>
+                                <dd>
+                                    <a ui-sref="ethnic-group-detail({id:vm.pacient.ethnicGroup.id})">{{vm.pacientselected.ethnicGroup.id}}</a>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.academicDegree">Academic Degree</span></dt>
+                                <dd>
+                                    <a ui-sref="academic-degree-detail({id:vm.pacient.academicDegree.id})">{{vm.pacientselected.academicDegree.id}}</a>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.socioeconomicLevel">Socioeconomic Level</span></dt>
+                                <dd>
+                                    <a ui-sref="socioeconomic-level-detail({id:vm.pacient.socioeconomicLevel.id})">{{vm.pacientselected.socioeconomicLevel.id}}</a>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.occupation">Occupation</span></dt>
+                                <dd>
+                                    <a ui-sref="occupation-detail({id:vm.pacient.occupation.id})">{{vm.pacientselected.occupation.id}}</a>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.livingPlace">Living Place</span></dt>
+                                <dd>
+                                    <a ui-sref="living-place-detail({id:vm.pacient.livingPlace.id})">{{vm.pacientselected.livingPlace.id}}</a>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.privateHealthInsurance">Private Health Insurance</span></dt>
+                                <dd>
+                                    <a ui-sref="private-health-insurance-detail({id:vm.pacient.privateHealthInsurance.id})">{{vm.pacientselected.privateHealthInsurance.id}}</a>
+                                </dd>
+                                <dt><span data-translate="cercardiobitiApp.pacient.socialHealthInsurance">Social Health Insurance</span></dt>
+                                <dd>
+                                    <a ui-sref="social-health-insurance-detail({id:vm.pacient.socialHealthInsurance.id})">{{vm.pacientselected.socialHealthInsurance.id}}</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </uib-tab>
+                    <uib-tab index="1" heading="CONTACTO">CONTACTO</uib-tab>
+                    <uib-tab index="2" heading="APP">APP</uib-tab>          
+                    <uib-tab index="3" heading="APP">APNP X</uib-tab>                              
+                </uib-tabset>                
+            </div> 
+        </div>
+      </div>
+   
+</div>

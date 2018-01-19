@@ -1,0 +1,66 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myPacientAppLabel" data-translate="cercardiobitiApp.pacientApp.home.createOrEditLabel">Create or edit a Pacient App</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.pacientApp.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.pacientApp.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientApp.chronicdegenerative" for="field_chronicdegenerative">Chronicdegenerative</label>
+            <input type="text" class="form-control" name="chronicdegenerative" id="field_chronicdegenerative"
+                    ng-model="vm.pacientApp.chronicdegenerative"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientApp.traumatic" for="field_traumatic">Traumatic</label>
+            <input type="text" class="form-control" name="traumatic" id="field_traumatic"
+                    ng-model="vm.pacientApp.traumatic"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientApp.gynecologicalobstetrics" for="field_gynecologicalobstetrics">Gynecologicalobstetrics</label>
+            <input type="text" class="form-control" name="gynecologicalobstetrics" id="field_gynecologicalobstetrics"
+                    ng-model="vm.pacientApp.gynecologicalobstetrics"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientApp.others" for="field_others">Others</label>
+            <input type="text" class="form-control" name="others" id="field_others"
+                    ng-model="vm.pacientApp.others"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientApp.daytime" for="field_daytime">Daytime</label>
+                <div class="input-group">
+                    <input id="field_daytime" type="text" class="form-control" name="daytime" datetime-picker="{{dateformat}}" ng-model="vm.pacientApp.daytime" is-open="vm.datePickerOpenStatus.daytime"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('daytime')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.pacientApp.pacient" for="field_pacient">Pacient</label>
+            <select class="form-control" id="field_pacient" name="pacient" ng-model="vm.pacientApp.pacient" ng-options="pacient as pacient.id for pacient in vm.pacients | orderBy:'id' track by pacient.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

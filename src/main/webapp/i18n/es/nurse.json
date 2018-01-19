@@ -1,0 +1,43 @@
+{
+    "cercardiobitiApp": {
+        "nurse" : {
+            "home": {
+                "title": "Enfermeras",
+                "createLabel": "Agregar",
+                "createOrEditLabel": "Crear o editar Enfermera",
+                "create": "Crear Enfermera",
+                "editLabel": "Editar Enfermera",
+                "search": "Buscar por Enfermera"
+            },
+            "created": "Un nueva Enfermera ha sido creado con el identificador {{ param }}",
+            "updated": "Un Enfermera ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Enfermera ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Nurse {{ id }}?"
+            },
+            "detail": {
+                "title": "Enfermera"
+            },
+            "address": "Dirección",
+            "cpid": "CP",
+            "colony": "Colonia",
+            "street": "Calle",
+            "streetnumber": "No. Ext. ",
+            "suitnumber": "No. Int",
+            "phonenumber1": "Teléfono 1",
+            "phonenumber2": "Teléfono 2",
+            "email1": "Email 1",
+            "email2": "Email 2",
+            "facebook": "Facebook",
+            "twitter": "Twitter",
+            "instagram": "Instagram",
+            "snapchat": "Snapchat",
+            "linkedin": "Linkedin",
+            "vine": "Vine",
+            "createdat": "Fecha de Creación",
+            "userBD": "Nombre Completo",
+            "company": "Compañía",
+            "gender": "Género"
+        }
+    }
+}

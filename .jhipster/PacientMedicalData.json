@@ -1,0 +1,61 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "pacient",
+            "otherEntityName": "pacient",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "pacientMedicalData"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "bloodGroup",
+            "otherEntityName": "bloodGroup",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "disabilities",
+            "otherEntityName": "disabilities",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "diseases",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "surgicalinterventions",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "useofdrugs",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "allergies",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ahffather",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ahfmother",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ahfothers",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171127223250",
+    "entityTableName": "pacient_medical_data",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

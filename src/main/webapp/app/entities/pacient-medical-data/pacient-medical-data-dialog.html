@@ -1,0 +1,86 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myPacientMedicalDataLabel" data-translate="cercardiobitiApp.pacientMedicalData.home.createOrEditLabel">Create or edit a Pacient Medical Data</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.pacientMedicalData.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.pacientMedicalData.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientMedicalData.diseases" for="field_diseases">Diseases</label>
+            <input type="text" class="form-control" name="diseases" id="field_diseases"
+                    ng-model="vm.pacientMedicalData.diseases"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientMedicalData.surgicalinterventions" for="field_surgicalinterventions">Surgicalinterventions</label>
+            <input type="text" class="form-control" name="surgicalinterventions" id="field_surgicalinterventions"
+                    ng-model="vm.pacientMedicalData.surgicalinterventions"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientMedicalData.useofdrugs" for="field_useofdrugs">Useofdrugs</label>
+            <input type="text" class="form-control" name="useofdrugs" id="field_useofdrugs"
+                    ng-model="vm.pacientMedicalData.useofdrugs"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientMedicalData.allergies" for="field_allergies">Allergies</label>
+            <input type="text" class="form-control" name="allergies" id="field_allergies"
+                    ng-model="vm.pacientMedicalData.allergies"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientMedicalData.ahffather" for="field_ahffather">Ahffather</label>
+            <input type="text" class="form-control" name="ahffather" id="field_ahffather"
+                    ng-model="vm.pacientMedicalData.ahffather"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientMedicalData.ahfmother" for="field_ahfmother">Ahfmother</label>
+            <input type="text" class="form-control" name="ahfmother" id="field_ahfmother"
+                    ng-model="vm.pacientMedicalData.ahfmother"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.pacientMedicalData.ahfothers" for="field_ahfothers">Ahfothers</label>
+            <input type="text" class="form-control" name="ahfothers" id="field_ahfothers"
+                    ng-model="vm.pacientMedicalData.ahfothers"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.pacientMedicalData.pacient" for="field_pacient">Pacient</label>
+            <select class="form-control" id="field_pacient" name="pacient" ng-model="vm.pacientMedicalData.pacient" ng-options="pacient as pacient.id for pacient in vm.pacients | orderBy:'id' track by pacient.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.pacientMedicalData.bloodGroup" for="field_bloodGroup">Blood Group</label>
+            <select class="form-control" id="field_bloodGroup" name="bloodGroup" ng-model="vm.pacientMedicalData.bloodGroup" ng-options="bloodGroup as bloodGroup.id for bloodGroup in vm.bloodgroups track by bloodGroup.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.pacientMedicalData.disabilities" for="field_disabilities">Disabilities</label>
+            <select class="form-control" id="field_disabilities" name="disabilities" ng-model="vm.pacientMedicalData.disabilities" ng-options="disabilities as disabilities.id for disabilities in vm.disabilities track by disabilities.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,83 @@
+
+<div>
+    <h2><span data-translate="cercardiobitiApp.medicine.detail.title">Medicine</span> {{vm.medicine.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="cercardiobitiApp.medicine.tipoinsumo">Tipoinsumo</span></dt>
+        <dd>
+            <span>{{vm.medicine.tipoinsumo}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medicine.dentrofueracuadro">Dentrofueracuadro</span></dt>
+        <dd>
+            <span>{{vm.medicine.dentrofueracuadro}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medicine.nogrupoterapeutico">Nogrupoterapeutico</span></dt>
+        <dd>
+            <span>{{vm.medicine.nogrupoterapeutico}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medicine.nombregrupoterapeutico">Nombregrupoterapeutico</span></dt>
+        <dd>
+            <span>{{vm.medicine.nombregrupoterapeutico}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medicine.nivelatencion">Nivelatencion</span></dt>
+        <dd>
+            <span>{{vm.medicine.nivelatencion}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medicine.clavecodigo">Clavecodigo</span></dt>
+        <dd>
+            <span>{{vm.medicine.clavecodigo}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medicine.subclavecodigo">Subclavecodigo</span></dt>
+        <dd>
+            <span>{{vm.medicine.subclavecodigo}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medicine.nombregenerico">Nombregenerico</span></dt>
+        <dd>
+            <span>{{vm.medicine.nombregenerico}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medicine.formafarmaceutica">Formafarmaceutica</span></dt>
+        <dd>
+            <span>{{vm.medicine.formafarmaceutica}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medicine.concentracion">Concentracion</span></dt>
+        <dd>
+            <span>{{vm.medicine.concentracion}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medicine.presentacion">Presentacion</span></dt>
+        <dd>
+            <span>{{vm.medicine.presentacion}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medicine.principalindicacion">Principalindicacion</span></dt>
+        <dd>
+            <span>{{vm.medicine.principalindicacion}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medicine.demasindicaciones">Demasindicaciones</span></dt>
+        <dd>
+            <span>{{vm.medicine.demasindicaciones}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medicine.tipoactualizacion">Tipoactualizacion</span></dt>
+        <dd>
+            <span>{{vm.medicine.tipoactualizacion}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medicine.noactualizacion">Noactualizacion</span></dt>
+        <dd>
+            <span>{{vm.medicine.noactualizacion}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.medicine.descripcion">Descripcion</span></dt>
+        <dd>
+            <span>{{vm.medicine.descripcion}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="medicine-detail.edit({id:vm.medicine.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

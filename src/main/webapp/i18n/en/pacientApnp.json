@@ -1,0 +1,28 @@
+{
+    "cercardiobitiApp": {
+        "pacientApnp" : {
+            "home": {
+                "title": "Pacient Apnps",
+                "createLabel": "Create a new Pacient Apnp",
+                "createOrEditLabel": "Create or edit a Pacient Apnp",
+                "search": "Search for Pacient Apnp"
+            },
+            "created": "A new Pacient Apnp is created with identifier {{ param }}",
+            "updated": "A Pacient Apnp is updated with identifier {{ param }}",
+            "deleted": "A Pacient Apnp is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Pacient Apnp {{ id }}?"
+            },
+            "detail": {
+                "title": "Pacient Apnp"
+            },
+            "quantity": "Quantity",
+            "datestarts": "Datestarts",
+            "dateend": "Dateend",
+            "pacient": "Pacient",
+            "drugAddiction": "Drug Addiction",
+            "backGround": "Back Ground",
+            "time": "Time"
+        }
+    }
+}

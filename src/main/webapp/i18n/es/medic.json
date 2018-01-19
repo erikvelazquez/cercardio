@@ -1,0 +1,41 @@
+{
+    "cercardiobitiApp": {
+        "medic" : {
+            "home": {
+                "title": "Médicos",
+                "createLabel": "Crear nuevo Médico",
+                "createOrEditLabel": "Crear o editar Médico",
+                "search": "Search for Médico"
+            },
+            "created": "Un nuevo Médico ha sido creado con el identificador {{ param }}",
+            "updated": "Un Médico ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Médico ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Médico {{ id }}?"
+            },
+            "detail": {
+                "title": "Médico"
+            },
+            "colony": "Colonia",
+            "street": "Calle",
+            "streetnumber": "No. Ext.",
+            "suitnumber": "No. Int",
+            "phonenumber1": "Teléfono 1",
+            "phonenumber2": "Teléfono 2",
+            "email1": "Email 1",
+            "email2": "Email 2",
+            "facebook": "Facebook",
+            "twitter": "Twitter",
+            "instagram": "Instagram",
+            "snapchat": "Snapchat",
+            "linkedin": "Linkedin",
+            "vine": "Vine",
+            "createdat": "Fecha de Creación",
+            "userBD": "Usuario",
+            "company": "Compañia",
+            "ethnicGroup": "Grupo Étnico",
+            "gender": "Género",
+            "category": "Especialidad"
+        }
+    }
+}

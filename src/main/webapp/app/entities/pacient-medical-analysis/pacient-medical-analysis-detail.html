@@ -1,0 +1,63 @@
+
+<div>
+    <h2><span data-translate="cercardiobitiApp.pacientMedicalAnalysis.detail.title">Pacient Medical Analysis</span> {{vm.pacientMedicalAnalysis.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="cercardiobitiApp.pacientMedicalAnalysis.presentation">Presentation</span></dt>
+        <dd>
+            <span>{{vm.pacientMedicalAnalysis.presentation}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientMedicalAnalysis.subjective">Subjective</span></dt>
+        <dd>
+            <span>{{vm.pacientMedicalAnalysis.subjective}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientMedicalAnalysis.objective">Objective</span></dt>
+        <dd>
+            <span>{{vm.pacientMedicalAnalysis.objective}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientMedicalAnalysis.analysis">Analysis</span></dt>
+        <dd>
+            <span>{{vm.pacientMedicalAnalysis.analysis}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientMedicalAnalysis.disease">Disease</span></dt>
+        <dd>
+            <span>{{vm.pacientMedicalAnalysis.disease}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientMedicalAnalysis.tests">Tests</span></dt>
+        <dd>
+            <span>{{vm.pacientMedicalAnalysis.tests}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientMedicalAnalysis.treatment">Treatment</span></dt>
+        <dd>
+            <span>{{vm.pacientMedicalAnalysis.treatment}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientMedicalAnalysis.medicine">Medicine</span></dt>
+        <dd>
+            <span>{{vm.pacientMedicalAnalysis.medicine}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientMedicalAnalysis.daytime">Daytime</span></dt>
+        <dd>
+            <span>{{vm.pacientMedicalAnalysis.daytime | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientMedicalAnalysis.medic">Medic</span></dt>
+        <dd>
+            <a ui-sref="medic-detail({id:vm.pacientMedicalAnalysis.medic.id})">{{vm.pacientMedicalAnalysis.medic.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.pacientMedicalAnalysis.pacient">Pacient</span></dt>
+        <dd>
+            <a ui-sref="pacient-detail({id:vm.pacientMedicalAnalysis.pacient.id})">{{vm.pacientMedicalAnalysis.pacient.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="pacient-medical-analysis-detail.edit({id:vm.pacientMedicalAnalysis.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

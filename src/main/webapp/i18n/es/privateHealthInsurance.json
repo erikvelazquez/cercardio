@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "privateHealthInsurance" : {
+            "home": {
+                "title": "Seguridad Social Privada",
+                "createLabel": "Crear nuevo Seguridad Social Privada",
+                "createOrEditLabel": "Crear o editar Seguridad Social Privada",
+                "search": "Buscar por Seguridad Social Privada"
+            },
+            "created": "Un nuevo Seguridad Social Privada ha sido creado con el identificador {{ param }}",
+            "updated": "Un Seguridad Social Privada ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Seguridad Social Privada ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Seguridad Social Privada {{ id }}?"
+            },
+            "detail": {
+                "title": "Seguridad Social Privada"
+            },
+            "name": "Nombre",
+            "isactive": "Activo"
+        }
+    }
+}

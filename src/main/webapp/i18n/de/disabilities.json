@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "disabilities" : {
+            "home": {
+                "title": "Disabilities",
+                "createLabel": "Disabilities erstellen",
+                "createOrEditLabel": "Disabilities erstellen oder bearbeiten",
+                "search": "Suche nach Disabilities"
+            },
+            "created": "Disabilities erstellt mit ID {{ param }}",
+            "updated": "Disabilities aktualisiert mit ID {{ param }}",
+            "deleted": "Disabilities gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Disabilities {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Disabilities"
+            },
+            "subgroup": "Subgroup",
+            "disability": "Disability"
+        }
+    }
+}

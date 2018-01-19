@@ -1,0 +1,177 @@
+<div>
+    <h2 data-translate="cercardiobitiApp.diagnosis.home.title">Diagnoses</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="diagnosis.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="cercardiobitiApp.diagnosis.home.createLabel">
+                        Create new Diagnosis
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'cercardiobitiApp.diagnosis.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.letra">Letra</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.catalogkey">Catalogkey</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.asterisco">Asterisco</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.nombre">Nombre</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.lsex">Lsex</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.linf">Linf</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.lsup">Lsup</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.trivial">Trivial</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.erradicado">Erradicado</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.ninter">Ninter</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.nin">Nin</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.ninmtobs">Ninmtobs</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.nocbd">Nocbd</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.noaph">Noaph</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.fetal">Fetal</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.capitulo">Capitulo</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.lista1">Lista 1</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.grupo1">Grupo 1</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.lista5">Lista 5</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.actualizacionescie10">Actualizacionescie 10</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.yearmodifi">Yearmodifi</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.yearaplicacion">Yearaplicacion</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.valid">Valid</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.prinmorta">Prinmorta</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.prinmorbi">Prinmorbi</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.lmmorbi">Lmmorbi</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.lmmorta">Lmmorta</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.lgbd165">Lgbd 165</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.iomsbeck">Iomsbeck</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.lgbd190">Lgbd 190</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.notdiaria">Notdiaria</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.notsemanal">Notsemanal</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.sistemaespecial">Sistemaespecial</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.birmm">Birmm</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.causatype">Causatype</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.epimorta">Epimorta</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.edasiras5Anios">Edasiras 5 Anios</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.csvematernasseedepid">Csvematernasseedepid</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.epimortam5">Epimortam 5</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.epimorbi">Epimorbi</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.defmaternas">Defmaternas</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.escauses">Escauses</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.numcauses">Numcauses</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.essuivemorta">Essuivemorta</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.essuivemorb">Essuivemorb</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.epiclave">Epiclave</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.epiclavedesc">Epiclavedesc</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.essuivenotin">Essuivenotin</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.essuiveestepi">Essuiveestepi</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.essuiveestbrote">Essuiveestbrote</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.sinac">Sinac</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.daga">Daga</span></th>
+                    <th><span data-translate="cercardiobitiApp.diagnosis.manifestaenfer">Manifestaenfer</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="diagnosis in vm.diagnoses track by diagnosis.id">
+                    <td><a ui-sref="diagnosis-detail({id:diagnosis.id})">{{diagnosis.id}}</a></td>
+                    <td>{{diagnosis.letra}}</td>
+                    <td>{{diagnosis.catalogkey}}</td>
+                    <td>{{diagnosis.asterisco}}</td>
+                    <td>{{diagnosis.nombre}}</td>
+                    <td>{{diagnosis.lsex}}</td>
+                    <td>{{diagnosis.linf}}</td>
+                    <td>{{diagnosis.lsup}}</td>
+                    <td>{{diagnosis.trivial}}</td>
+                    <td>{{diagnosis.erradicado}}</td>
+                    <td>{{diagnosis.ninter}}</td>
+                    <td>{{diagnosis.nin}}</td>
+                    <td>{{diagnosis.ninmtobs}}</td>
+                    <td>{{diagnosis.nocbd}}</td>
+                    <td>{{diagnosis.noaph}}</td>
+                    <td>{{diagnosis.fetal}}</td>
+                    <td>{{diagnosis.capitulo}}</td>
+                    <td>{{diagnosis.lista1}}</td>
+                    <td>{{diagnosis.grupo1}}</td>
+                    <td>{{diagnosis.lista5}}</td>
+                    <td>{{diagnosis.actualizacionescie10}}</td>
+                    <td>{{diagnosis.yearmodifi}}</td>
+                    <td>{{diagnosis.yearaplicacion}}</td>
+                    <td>{{diagnosis.valid}}</td>
+                    <td>{{diagnosis.prinmorta}}</td>
+                    <td>{{diagnosis.prinmorbi}}</td>
+                    <td>{{diagnosis.lmmorbi}}</td>
+                    <td>{{diagnosis.lmmorta}}</td>
+                    <td>{{diagnosis.lgbd165}}</td>
+                    <td>{{diagnosis.iomsbeck}}</td>
+                    <td>{{diagnosis.lgbd190}}</td>
+                    <td>{{diagnosis.notdiaria}}</td>
+                    <td>{{diagnosis.notsemanal}}</td>
+                    <td>{{diagnosis.sistemaespecial}}</td>
+                    <td>{{diagnosis.birmm}}</td>
+                    <td>{{diagnosis.causatype}}</td>
+                    <td>{{diagnosis.epimorta}}</td>
+                    <td>{{diagnosis.edasiras5Anios}}</td>
+                    <td>{{diagnosis.csvematernasseedepid}}</td>
+                    <td>{{diagnosis.epimortam5}}</td>
+                    <td>{{diagnosis.epimorbi}}</td>
+                    <td>{{diagnosis.defmaternas}}</td>
+                    <td>{{diagnosis.escauses}}</td>
+                    <td>{{diagnosis.numcauses}}</td>
+                    <td>{{diagnosis.essuivemorta}}</td>
+                    <td>{{diagnosis.essuivemorb}}</td>
+                    <td>{{diagnosis.epiclave}}</td>
+                    <td>{{diagnosis.epiclavedesc}}</td>
+                    <td>{{diagnosis.essuivenotin}}</td>
+                    <td>{{diagnosis.essuiveestepi}}</td>
+                    <td>{{diagnosis.essuiveestbrote}}</td>
+                    <td>{{diagnosis.sinac}}</td>
+                    <td>{{diagnosis.daga}}</td>
+                    <td>{{diagnosis.manifestaenfer}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="diagnosis-detail({id:diagnosis.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="diagnosis.edit({id:diagnosis.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="diagnosis.delete({id:diagnosis.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,127 @@
+<div>
+    <h2 data-translate="cercardiobitiApp.pacientGenerals.home.title">Pacient Generals</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="pacient-generals.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="cercardiobitiApp.pacientGenerals.home.createLabel">
+                        Create new Pacient Generals
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'cercardiobitiApp.pacientGenerals.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientGenerals.curp">Curp</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientGenerals.rfc">Rfc</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientGenerals.dateofbirth">Dateofbirth</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientGenerals.placeofbirth">Placeofbirth</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientGenerals.privatenumber">Privatenumber</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientGenerals.socialnumber">Socialnumber</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientGenerals.userBD">User BD</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientGenerals.gender">Gender</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientGenerals.civilstatus">Civilstatus</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientGenerals.religion">Religion</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientGenerals.ethnicGroup">Ethnic Group</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientGenerals.academicDegree">Academic Degree</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientGenerals.socioeconomicLevel">Socioeconomic Level</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientGenerals.occupation">Occupation</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientGenerals.livingPlace">Living Place</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientGenerals.privateHealthInsurance">Private Health Insurance</span></th>
+                    <th><span data-translate="cercardiobitiApp.pacientGenerals.socialHealthInsurance">Social Health Insurance</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="pacientGenerals in vm.pacientGenerals track by pacientGenerals.id">
+                    <td><a ui-sref="pacient-generals-detail({id:pacientGenerals.id})">{{pacientGenerals.id}}</a></td>
+                    <td>{{pacientGenerals.curp}}</td>
+                    <td>{{pacientGenerals.rfc}}</td>
+                        <td>{{pacientGenerals.dateofbirth | date:'mediumDate'}}</td>
+                    <td>{{pacientGenerals.placeofbirth}}</td>
+                    <td>{{pacientGenerals.privatenumber}}</td>
+                    <td>{{pacientGenerals.socialnumber}}</td>
+                    <td>
+                        <a ui-sref="user-bd-detail({id:pacientGenerals.userBD.id})">{{pacientGenerals.userBD.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="gender-detail({id:pacientGenerals.gender.id})">{{pacientGenerals.gender.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="civil-status-detail({id:pacientGenerals.civilstatus.id})">{{pacientGenerals.civilstatus.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="religion-detail({id:pacientGenerals.religion.id})">{{pacientGenerals.religion.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="ethnic-group-detail({id:pacientGenerals.ethnicGroup.id})">{{pacientGenerals.ethnicGroup.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="academic-degree-detail({id:pacientGenerals.academicDegree.id})">{{pacientGenerals.academicDegree.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="socioeconomic-level-detail({id:pacientGenerals.socioeconomicLevel.id})">{{pacientGenerals.socioeconomicLevel.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="occupation-detail({id:pacientGenerals.occupation.id})">{{pacientGenerals.occupation.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="living-place-detail({id:pacientGenerals.livingPlace.id})">{{pacientGenerals.livingPlace.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="private-health-insurance-detail({id:pacientGenerals.privateHealthInsurance.id})">{{pacientGenerals.privateHealthInsurance.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="social-health-insurance-detail({id:pacientGenerals.socialHealthInsurance.id})">{{pacientGenerals.socialHealthInsurance.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="pacient-generals-detail({id:pacientGenerals.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="pacient-generals.edit({id:pacientGenerals.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="pacient-generals.delete({id:pacientGenerals.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,511 @@
+
+
+entity AcademicDegree {
+	description String
+    is_active Boolean
+	created_at ZonedDateTime
+}
+
+entity Appreciation {
+	 
+    height Float
+    weight Float
+    size Float
+    bmi Float
+    temperature Float
+    saturation Float
+    blood_pressuere Float
+    heart_rate Float
+    breathing_frequency Float
+    others String
+    head String
+    neck String
+    chest String
+    abdomen String
+    body_part String
+    genitals String
+    others_physical String
+    created_at  ZonedDateTime
+}
+
+entity Background {
+	 
+    description String
+    is_active Boolean
+}
+
+entity BloodGroup {
+	 
+    description String
+    is_active Boolean
+}
+
+entity Category {
+	 
+    description String
+}
+
+entity CivilStatus {
+	 
+    description String
+    is_active Boolean
+}
+
+entity Company{
+	name String
+    rfc String
+    is_active Boolean
+}
+
+entity Diagnosis{
+	letra String
+	catalog_key String
+	asterisco String
+	nombre String
+	lsex String
+	linf String
+	lsup String
+	trivial String
+	erradicado String
+	n_inter String
+	nin String
+	ninmtobs String
+	no_cbd String
+	no_aph String
+	fetal String
+	capitulo Integer
+	lista1 Integer
+	grupo1 Integer
+	lista5 Integer
+	actualizaciones_cie10 String
+	year_modifi String
+	year_aplicacion String
+	valid String
+	prinmorta Integer
+	prinmorbi Integer
+	lm_morbi String
+	lm_morta String
+	lgbd165 String
+	iomsbeck Integer
+	lgbd190 String
+	notdiaria String
+	notsemanal String
+	sistema_especial String
+	birmm String
+	causa_type Integer
+	epi_morta String
+	edas_iras_5_Anios String
+	csve_maternas_seed_epid String
+	epi_morta_m5 String
+	epi_morbi String
+	def_maternas Integer
+	es_causes String
+	num_causes String
+	es_suive_morta String
+	es_suive_morb String
+	epi_clave String
+	epi_clave_desc String
+	es_suive_notin String
+	es_suive_est_epi String
+	es_suive_est_brote String
+	sinac String
+	daga String
+	manifesta_enfer String
+}
+
+entity Disabilities {
+	 
+    sub_group String
+    disability String
+}
+
+entity Domicile{
+	domicile String
+	is_active Boolean
+}
+
+entity DrugAddiction {
+	 
+    description String
+    is_active Boolean
+}
+
+entity EthnicGroup {
+	 
+    description String
+    is_active Boolean
+}
+
+entity Gender {
+	 
+    description String
+    is_active Boolean
+}
+
+entity Indigenous_Languages{
+	catalog_key String
+	indigenous_language String
+}
+
+entity LivingPlace {
+	 
+    description String
+    price String
+}
+
+entity Medic {
+     
+	 colony String
+	 street String
+	 street_number String
+	 suit_number String
+	 phone_number_1 Integer
+	 phone_number_2 Integer
+	 email_1 String
+	 email_2 String
+	 facebook String
+	 twitter String
+	 instagram String
+	 snapchat String
+	 linkedin String
+	 vine String
+     created_at ZonedDateTime
+}
+
+
+entity Nurse {
+	 
+	 cp_id Integer
+	 colony String
+	 street String
+	 street_number String
+	 suit_number String
+	 phone_number_1 Integer
+	 phone_number_2 Integer
+	 email_1 String
+	 email_2 String
+	 facebook String
+	 twitter String
+	 instagram String
+	 snapchat String
+	 linkedin String
+	 vine String
+     created_at ZonedDateTime
+}
+
+entity Occupation {
+	description String
+    is_active Boolean
+}
+
+entity Pacient {
+	 cp Integer
+	 colony String
+	 street String
+	 street_number String
+	 suit_number String
+	 phone_number_1 Integer
+	 phone_number_2 Integer
+	 email_1 String
+	 email_2 String
+     
+     curp String
+     rfc String
+     date_of_birth LocalDate 
+	 place_of_birth String
+	 private_number String
+	 social_number String
+     
+	 facebook String
+	 twitter String
+	 instagram String
+	 snapchat String
+	 linkedin String
+	 vine String
+}
+
+entity PacientApnp {
+	 quantity Integer
+	 date_starts LocalDate
+	 date_end LocalDate
+}
+
+entity PacientApp {
+	 chronic_degenerative String
+	 traumatic String
+	 gynecological_obstetrics String
+	 others String
+	 day_time ZonedDateTime
+}
+
+entity PacientContact {
+     name String
+     lastname String
+	 street String
+	 street_number String
+	 suit_number String
+	 phone_number_1 Integer
+	 phone_number_2 Integer
+	 email_1 String
+	 email_2 String
+	 facebook String
+	 twitter String
+	 instagram String
+	 snapchat String
+	 linkedin String
+	 vine String
+}
+
+entity PacientLaboratoy {
+	 laboratory String
+	 number String
+	 date_of_elaboration ZonedDateTime
+}
+
+
+entity PacientMedicalAnalysis {
+	presentation String
+	subjective String
+	objective String
+	analysis String
+	disease String
+	tests String
+	treatment String
+	medicine String
+	day_time ZonedDateTime
+}
+
+entity PacientMedicalData {
+     diseases String
+	 surgical_interventions String
+	 use_of_drugs String
+	 allergies String
+	 ahf_father String
+	 ahf_mother String
+	 ahf_others String
+}
+
+
+entity Payment {
+	name String
+}
+
+entity PrivateHealthInsurance {
+	name String
+    is_active Boolean
+}
+
+entity Programs {
+	description String
+  	url String
+  	icon String
+	program_parent_id Integer
+	by_order Integer
+    is_active Boolean
+}
+
+entity Religion {
+	religion String
+    is_active Boolean
+}
+
+entity Reservation {
+	title String
+    note String
+    date_at LocalDate
+    created_at ZonedDateTime
+    symtoms String
+    medicaments String
+    cost Integer
+}
+
+entity SocialHealthInsurance {
+	name String
+    is_active Boolean
+}
+
+entity SocioeconomicLevel {
+	code String
+    name String
+    is_active Boolean
+}
+
+entity Time {
+	description String
+    is_active Boolean
+}
+
+entity Timers {
+	description String
+    is_active Boolean
+}
+
+entity Type_Program {
+	name String
+    is_active Boolean
+}
+
+entity Status {
+	name String
+}
+
+entity Medical_Procedures {
+  catalog_key String
+  pro_nombre String
+  pro_cve_edia String
+  pro_edad_ia String
+  pro_cve_edfa String
+  pro_edad_fa String
+  sex_type Integer
+  por_nivela Integer
+  procedimiento_type String
+  pro_principal String
+  pro_capitulo Integer
+  pro_seccion Integer
+  pro_categoria Integer
+  pro_subcateg Integer
+  pro_grupo_lc Integer
+  pro_es_causes Integer
+  pro_num_causes Integer
+}
+ 
+entity Medicine{
+	tipo_insumo String
+	dentro_fuera_cuadro String
+	no_grupo_terapeutico Integer
+	nombre_grupo_terapeutico String
+	nivel_atencion String
+	clave_codigo String
+	subclave_codigo String
+	nombre_generico String
+	forma_farmaceutica String
+	concentracion String
+	presentacion String
+	principal_indicacion String
+	demas_indicaciones String
+	tipo_actualizacion String
+	no_actualizacion String
+	descripcion String
+}
+ 
+entity Medic_Information {
+	cp Integer
+	street String
+	ext_number String
+	int_number String
+	phone_1 String
+	phone_2 String
+	email_1 String
+	email_2 String
+	facebook String
+	twitter String
+	instagram String
+	snapchat String
+	linkedin String
+	vine String
+	recomended String
+	cvu_conacyt String
+	cedula String
+	cedula_esp String
+	curp String
+	rfc String
+	birthday LocalDate
+	external_hospitals String
+	sub_id Integer
+	high_id Integer
+	medical_insurance Integer
+	social_insurance Integer
+	responsibility_insurance String
+	SIN_conacyt String
+	medical_in_number String
+	social_in_number String
+	responsibility_in_number String
+	
+}
+
+
+entity Way_of_Administration {
+	way_of_administration String
+	is_active Boolean
+}
+
+entity UserBD {
+	username String
+    name String
+    lastname String
+    email String
+    password String
+    imagen String
+    is_active Boolean
+    created_at ZonedDateTime 
+}
+
+relationship OneToOne {
+	Pacient{userBD} to UserBD,
+    Medic{userBD} to UserBD,
+    Nurse{userBD} to UserBD,
+
+    PacientMedicalAnalysis{medic} to Medic,
+	PacientMedicalAnalysis{pacient} to Pacient,
+	
+	PacientMedicalData{pacient} to Pacient,
+    
+    PacientContact{pacient} to Pacient,    
+    PacientApp{pacient} to Pacient,
+	PacientMedicalData{pacient} to Pacient,   
+	Medic_Information{medic} to Medic
+	
+}
+
+relationship ManyToOne {
+	Pacient{company} to Company,
+	Medic{company} to Company,
+	Medic{ethnicGroup} to EthnicGroup,
+		
+    Nurse{company} to Company,
+
+    Pacient{gender} to Gender,
+    Medic{gender} to Gender,
+    Nurse{gender} to Gender,
+
+    Medic{category} to Category,
+	
+	PacientApnp{pacient} to Pacient,
+	
+	Pacient{civilstatus} to CivilStatus,
+    Pacient{religion} to Religion,
+    Pacient{ethnicGroup} to EthnicGroup,
+    Pacient{academicDegree} to AcademicDegree,
+    Pacient{socioeconomicLevel} to SocioeconomicLevel,
+	Pacient{occupation} to Occupation,
+	Pacient{livingPlace} to LivingPlace,
+    Pacient{privateHealthInsurance} to PrivateHealthInsurance,
+    Pacient{socialHealthInsurance} to SocialHealthInsurance,
+    
+ 	PacientMedicalData{bloodGroup} to BloodGroup,
+    PacientMedicalData{disabilities} to Disabilities,
+  
+	PacientLaboratoy{pacient} to Pacient,
+	PacientApnp{drugAddiction} to DrugAddiction,
+	PacientApnp{backGround} to Background,
+	PacientApnp{time} to Time, 
+
+	Type_Program{program} to Programs,
+
+	Reservation{pacient} to Pacient,
+    Reservation{medic} to Medic,
+    Reservation{status} to Status,
+    Reservation{payment} to Payment,
+    Reservation{timers} to Timers,
+
+	Appreciation{pacient} to Pacient,
+    Appreciation{medic} to Medic,
+
+	Reservation{appreciation} to Appreciation,
+	Reservation{pacientMedicalAnalysis} to PacientMedicalAnalysis
+
+}
+
+enum Language {
+    FRENCH, ENGLISH, SPANISH
+}

@@ -1,0 +1,23 @@
+{
+    "cercardiobitiApp": {
+        "bloodGroup" : {
+            "home": {
+                "title": "Blood Groups",
+                "createLabel": "Blood Group erstellen",
+                "createOrEditLabel": "Blood Group erstellen oder bearbeiten",
+                "search": "Suche nach Blood Group"
+            },
+            "created": "Blood Group erstellt mit ID {{ param }}",
+            "updated": "Blood Group aktualisiert mit ID {{ param }}",
+            "deleted": "Blood Group gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Blood Group {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Blood Group"
+            },
+            "description": "Description",
+            "isactive": "Isactive"
+        }
+    }
+}
