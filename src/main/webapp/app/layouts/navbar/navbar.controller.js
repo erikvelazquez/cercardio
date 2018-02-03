@@ -10,9 +10,10 @@
     function NavbarController ($state, Auth, Principal, ProfileService, LoginService) {
         var vm = this;
 
+        vm.vv = false;
         vm.isNavbarCollapsed = true;
         vm.isAuthenticated = Principal.isAuthenticated;
-
+        vm.ValorVariable = ValorVariable;
         ProfileService.getProfileInfo().then(function(response) {
             vm.inProduction = response.inProduction;
             vm.swaggerEnabled = response.swaggerEnabled;
@@ -38,8 +39,14 @@
         function toggleNavbar() {
             vm.isNavbarCollapsed = !vm.isNavbarCollapsed;
         }
+
         function collapseNavbar() {
             vm.isNavbarCollapsed = true;
+        }
+
+        function ValorVariable() {
+            vm.vv = !vm.vv;
+
         }
     }
 })();
