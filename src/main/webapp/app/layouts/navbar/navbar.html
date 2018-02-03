@@ -1,5 +1,7 @@
 <nav class="navbar navbar-default" role="navigation">
+    
     <div class="container">
+<<<<<<< HEAD
         <a class="navbar-brand"  >
             <span class="glyphicon glyphicon-th-list" ng-click="vm.collapseSidebar()" ></span>
         </a>
@@ -19,6 +21,11 @@
             </a>
         </div> 
        
+=======
+        <a class="navbar-brand" href="" >
+            <span  class="glyphicon glyphicon-th-list" onclick="w3_open()" ng-hide="!vm.isAuthenticated()" ></span>
+        </a>        
+>>>>>>> 6d5d5c826d64607da8d5b1ee1a5b8f4b9bf558c2
 
         <div class="navbar-collapse" uib-collapse="vm.isNavbarCollapsed" ng-switch="vm.isAuthenticated()">
             <ul class="nav navbar-nav navbar-right">
@@ -410,6 +417,7 @@
 
     </div>
 </nav>
+<<<<<<< HEAD
 
 
 <div id="mySidebar" class="w3-sidebar w3-light-grey w3-bar-block" style="width:{{vm.margin_left}}%; display:{{vm.sidebardisplay}}" >
@@ -476,6 +484,8 @@
 
 
 </div>
+=======
+>>>>>>> 6d5d5c826d64607da8d5b1ee1a5b8f4b9bf558c2
 <!-- 
  <aside class="main-sidebar" ng-switch="vm.isAuthenticated()">
         <section class="sidebar" ng-switch-when="true">
