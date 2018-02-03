@@ -171,7 +171,7 @@
                 });
             }]
         })
-        .state('appreciation.agregar_valoraracion', {
+        .state('agregar_valoracion', {
             parent: 'reservation',
             url: '/valoracion',
             data: {
@@ -205,6 +205,8 @@
                                 genitals: null,
                                 othersphysical: null,
                                 createdat: null,
+                                pacient_id: $stateParams.pacient_id,
+                                medic_id: $stateParams.medic_id,
                                 id: null
                             };
                         }
@@ -216,7 +218,7 @@
                 });
             }]
         })
-        .state('appreciation.editar_valoracion', {
+        .state('editar_valoracion', {
             parent: 'reservation',
             url: '/{id}/valoracion',
             data: {
@@ -232,6 +234,67 @@
                     resolve: {
                         entity: ['Appreciation', function(Appreciation) {
                             return Appreciation.get({id : $stateParams.id}).$promise;
+                        }]
+                    }
+                }).result.then(function() {
+                    $state.go('reservation', null, { reload: 'reservation' });
+                }, function() {
+                    $state.go('^');
+                });
+            }]
+        })
+        .state('agregar_analisis', {
+            parent: 'reservation',
+            url: '/Analisis',
+            data: {
+                authorities: ['ROLE_USER']
+            },
+            onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
+                $uibModal.open({
+                    templateUrl: 'app/entities/pacient-medical-analysis/pacient-medical-analysis-dialog2.html',
+                    controller: 'PacientMedicalAnalysisDialogController',
+                    controllerAs: 'vm',
+                    backdrop: 'static',
+                    size: 'lg',
+                    resolve: {
+                        entity: function () {
+                            return {
+                                presentation: null,
+                                subjective: null,
+                                objective: null,
+                                analysis: null,
+                                disease: null,
+                                tests: null,
+                                treatment: null,
+                                medicine: null,
+                                daytime: null,
+                                id: null
+                            };
+                        }
+                    }
+                }).result.then(function() {
+                    $state.go('reservation', null, { reload: 'reservation' });
+                }, function() {
+                    $state.go('reservation');
+                });
+            }]
+        })
+        .state('editar_analisis', {
+            parent: 'reservation',
+            url: '/{id}/Analisis',
+            data: {
+                authorities: ['ROLE_USER']
+            },
+            onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
+                $uibModal.open({
+                    templateUrl: 'app/entities/pacient-medical-analysis/pacient-medical-analysis-dialog2.html',
+                    controller: 'PacientMedicalAnalysisDialogController',
+                    controllerAs: 'vm',
+                    backdrop: 'static',
+                    size: 'lg',
+                    resolve: {
+                        entity: ['PacientMedicalAnalysis', function(PacientMedicalAnalysis) {
+                            return PacientMedicalAnalysis.get({id : $stateParams.id}).$promise;
                         }]
                     }
                 }).result.then(function() {

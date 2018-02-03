@@ -159,8 +159,8 @@ entity Medic {
 	 street String
 	 street_number String
 	 suit_number String
-	 phone_number_1 Integer
-	 phone_number_2 Integer
+	 phone_number_1 Long
+	 phone_number_2 Long
 	 email_1 String
 	 email_2 String
 	 facebook String
@@ -180,8 +180,8 @@ entity Nurse {
 	 street String
 	 street_number String
 	 suit_number String
-	 phone_number_1 Integer
-	 phone_number_2 Integer
+	 phone_number_1 Long
+	 phone_number_2 Long
 	 email_1 String
 	 email_2 String
 	 facebook String
@@ -244,8 +244,8 @@ entity PacientContact {
 	 street String
 	 street_number String
 	 suit_number String
-	 phone_number_1 Integer
-	 phone_number_2 Integer
+	 phone_number_1 Long
+	 phone_number_2 Long
 	 email_1 String
 	 email_2 String
 	 facebook String
@@ -393,8 +393,8 @@ entity Medic_Information {
 	street String
 	ext_number String
 	int_number String
-	phone_1 String
-	phone_2 String
+	phone_1 Long
+	phone_2 Long
 	email_1 String
 	email_2 String
 	facebook String

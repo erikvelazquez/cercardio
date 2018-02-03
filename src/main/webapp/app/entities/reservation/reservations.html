@@ -42,8 +42,8 @@
                     <th><span data-translate="cercardiobitiApp.reservation.dateat">Dateat</span></th> 
                     <th><span data-translate="cercardiobitiApp.reservation.status">Status</span></th>
                     <th><span data-translate="cercardiobitiApp.reservation.payment">Payment</span></th>
-                    <!-- <th><span >Appreciation</span></th> -->
-                    <!-- <th><span >PacientmedicalAnalysis</span></th> -->
+                    <!-- <th><span >Appreciation</span></th>  
+                    <th><span >PacientmedicalAnalysis</span></th> -->
                     <th></th>
                 </tr>
             </thead>
@@ -56,9 +56,9 @@
                     <td>{{reservation.dateat | date:'mediumDate'}}</td>
                     <td><span>{{reservation.status.name}}</span></td>
                     <td><span>{{reservation.payment.name}}</span></td>
-                    <!-- <td><span>{{!reservation.appreciation.id  + ' ' + reservation.appreciation.id }}</span></td> -->
-                    <!-- <td><span>{{!reservation.pacientMedicalAnalysis.id + ' ' + reservation.pacientMedicalAnalysis.id}}</span></td> -->
-                    
+                    <!-- <td><span>{{reservation.appreciation.id }}</span></td>
+                    <td><span>{{reservation.pacientMedicalAnalysis.id}}</span></td>
+                     -->
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"
@@ -75,28 +75,28 @@
                             </button>
 
                             <button type="submit"
-                                    ui-sref="appreciation.agregar_valoraracion({id:reservation.id})"
+                                    ui-sref="agregar_valoracion({pacient_id:reservation.pacient_id ,medic_id:reservation.medic_id})"
                                     class="btn btn-success btn-sm" ng-show="!reservation.appreciation.id">
                                 <span class="glyphicon glyphicon-plus"></span>
                                 <span class="hidden-sm-down" >Valoraración</span>
                             </button>
 
                             <button type="submit"
-                                    ui-sref="appreciation.editar_valoracion({id:reservation.id})"
+                                    ui-sref="editar_valoracion({id:reservation.appreciation.id})"
                                     class="btn btn-primary btn-sm" ng-show="reservation.appreciation.id">
                                 <span class="glyphicon glyphicon-pencil"></span>
                                 <span class="hidden-sm-down">Valoraración</span>
                             </button>
 
                              <button type="submit"
-                                    ui-sref="reservation.agregar_analisis({id:reservation.id})"
+                                    ui-sref="agregar_analisis({id:reservation.id})"
                                     class="btn btn-success btn-sm" ng-show="!reservation.pacientMedicalAnalysis.id">
                                 <span class="glyphicon glyphicon-plus"></span>
                                 <span class="hidden-sm-down" >Análisis</span>
                             </button>
 
                             <button type="submit"
-                                    ui-sref="reservation.editar_analisis({id:reservation.id})"
+                                    ui-sref="editar_analisis({id:reservation.pacientMedicalAnalysis.id})"
                                     class="btn btn-primary btn-sm" ng-show="reservation.pacientMedicalAnalysis.id">
                                 <span class="glyphicon glyphicon-pencil"></span>
                                 <span class="hidden-sm-down" >Análisis</span>

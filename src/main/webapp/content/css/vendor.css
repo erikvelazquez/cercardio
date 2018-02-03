@@ -1514,15 +1514,15 @@ pre {
   @media (min-width: 768px) {
     .container {
       width: 750px; 
-      padding-left: 15%;} }
+      padding-left: 1%;} }
   @media (min-width: 992px) {
     .container {
       width: 970px; 
-      padding-left: 15%;} }
+      padding-left: 1%;} }
   @media (min-width: 1200px) {
     .container {
       width: Auto; 
-      padding-left: 15%;} }
+      padding-left: 1%;} }
 
 .container-fluid {
   margin-right: auto;
@@ -5834,6 +5834,8 @@ button.close {
  * ------------------
  */
  .main-sidebar {
+  background: #222d32;
+  font-family: Arial, Helvetica, sans-serif;
   position: absolute;
   top: 0;
   left: 0;
