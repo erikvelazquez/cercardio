@@ -5,7 +5,7 @@
                 "title": "Pacientes",
                 "createLabel": "Crear nuevo Paciente",
                 "createOrEditLabel": "Crear o editar Paciente",
-                "search": "Search for Paciente"
+                "search": "Buscar Paciente"
             },
             "created": "Un nuevo Paciente ha sido creado con el identificador {{ param }}",
             "updated": "Un Paciente ha sido actualizado con el identificador {{ param }}",
@@ -21,8 +21,8 @@
             "street": "Calle",
             "streetnumber": "No. Ext.",
             "suitnumber": "No. Int",
-            "phonenumber1": "Teléfono 1",
-            "phonenumber2": "Teléfono 2",
+            "phonenumber1": "Tel. 1",
+            "phonenumber2": "Tel. 2",
             "email1": "Email 1",
             "email2": "Email 2",
             "facebook": "Facebook",
