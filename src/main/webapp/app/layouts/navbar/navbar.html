@@ -1,31 +1,9 @@
 <nav class="navbar navbar-default" role="navigation">
     
     <div class="container">
-<<<<<<< HEAD
-        <a class="navbar-brand"  >
-            <span class="glyphicon glyphicon-th-list" ng-click="vm.collapseSidebar()" ></span>
-        </a>
-
-        
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" ng-click="vm.toggleNavbar()">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand logo" href="#/" ng-click="vm.collapseNavbar()">
-                <img class="logo-img" src="content/images/logocc.png" alt="logo"/>
-                <span data-translate="global.title">CerCardio Biti</span>
-            </a>
-        </div> 
-       
-=======
         <a class="navbar-brand" href="" >
             <span  class="glyphicon glyphicon-th-list" onclick="w3_open()" ng-hide="!vm.isAuthenticated()" ></span>
         </a>        
->>>>>>> 6d5d5c826d64607da8d5b1ee1a5b8f4b9bf558c2
 
         <div class="navbar-collapse" uib-collapse="vm.isNavbarCollapsed" ng-switch="vm.isAuthenticated()">
             <ul class="nav navbar-nav navbar-right">
@@ -417,75 +395,6 @@
 
     </div>
 </nav>
-<<<<<<< HEAD
-
-
-<div id="mySidebar" class="w3-sidebar w3-light-grey w3-bar-block" style="width:{{vm.margin_left}}%; display:{{vm.sidebardisplay}}" >
-
-    <li class="w3-bar-item">
-        <a ui-sref="home" ng-click="vm.collapseSidebar()">
-            <span class="glyphicon glyphicon-home"></span>
-            <span class="hidden-sm">Home</span>
-        </a>
-    </li>
-    
-    <a class="w3-bar-item w3-button" ui-sref="reservation" ng-click="vm.collapseSidebar()">
-        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
-        <span data-translate="global.menu.entities.reservation">Reservation</span>
-    </a>
-    <a class="w3-bar-item w3-button" ui-sref="pacient" ng-click="vm.collapseSidebar()">
-        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
-        <span data-translate="global.menu.entities.pacient">Pacient</span>
-    </a>
-    <a class="w3-bar-item w3-button" ui-sref="medic" ng-click="vm.collapseSidebar()">
-        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
-        <span data-translate="global.menu.entities.medic">Medic</span>
-    </a>
-    <a class="w3-bar-item w3-button" ui-sref="nurse" ng-click="vm.collapseSidebar()">
-        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
-        <span data-translate="global.menu.entities.nurse">Nurse</span>
-    </a>
-    <a class="w3-bar-item w3-button" ui-sref="reports" ng-click="vm.collapseSidebar()">
-        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
-        <span data-translate="global.menu.entities.reports">Reports</span>
-    </a>
-    <a class="w3-bar-item w3-button" ui-sref="reports" ng-click="vm.collapseSidebar()">
-        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
-        <span data-translate="global.menu.entities.reports">Reports</span>
-    </a>
-
-    <li class="treeview">
-        <a href="#">
-            <i class="fa fa-pie-chart"></i>
-            <span>Catalogos</span>
-            <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-            </span>
-        </a>
-        <ul class="treeview-menu">
-                <li><a href="../charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-                <li><a href="../charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-                <li><a href="../charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-                <li><a href="../charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
-            <li ui-sref-active="active">
-                <a ui-sref="academic-degree" ng-click="vm.collapseNavbar()">
-                    <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
-                    <span data-translate="global.menu.entities.academicDegree">Academic Degree</span>
-                </a>
-            </li>
-            <li ui-sref-active="active">
-                <a ui-sref="appreciation" ng-click="vm.collapseNavbar()">
-                    <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
-                    <span data-translate="global.menu.entities.appreciation">Appreciation</span>
-                </a>
-            </li>
-        </ul>
-    </li>
-
-
-</div>
-=======
->>>>>>> 6d5d5c826d64607da8d5b1ee1a5b8f4b9bf558c2
 <!-- 
  <aside class="main-sidebar" ng-switch="vm.isAuthenticated()">
         <section class="sidebar" ng-switch-when="true">
