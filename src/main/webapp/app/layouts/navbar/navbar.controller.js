@@ -16,6 +16,7 @@
         vm.collapseSidebar = collapseSidebar;
         vm.sidebardisplay = "none";
         vm.margin_left = "0";
+        vm.sidebar = false;
 
         ProfileService.getProfileInfo().then(function(response) {
             vm.inProduction = response.inProduction;
