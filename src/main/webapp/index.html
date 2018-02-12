@@ -31,35 +31,33 @@
     
     <div ui-view="navbar" ng-cloak></div>
     <!-- style="display:none" -->
-    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="width:0%" id="mySidebar">
-        <!-- <button class="w3-bar-item w3-button w3-large"  >Close &times;</button> -->
-        <a class="w3-bar-item w3-button" ui-sref="home"   ng-click="vm.collapseNavbar()">
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="width:5%" id="mySidebar">
+         <a class="w3-bar-item w3-button" ui-sref="home"   ng-click="vm.collapseNavbar()">
             <span class="glyphicon glyphicon-home"></span>
-            <span class="hidden-sm">Home</span>
         </a>
         <a class="w3-bar-item w3-button" ui-sref="reservation" ng-click="vm.collapseNavbar()">
             <span class="glyphicon glyphicon-calendar"></span>&nbsp;
-            <span data-translate="global.menu.entities.reservation" class="etiquetaMenu">Reservation</span>
+            <span id="lblreservation" data-translate="global.menu.entities.reservation" class="etiquetaMenu">Reservation</span>
         </a>
         <a class="w3-bar-item w3-button"   ui-sref="pacient" ng-click="vm.collapseNavbar()">
             <span class="glyphicon glyphicon-user"></span>&nbsp;
-            <span data-translate="global.menu.entities.pacient">Pacient</span>
+            <span id = "lblpacient" data-translate="global.menu.entities.pacient">Pacient</span>
         </a>
         <a class="w3-bar-item w3-button" ui-sref="medic" ng-click="vm.collapseNavbar()">
             <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;
-            <span data-translate="global.menu.entities.medic">Medic</span>
+            <span id = "lblmedic" data-translate="global.menu.entities.medic">Medic</span>
         </a>
         <a class="w3-bar-item w3-button" ui-sref="nurse" ng-click="vm.collapseNavbar()">
             <span class="glyphicon glyphicon-heart"></span>&nbsp;
-            <span data-translate="global.menu.entities.nurse">Nurse</span>
+            <span id = "lblnurse" data-translate="global.menu.entities.nurse">Nurse</span>
         </a>
         <a class="w3-bar-item w3-button" ui-sref="reports"  ng-click="vm.collapseNavbar()">
             <span class="glyphicon glyphicon-file"></span>&nbsp;
-            <span data-translate="global.menu.entities.reports">Reports</span>
+            <span id = "lblreports" data-translate="global.menu.entities.reports">Reports</span>
         </a>
         <a class="w3-bar-item w3-button" ui-sref="company" ng-click="vm.collapseNavbar()">
             <span class="glyphicon glyphicon-header"></span>&nbsp;
-            <span data-translate="global.menu.entities.company">Company</span>
+            <span id = "lblcompany" data-translate="global.menu.entities.company">Company</span>
         </a>
         
        
@@ -76,6 +74,7 @@
         </div>
     </div>
     <script>
+        habilita(false);
         function w3_taggle(){
             if(document.getElementById("main").style.marginLeft == "5%" 
                 || document.getElementById("main").style.marginLeft == "" ){
@@ -85,12 +84,33 @@
                 document.getElementById("mySidebar").style.width = "20%";
                 document.getElementById("mySidebar").style.display = "block";
                 // document.getElementById("openNav").style.display = 'none';
+                habilita(true);
             }else{
                 // document.getElementsByClassName("etiquetaMenu").style.display = 'none';
                 document.getElementById("main2").style.marginLeft = "5%";
                 document.getElementById("main").style.marginLeft = "5%";
                 document.getElementById("mySidebar").style.width = "5%";
                 // document.getElementById("openNav").style.display = "inline-block";
+                habilita(false);
+            }
+        }
+
+        function habilita(valor){
+            if(valor){
+                document.getElementById("lblreservation").style.display = "inline-block";
+                document.getElementById("lblpacient").style.display = "inline-block";
+                document.getElementById("lblmedic").style.display = "inline-block";
+                document.getElementById("lblnurse").style.display = "inline-block";
+                document.getElementById("lblreports").style.display = "inline-block";
+                document.getElementById("lblcompany").style.display = "inline-block";
+            }else{
+                document.getElementById("lblreservation").style.display = "none";
+                document.getElementById("lblpacient").style.display = "none";
+                document.getElementById("lblmedic").style.display = "none";
+                document.getElementById("lblnurse").style.display = "none";
+                document.getElementById("lblreports").style.display = "none";
+                document.getElementById("lblcompany").style.display = "none";
+                
             }
         }
 
