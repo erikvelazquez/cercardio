@@ -16,27 +16,29 @@
                     ng-model="vm.appreciation.id" readonly />
         </div> -->
 
-                
         <div class="Row col-md-12">
 
-            <!-- <div class="form-group col-md-4">
+            <div class="form-group col-md-4">
                 <label data-translate="cercardiobitiApp.appreciation.reservation" for="field_reservation">Reservation</label>
-                <select class="form-control" id="field_reservation" name="reservation" ng-model="vm.appreciation.reservation" ng-options="reservation as reservation.id for reservation in vm.reservations | orderBy:'id' track by reservation.id">
+                <label>Id: {{vm.appreciation.reservation_id }}</label>
+                <!-- <select class="form-control" id="field_reservation" name="reservation" ng-model="vm.appreciation.reservation" ng-options="reservation as reservation.id for reservation in vm.reservations | orderBy:'id' track by reservation.id">
                     <option value=""></option>
-                </select>
-            </div>-->
+                </select> -->
+            </div>
 
             <div class="form-group col-md-4">
-                <label data-translate="cercardiobitiApp.appreciation.pacient" for="field_pacient">Pacient</label>
-                <select class="form-control" id="field_pacient" name="pacient" ng-model="vm.appreciation.pacient" ng-options="pacient as pacient.userBD.name + ' ' + pacient.userBD.lastname for pacient in vm.pacients track by pacient.id">
+                <label data-translate="cercardiobitiApp.appreciation.pacient" for="field_pacient">Pacient </label>
+                <label>Id: {{vm.appreciation.pacient_id }}</label>
+                <!-- <select class="form-control" id="field_pacient" name="pacient" ng-model="vm.appreciation.pacient" ng-options="pacient as pacient.userBD.name + ' ' + pacient.userBD.lastname for pacient in vm.pacients track by pacient.id">
                     <option value=""></option>
-                </select>
+                </select> -->
             </div>
             <div class="form-group col-md-4">
                 <label data-translate="cercardiobitiApp.appreciation.medic" for="field_medic">Medic</label>
-                <select class="form-control" id="field_medic" name="medic" ng-model="vm.appreciation.medic" ng-options="medic as medic.userBD.name + ' ' + medic.userBD.lastname for medic in vm.medics track by medic.id">
+                <label>Id: {{vm.appreciation.medic_id }}</label>
+                <!-- <select class="form-control" id="field_medic" name="medic" ng-model="vm.appreciation.medic" ng-options="medic as medic.userBD.name + ' ' + medic.userBD.lastname for medic in vm.medics track by medic.id">
                     <option value=""></option>
-                </select>
+                </select> -->
             </div> 
 
             <div class="form-group col-md-4">

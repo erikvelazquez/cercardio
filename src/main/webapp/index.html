@@ -14,7 +14,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css">
     <link rel="stylesheet" href="bower_components/ng-table/dist/ng-table.css">
-    <link rel="stylesheet" href="bower_components/animate/animate.min.css">
+    <!-- <link rel="stylesheet" href="bower_components/animate/animate.min.css"> -->
     <!-- endinject -->
     <link rel="stylesheet" href="content/css/vendor.css">
     <!-- endbuild -->
@@ -31,40 +31,38 @@
     
     <div ui-view="navbar" ng-cloak></div>
     <!-- style="display:none" -->
-    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="width:5%" id="mySidebar">
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="width:0%" id="mySidebar">
         <!-- <button class="w3-bar-item w3-button w3-large"  >Close &times;</button> -->
         <a class="w3-bar-item w3-button" ui-sref="home"   ng-click="vm.collapseNavbar()">
             <span class="glyphicon glyphicon-home"></span>
             <span class="hidden-sm">Home</span>
         </a>
-        <a class="w3-bar-item w3-button" ui-sref="reservation"   ng-click="vm.collapseNavbar()">
+        <a class="w3-bar-item w3-button" ui-sref="reservation" ng-click="vm.collapseNavbar()">
             <span class="glyphicon glyphicon-calendar"></span>&nbsp;
             <span data-translate="global.menu.entities.reservation" class="etiquetaMenu">Reservation</span>
         </a>
-        <a class="w3-bar-item w3-button"   ui-sref="pacient"   ng-click="vm.collapseNavbar()">
+        <a class="w3-bar-item w3-button"   ui-sref="pacient" ng-click="vm.collapseNavbar()">
             <span class="glyphicon glyphicon-user"></span>&nbsp;
             <span data-translate="global.menu.entities.pacient">Pacient</span>
         </a>
-        <a class="w3-bar-item w3-button" ui-sref="medic"   ng-click="vm.collapseNavbar()">
+        <a class="w3-bar-item w3-button" ui-sref="medic" ng-click="vm.collapseNavbar()">
             <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;
             <span data-translate="global.menu.entities.medic">Medic</span>
         </a>
-        <a class="w3-bar-item w3-button" ui-sref="nurse"  ng-click="vm.collapseNavbar()">
+        <a class="w3-bar-item w3-button" ui-sref="nurse" ng-click="vm.collapseNavbar()">
             <span class="glyphicon glyphicon-heart"></span>&nbsp;
             <span data-translate="global.menu.entities.nurse">Nurse</span>
         </a>
-        <a class="w3-bar-item w3-button" ui-sref="reports"   ng-click="vm.collapseNavbar()">
+        <a class="w3-bar-item w3-button" ui-sref="reports"  ng-click="vm.collapseNavbar()">
             <span class="glyphicon glyphicon-file"></span>&nbsp;
             <span data-translate="global.menu.entities.reports">Reports</span>
         </a>
-        <a class="w3-bar-item w3-button" ui-sref="company"   ng-click="vm.collapseNavbar()">
+        <a class="w3-bar-item w3-button" ui-sref="company" ng-click="vm.collapseNavbar()">
             <span class="glyphicon glyphicon-header"></span>&nbsp;
             <span data-translate="global.menu.entities.company">Company</span>
         </a>
-        <a class="w3-bar-item w3-button" ui-sref="user-bd"  ng-click="vm.collapseNavbar()">
-            <span class="glyphicon glyphicon-credit-card"></span>&nbsp;
-            <span data-translate="global.menu.entities.userBd">User Bd</span>
-        </a>
+        
+       
     </div>
 
     <div id="main" style="margin-left:5%">        
@@ -86,13 +84,13 @@
                 document.getElementById("main").style.marginLeft = "20%";
                 document.getElementById("mySidebar").style.width = "20%";
                 document.getElementById("mySidebar").style.display = "block";
-                document.getElementById("openNav").style.display = 'none';
+                // document.getElementById("openNav").style.display = 'none';
             }else{
                 // document.getElementsByClassName("etiquetaMenu").style.display = 'none';
                 document.getElementById("main2").style.marginLeft = "5%";
                 document.getElementById("main").style.marginLeft = "5%";
                 document.getElementById("mySidebar").style.width = "5%";
-                document.getElementById("openNav").style.display = "inline-block";
+                // document.getElementById("openNav").style.display = "inline-block";
             }
         }
 

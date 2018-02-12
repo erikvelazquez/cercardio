@@ -15,14 +15,198 @@
                             <span class="hidden-sm">Home</span>
                         </a>
                     </li> -->
+
+                    <li ng-class="{active: vm.$state.includes('entity')}" ng-switch-when="true" uib-dropdown class="dropdown pointer">
+                            <a class="dropdown-toggle" uib-dropdown-toggle href="" id="entity-menu">
+                                <span>
+                                    <span class="glyphicon glyphicon-th-list"></span>
+                                    <span class="hidden-sm">
+                                        Catálogos
+                                    </span>
+                                    <b class="caret"></b>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu" uib-dropdown-menu>
+                                                    
+                                <li ui-sref-active="active">
+                                    <a ui-sref="academic-degree" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.academicDegree">Academic Degree</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="background" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.background">Background</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="blood-group" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.bloodGroup">Blood Group</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="category" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.category">Category</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="civil-status" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.civilStatus">Civil Status</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="disabilities" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.disabilities">Disabilities</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="drug-addiction" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.drugAddiction">Drug Addiction</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="ethnic-group" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.ethnicGroup">Ethnic Group</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="gender" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.gender">Gender</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="living-place" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.livingPlace">Living Place</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="occupation" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.occupation">Occupation</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="payment" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.payment">Payment</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="private-health-insurance" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.privateHealthInsurance">Private Health Insurance</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="religion" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.religion">Religion</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="social-health-insurance" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.socialHealthInsurance">Social Health Insurance</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="socioeconomic-level" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.socioeconomicLevel">Socioeconomic Level</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="status" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.status">Status</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="time" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.time">Time</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="diagnosis" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.diagnosis">Diagnosis</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="domicile" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.domicile">Domicile</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="indigenous-languages" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.indigenousLanguages">Indigenous Languages</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="medical-procedures" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.medicalProcedures">Medical Procedures</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="medicine" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.medicine">Medicine</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="medic-information" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.medicInformation">Medic Information</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="programs" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.programs">Programs</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="type-program" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.typeProgram">Type Program</span>
+                                    </a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="way-of-administration" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.wayOfAdministration">Way Of Administration</span>
+                                    </a>
+                                </li>
+                            
+                                <li ui-sref-active="active">
+                                    <a ui-sref="timers" ng-click="vm.collapseNavbar()">
+                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                        <span data-translate="global.menu.entities.timers">Timers</span>
+                                    </a>
+                                </li>
+                               
+                            </ul>
+                    </li>
                     <!-- jhipster-needle-add-element-to-menu - JHipster will add new menu items here -->
                     <li ng-class="{active: vm.$state.includes('entity')}" ng-switch-when="true" uib-dropdown class="dropdown pointer">
                         <a class="dropdown-toggle" uib-dropdown-toggle href="" id="entity-menu">
                             <span>
                                 <span class="glyphicon glyphicon-th-list"></span>
                                 <span class="hidden-sm">
-                                    Entities 
-                                    <!-- {{vm.sidebardisplay + ' ' + vm.margin_left}} -->
+                                    Entities
                                 </span>
                                 <b class="caret"></b>
                             </span>
@@ -119,7 +303,7 @@
                                         <span data-translate="global.menu.entities.pacient">Pacient</span>
                                     </a>
                                 </li>
-                            <li ui-sref-active="active">
+                            <!-- <li ui-sref-active="active">
                                     <a ui-sref="pacient-apnp" ng-click="vm.collapseNavbar()">
                                         <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
                                         <span data-translate="global.menu.entities.pacientApnp">Pacient Apnp</span>
@@ -142,8 +326,8 @@
                                         <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
                                         <span data-translate="global.menu.entities.pacientLaboratoy">Pacient Laboratoy</span>
                                     </a>
-                                </li>
-                            <li ui-sref-active="active">
+                                </li> -->
+                            <!-- <li ui-sref-active="active">
                                         <a ui-sref="pacient-medical-analysis" ng-click="vm.collapseNavbar()">
                                             <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
                                             <span data-translate="global.menu.entities.pacientMedicalAnalysis">Pacient Medical Analysis</span>
@@ -155,7 +339,7 @@
                                         <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
                                         <span data-translate="global.menu.entities.pacientMedicalData">Pacient Medical Data</span>
                                     </a>
-                                </li>
+                                </li> -->
                             <li ui-sref-active="active">
                                     <a ui-sref="payment" ng-click="vm.collapseNavbar()">
                                         <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
@@ -204,18 +388,18 @@
                                         <span data-translate="global.menu.entities.time">Time</span>
                                     </a>
                                 </li>
-                            <li ui-sref-active="active">
+                            <!-- <li ui-sref-active="active">
                                     <a ui-sref="user-bd" ng-click="vm.collapseNavbar()">
                                         <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
                                         <span data-translate="global.menu.entities.userBd">User Bd</span>
                                     </a>
-                                </li>
-                            <li ui-sref-active="active">
+                                </li> -->
+                            <!-- <li ui-sref-active="active">
                                     <a ui-sref="company" ng-click="vm.collapseNavbar()">
                                         <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
                                         <span data-translate="global.menu.entities.company">Company</span>
                                     </a>
-                                </li>
+                                </li> -->
                             <li ui-sref-active="active">
                                     <a ui-sref="diagnosis" ng-click="vm.collapseNavbar()">
                                         <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
@@ -333,6 +517,18 @@
                             </span>
                         </a>
                         <ul class="dropdown-menu" uib-dropdown-menu>
+                            <li ui-sref-active="active">
+                                <a class="w3-bar-item w3-button" ui-sref="user-bd"  ng-click="vm.collapseNavbar()">
+                                    <span class="glyphicon glyphicon-credit-card"></span>&nbsp;
+                                    <span data-translate="global.menu.entities.userBd">User Bd</span>
+                                </a>
+                            </li>
+                            <li ui-sref-active="active">
+                                <a ui-sref="company" ng-click="vm.collapseNavbar()">
+                                    <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                    <span data-translate="global.menu.entities.company">Company</span>
+                                </a>
+                            </li>
                             <li ui-sref-active="active">
                                 <a ui-sref="user-management" ng-click="vm.collapseNavbar()">
                                     <span class="glyphicon glyphicon-user"></span>&nbsp;

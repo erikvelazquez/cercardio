@@ -173,7 +173,7 @@
         })
         .state('agregar_valoracion', {
             parent: 'reservation',
-            url: '/valoracion',
+            url: '/{id},{pacient_id},{medic_id}/valoracion',
             data: {
                 authorities: ['ROLE_USER']
             },
@@ -187,6 +187,9 @@
                     resolve: {
                         entity: function () {
                             return {
+                                reservation_id: $stateParams.id, 
+                                pacient_id: $stateParams.pacient_id,
+                                medic_id: $stateParams.medic_id,
                                 height: null,
                                 weight: null,
                                 size: null,
@@ -205,8 +208,6 @@
                                 genitals: null,
                                 othersphysical: null,
                                 createdat: null,
-                                pacient_id: $stateParams.pacient_id,
-                                medic_id: $stateParams.medic_id,
                                 id: null
                             };
                         }
