@@ -5,12 +5,22 @@
         .module('cercardiobitiApp')
         .controller('AppreciationDialogController', AppreciationDialogController);
 
-    AppreciationDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Appreciation', 'Pacient', 'Medic'];
+    AppreciationDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Appreciation', 'Pacient', 'Medic','Reservation'];
 
-    function AppreciationDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Appreciation, Pacient, Medic) {
+    function AppreciationDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Appreciation, Pacient, Medic, Reservation) {
         var vm = this;
 
         vm.appreciation = entity;
+        vm.reservation =  {
+                            title: null,
+                            note: null,
+                            dateat: null,
+                            createdat: null,
+                            symtoms: null,
+                            medicaments: null,
+                            cost: null,
+                            id: null
+                        };
         vm.clear = clear;
         vm.datePickerOpenStatus = {};
         vm.openCalendar = openCalendar;
@@ -36,7 +46,16 @@
         }
 
         function onSaveSuccess (result) {
-            $scope.$emit('cercardiobitiApp:appreciationUpdate', result);
+            vm.reservation.id = vm.appreciation.reservation_id;
+            vm.reservation.appreciation_id = result;
+            // vm.Reservation.update(vm.reservation, onSaveRSuccess, onSaveError)
+            $scope.$emit('cercardiobitiApp:appreciationUpdate', result +" INfor "+ vm.reservation);
+            $uibModalInstance.close(result);
+            vm.isSaving = false;
+        }
+
+        function onSaveRSuccess (result) {
+            $scope.$emit('cercardiobitiApp:reservationUpdate', result);
             $uibModalInstance.close(result);
             vm.isSaving = false;
         }
@@ -50,5 +69,6 @@
         function openCalendar (date) {
             vm.datePickerOpenStatus[date] = true;
         }
+
     }
 })();

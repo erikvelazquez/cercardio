@@ -42,8 +42,14 @@
                     <th><span data-translate="cercardiobitiApp.reservation.dateat">Dateat</span></th> 
                     <th><span data-translate="cercardiobitiApp.reservation.status">Status</span></th>
                     <th><span data-translate="cercardiobitiApp.reservation.payment">Payment</span></th>
-                    <!-- <th><span >Appreciation</span></th>  
-                    <th><span >PacientmedicalAnalysis</span></th> -->
+
+                    <!--
+                    <th><span >IDPaciente</span></th>  
+                    <th><span >IDMedico</span></th>
+                    <th><span >Appreciation</span></th>  
+                    <th><span >PacientmedicalAnalysis</span></th> 
+                    -->
+
                     <th></th>
                 </tr>
             </thead>
@@ -51,31 +57,39 @@
                 <tr ng-repeat="reservation in vm.reservations track by reservation.id">
                     <td>{{reservation.id}}</td>
                     <td>{{reservation.title}}</td>
-                    <td><span>{{reservation.pacient.userBD.name +' '+reservation.pacient.userBD.lastname}}</span></td>
-                    <td><span>{{reservation.medic.userBD.name +' '+reservation.medic.userBD.lastname}}</span></td>
+                    <td><span>{{reservation.pacient.userBD.name +' '+ reservation.pacient.userBD.lastname}}</span></td>
+                    <td><span>{{reservation.medic.userBD.name +' '+ reservation.medic.userBD.lastname}}</span></td>
                     <td>{{reservation.dateat | date:'mediumDate'}}</td>
                     <td><span>{{reservation.status.name}}</span></td>
                     <td><span>{{reservation.payment.name}}</span></td>
-                    <!-- <td><span>{{reservation.appreciation.id }}</span></td>
+
+                    <!--
+                    <td><span>{{reservation.pacient.id }}</span></td>
+                    <td><span>{{reservation.medic.id }}</span></td>
+                    
+                    <td><span>{{reservation.appreciation.id }}</span></td>
                     <td><span>{{reservation.pacientMedicalAnalysis.id}}</span></td>
                      -->
+<!-- 
+                     ui-sref="reservation-detail({id:reservation.id})" -->
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"
-                                    ui-sref="reservation-detail({id:reservation.id})"
+                                    ui-sref="reservation.edit({id:reservation.id, status:false})"
                                     class="btn btn-info btn-sm">
                                 <span class="glyphicon glyphicon-eye-open"></span>
                                 <span class="hidden-sm-down" data-translate="entity.action.view"></span>
                             </button>
+
                             <button type="submit"
-                                    ui-sref="reservation.edit({id:reservation.id})"
+                                    ui-sref="reservation.edit({id:reservation.id, status:true})"
                                     class="btn btn-primary btn-sm">
                                 <span class="glyphicon glyphicon-pencil"></span>
                                 <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
                             </button>
-
+                            
                             <button type="submit"
-                                    ui-sref="agregar_valoracion({pacient_id:reservation.pacient_id ,medic_id:reservation.medic_id})"
+                                    ui-sref="agregar_valoracion({id:reservation.id, pacient_id:reservation.pacient.id, medic_id:reservation.medic.id})"
                                     class="btn btn-success btn-sm" ng-show="!reservation.appreciation.id">
                                 <span class="glyphicon glyphicon-plus"></span>
                                 <span class="hidden-sm-down" >Valoraración</span>
@@ -89,7 +103,7 @@
                             </button>
 
                              <button type="submit"
-                                    ui-sref="agregar_analisis({id:reservation.id})"
+                                    ui-sref="agregar_analisis({id:reservation.appreciation.id, pacient_id:reservation.pacient.id, medic_id:reservation.medic.id})"
                                     class="btn btn-success btn-sm" ng-show="!reservation.pacientMedicalAnalysis.id">
                                 <span class="glyphicon glyphicon-plus"></span>
                                 <span class="hidden-sm-down" >Análisis</span>
