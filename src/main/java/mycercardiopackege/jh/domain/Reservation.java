@@ -47,6 +47,14 @@ public class Reservation implements Serializable {
     @Column(name = "jhi_cost")
     private Integer cost;
 
+    @OneToOne
+    @JoinColumn(unique = true)
+    private Appreciation appreciation;
+
+    @OneToOne
+    @JoinColumn(unique = true)
+    private PacientMedicalAnalysis pacientMedicalAnalysis;
+
     @ManyToOne
     private Pacient pacient;
 
@@ -61,12 +69,6 @@ public class Reservation implements Serializable {
 
     @ManyToOne
     private Timers timers;
-
-    @ManyToOne
-    private Appreciation appreciation;
-
-    @ManyToOne
-    private PacientMedicalAnalysis pacientMedicalAnalysis;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -168,6 +170,32 @@ public class Reservation implements Serializable {
         this.cost = cost;
     }
 
+    public Appreciation getAppreciation() {
+        return appreciation;
+    }
+
+    public Reservation appreciation(Appreciation appreciation) {
+        this.appreciation = appreciation;
+        return this;
+    }
+
+    public void setAppreciation(Appreciation appreciation) {
+        this.appreciation = appreciation;
+    }
+
+    public PacientMedicalAnalysis getPacientMedicalAnalysis() {
+        return pacientMedicalAnalysis;
+    }
+
+    public Reservation pacientMedicalAnalysis(PacientMedicalAnalysis pacientMedicalAnalysis) {
+        this.pacientMedicalAnalysis = pacientMedicalAnalysis;
+        return this;
+    }
+
+    public void setPacientMedicalAnalysis(PacientMedicalAnalysis pacientMedicalAnalysis) {
+        this.pacientMedicalAnalysis = pacientMedicalAnalysis;
+    }
+
     public Pacient getPacient() {
         return pacient;
     }
@@ -231,32 +259,6 @@ public class Reservation implements Serializable {
 
     public void setTimers(Timers timers) {
         this.timers = timers;
-    }
-
-    public Appreciation getAppreciation() {
-        return appreciation;
-    }
-
-    public Reservation appreciation(Appreciation appreciation) {
-        this.appreciation = appreciation;
-        return this;
-    }
-
-    public void setAppreciation(Appreciation appreciation) {
-        this.appreciation = appreciation;
-    }
-
-    public PacientMedicalAnalysis getPacientMedicalAnalysis() {
-        return pacientMedicalAnalysis;
-    }
-
-    public Reservation pacientMedicalAnalysis(PacientMedicalAnalysis pacientMedicalAnalysis) {
-        this.pacientMedicalAnalysis = pacientMedicalAnalysis;
-        return this;
-    }
-
-    public void setPacientMedicalAnalysis(PacientMedicalAnalysis pacientMedicalAnalysis) {
-        this.pacientMedicalAnalysis = pacientMedicalAnalysis;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

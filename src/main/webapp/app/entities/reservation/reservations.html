@@ -43,8 +43,8 @@
                     <th><span data-translate="cercardiobitiApp.reservation.status">Status</span></th>
                     <th><span data-translate="cercardiobitiApp.reservation.payment">Payment</span></th>
 
-                    <!--
-                    <th><span >IDPaciente</span></th>  
+                    
+                    <!-- <th><span >IDPaciente</span></th>  
                     <th><span >IDMedico</span></th>
                     <th><span >Appreciation</span></th>  
                     <th><span >PacientmedicalAnalysis</span></th> 
@@ -63,15 +63,12 @@
                     <td><span>{{reservation.status.name}}</span></td>
                     <td><span>{{reservation.payment.name}}</span></td>
 
-                    <!--
-                    <td><span>{{reservation.pacient.id }}</span></td>
+                    <!-- <td><span>{{reservation.pacient.id }}</span></td>
                     <td><span>{{reservation.medic.id }}</span></td>
                     
                     <td><span>{{reservation.appreciation.id }}</span></td>
-                    <td><span>{{reservation.pacientMedicalAnalysis.id}}</span></td>
-                     -->
-<!-- 
-                     ui-sref="reservation-detail({id:reservation.id})" -->
+                    <td><span>{{reservation.pacientMedicalAnalysis.id}}</span></td> -->
+            
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"
@@ -96,8 +93,8 @@
                             </button>
 
                             <button type="submit"
-                                    ui-sref="editar_valoracion({id:reservation.appreciation.id})"
-                                    class="btn btn-primary btn-sm" ng-show="reservation.appreciation.id">
+                                    ui-sref="editar_valoracion({id:3152})"  
+                                    class="btn btn-primary btn-sm" >    <!--reservation.appreciation.id ng-show="reservation.appreciation.id" -->
                                 <span class="glyphicon glyphicon-pencil"></span>
                                 <span class="hidden-sm-down">Valoraración</span>
                             </button>

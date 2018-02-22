@@ -40,10 +40,10 @@ public class PacientContact implements Serializable {
     private String suitnumber;
 
     @Column(name = "phonenumber_1")
-    private Integer phonenumber1;
+    private Long phonenumber1;
 
     @Column(name = "phonenumber_2")
-    private Integer phonenumber2;
+    private Long phonenumber2;
 
     @Column(name = "email_1")
     private String email1;
@@ -147,29 +147,29 @@ public class PacientContact implements Serializable {
         this.suitnumber = suitnumber;
     }
 
-    public Integer getPhonenumber1() {
+    public Long getPhonenumber1() {
         return phonenumber1;
     }
 
-    public PacientContact phonenumber1(Integer phonenumber1) {
+    public PacientContact phonenumber1(Long phonenumber1) {
         this.phonenumber1 = phonenumber1;
         return this;
     }
 
-    public void setPhonenumber1(Integer phonenumber1) {
+    public void setPhonenumber1(Long phonenumber1) {
         this.phonenumber1 = phonenumber1;
     }
 
-    public Integer getPhonenumber2() {
+    public Long getPhonenumber2() {
         return phonenumber2;
     }
 
-    public PacientContact phonenumber2(Integer phonenumber2) {
+    public PacientContact phonenumber2(Long phonenumber2) {
         this.phonenumber2 = phonenumber2;
         return this;
     }
 
-    public void setPhonenumber2(Integer phonenumber2) {
+    public void setPhonenumber2(Long phonenumber2) {
         this.phonenumber2 = phonenumber2;
     }
 

@@ -18,6 +18,29 @@
 
         <div class="Row col-md-12">
 
+
+            <div class="form-group">
+                <label data-translate="cercardiobitiApp.appreciation.pacient" for="field_pacient">Pacient</label>
+                <select class="form-control" id="field_pacient" name="pacient" 
+                ng-model="vm.appreciation.pacient" ng-options="pacient as pacient.id for pacient in vm.pacients track by pacient.id">
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label data-translate="cercardiobitiApp.appreciation.medic" for="field_medic">Medic</label>
+                <select class="form-control" id="field_medic" name="medic" 
+                    ng-model="vm.appreciation.medic" ng-options="medic as medic.id for medic in vm.medics track by medic.id">
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label data-translate="cercardiobitiApp.appreciation.reservation" for="field_reservation">Reservation</label>
+                <select class="form-control" id="field_reservation" name="reservation" 
+                    ng-model="vm.appreciation.reservation" ng-options="reservation as reservation.id for reservation in vm.reservations track by reservation.id">
+                    <option value=""></option>
+                </select>
+            </div>
+
             <div class="form-group col-md-4">
                 <label data-translate="cercardiobitiApp.appreciation.reservation" for="field_reservation">Reservation</label>
                 <label>Id: {{vm.appreciation.reservation_id }}</label>

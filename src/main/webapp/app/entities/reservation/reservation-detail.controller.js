@@ -5,9 +5,9 @@
         .module('cercardiobitiApp')
         .controller('ReservationDetailController', ReservationDetailController);
 
-    ReservationDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'Reservation', 'Pacient', 'Medic', 'Status', 'Payment', 'Timers', 'Appreciation', 'PacientMedicalAnalysis'];
+    ReservationDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'Reservation', 'Appreciation', 'PacientMedicalAnalysis', 'Pacient', 'Medic', 'Status', 'Payment', 'Timers'];
 
-    function ReservationDetailController($scope, $rootScope, $stateParams, previousState, entity, Reservation, Pacient, Medic, Status, Payment, Timers, Appreciation, PacientMedicalAnalysis) {
+    function ReservationDetailController($scope, $rootScope, $stateParams, previousState, entity, Reservation, Appreciation, PacientMedicalAnalysis, Pacient, Medic, Status, Payment, Timers) {
         var vm = this;
 
         vm.reservation = entity;

@@ -453,9 +453,13 @@ relationship OneToOne {
     PacientContact{pacient} to Pacient,    
     PacientApp{pacient} to Pacient,
 	PacientMedicalData{pacient} to Pacient,   
-	Medic_Information{medic} to Medic
+	Medic_Information{medic} to Medic,
+
+	Reservation{appreciation} to Appreciation,
+	Reservation{pacientMedicalAnalysis} to PacientMedicalAnalysis
 	
 }
+
 
 relationship ManyToOne {
 	Pacient{company} to Company,
@@ -499,11 +503,8 @@ relationship ManyToOne {
     Reservation{timers} to Timers,
 
 	Appreciation{pacient} to Pacient,
-    Appreciation{medic} to Medic,
-
-	Reservation{appreciation} to Appreciation,
-	Reservation{pacientMedicalAnalysis} to PacientMedicalAnalysis
-
+    Appreciation{medic} to Medic
+	
 }
 
 enum Language {

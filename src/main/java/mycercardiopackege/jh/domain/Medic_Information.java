@@ -38,10 +38,10 @@ public class Medic_Information implements Serializable {
     private String intnumber;
 
     @Column(name = "phone_1")
-    private String phone1;
+    private Long phone1;
 
     @Column(name = "phone_2")
-    private String phone2;
+    private Long phone2;
 
     @Column(name = "email_1")
     private String email1;
@@ -183,29 +183,29 @@ public class Medic_Information implements Serializable {
         this.intnumber = intnumber;
     }
 
-    public String getPhone1() {
+    public Long getPhone1() {
         return phone1;
     }
 
-    public Medic_Information phone1(String phone1) {
+    public Medic_Information phone1(Long phone1) {
         this.phone1 = phone1;
         return this;
     }
 
-    public void setPhone1(String phone1) {
+    public void setPhone1(Long phone1) {
         this.phone1 = phone1;
     }
 
-    public String getPhone2() {
+    public Long getPhone2() {
         return phone2;
     }
 
-    public Medic_Information phone2(String phone2) {
+    public Medic_Information phone2(Long phone2) {
         this.phone2 = phone2;
         return this;
     }
 
-    public void setPhone2(String phone2) {
+    public void setPhone2(Long phone2) {
         this.phone2 = phone2;
     }
 

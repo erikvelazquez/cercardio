@@ -33,11 +33,11 @@
         },
         {
             "fieldName": "phonenumber1",
-            "fieldType": "Integer"
+            "fieldType": "Long"
         },
         {
             "fieldName": "phonenumber2",
-            "fieldType": "Integer"
+            "fieldType": "Long"
         },
         {
             "fieldName": "email1",

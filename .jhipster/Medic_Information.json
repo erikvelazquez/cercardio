@@ -29,11 +29,11 @@
         },
         {
             "fieldName": "phone1",
-            "fieldType": "String"
+            "fieldType": "Long"
         },
         {
             "fieldName": "phone2",
-            "fieldType": "String"
+            "fieldType": "Long"
         },
         {
             "fieldName": "email1",

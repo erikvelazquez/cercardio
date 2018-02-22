@@ -8,6 +8,18 @@
     -->
     <changeSet id="20171127223254-2" author="jhipster">
         
+        <addForeignKeyConstraint baseColumnNames="appreciation_id"
+                                 baseTableName="reservation"
+                                 constraintName="fk_reservation_appreciation_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="appreciation"/>
+
+        <addForeignKeyConstraint baseColumnNames="pacient_medical_analysis_id"
+                                 baseTableName="reservation"
+                                 constraintName="fk_reservation_pacient_medical_analysis_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="pacient_medical_analysis"/>
+
         <addForeignKeyConstraint baseColumnNames="pacient_id"
                                  baseTableName="reservation"
                                  constraintName="fk_reservation_pacient_id"
@@ -37,18 +49,6 @@
                                  constraintName="fk_reservation_timers_id"
                                  referencedColumnNames="id"
                                  referencedTableName="timers"/>
-
-        <addForeignKeyConstraint baseColumnNames="appreciation_id"
-                                 baseTableName="reservation"
-                                 constraintName="fk_reservation_appreciation_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="appreciation"/>
-
-        <addForeignKeyConstraint baseColumnNames="pacient_medical_analysis_id"
-                                 baseTableName="reservation"
-                                 constraintName="fk_reservation_pacient_medical_analysis_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="pacient_medical_analysis"/>
 
     </changeSet>
 </databaseChangeLog>

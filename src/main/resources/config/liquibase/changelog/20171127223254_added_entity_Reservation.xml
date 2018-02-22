@@ -48,7 +48,11 @@
             <column name="jhi_cost" type="integer">
                 <constraints nullable="true" />
             </column>
-
+            <column name="appreciation_id" type="bigint">
+                <constraints unique="true" nullable="true" />
+            </column>            <column name="pacient_medical_analysis_id" type="bigint">
+                <constraints unique="true" nullable="true" />
+            </column>
             <column name="pacient_id" type="bigint">
                 <constraints nullable="true" />
             </column>
@@ -66,14 +70,6 @@
             </column>
 
             <column name="timers_id" type="bigint">
-                <constraints nullable="true" />
-            </column>
-
-            <column name="appreciation_id" type="bigint">
-                <constraints nullable="true" />
-            </column>
-
-            <column name="pacient_medical_analysis_id" type="bigint">
                 <constraints nullable="true" />
             </column>
 

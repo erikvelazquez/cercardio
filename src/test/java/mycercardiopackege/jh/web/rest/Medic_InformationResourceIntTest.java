@@ -53,11 +53,11 @@ public class Medic_InformationResourceIntTest {
     private static final String DEFAULT_INTNUMBER = "AAAAAAAAAA";
     private static final String UPDATED_INTNUMBER = "BBBBBBBBBB";
 
-    private static final String DEFAULT_PHONE_1 = "AAAAAAAAAA";
-    private static final String UPDATED_PHONE_1 = "BBBBBBBBBB";
+    private static final Long DEFAULT_PHONE_1 = 1L;
+    private static final Long UPDATED_PHONE_1 = 2L;
 
-    private static final String DEFAULT_PHONE_2 = "AAAAAAAAAA";
-    private static final String UPDATED_PHONE_2 = "BBBBBBBBBB";
+    private static final Long DEFAULT_PHONE_2 = 1L;
+    private static final Long UPDATED_PHONE_2 = 2L;
 
     private static final String DEFAULT_EMAIL_1 = "AAAAAAAAAA";
     private static final String UPDATED_EMAIL_1 = "BBBBBBBBBB";
@@ -301,8 +301,8 @@ public class Medic_InformationResourceIntTest {
             .andExpect(jsonPath("$.[*].street").value(hasItem(DEFAULT_STREET.toString())))
             .andExpect(jsonPath("$.[*].extnumber").value(hasItem(DEFAULT_EXTNUMBER.toString())))
             .andExpect(jsonPath("$.[*].intnumber").value(hasItem(DEFAULT_INTNUMBER.toString())))
-            .andExpect(jsonPath("$.[*].phone1").value(hasItem(DEFAULT_PHONE_1.toString())))
-            .andExpect(jsonPath("$.[*].phone2").value(hasItem(DEFAULT_PHONE_2.toString())))
+            .andExpect(jsonPath("$.[*].phone1").value(hasItem(DEFAULT_PHONE_1.intValue())))
+            .andExpect(jsonPath("$.[*].phone2").value(hasItem(DEFAULT_PHONE_2.intValue())))
             .andExpect(jsonPath("$.[*].email1").value(hasItem(DEFAULT_EMAIL_1.toString())))
             .andExpect(jsonPath("$.[*].email2").value(hasItem(DEFAULT_EMAIL_2.toString())))
             .andExpect(jsonPath("$.[*].facebook").value(hasItem(DEFAULT_FACEBOOK.toString())))
@@ -345,8 +345,8 @@ public class Medic_InformationResourceIntTest {
             .andExpect(jsonPath("$.street").value(DEFAULT_STREET.toString()))
             .andExpect(jsonPath("$.extnumber").value(DEFAULT_EXTNUMBER.toString()))
             .andExpect(jsonPath("$.intnumber").value(DEFAULT_INTNUMBER.toString()))
-            .andExpect(jsonPath("$.phone1").value(DEFAULT_PHONE_1.toString()))
-            .andExpect(jsonPath("$.phone2").value(DEFAULT_PHONE_2.toString()))
+            .andExpect(jsonPath("$.phone1").value(DEFAULT_PHONE_1.intValue()))
+            .andExpect(jsonPath("$.phone2").value(DEFAULT_PHONE_2.intValue()))
             .andExpect(jsonPath("$.email1").value(DEFAULT_EMAIL_1.toString()))
             .andExpect(jsonPath("$.email2").value(DEFAULT_EMAIL_2.toString()))
             .andExpect(jsonPath("$.facebook").value(DEFAULT_FACEBOOK.toString()))
@@ -527,8 +527,8 @@ public class Medic_InformationResourceIntTest {
             .andExpect(jsonPath("$.[*].street").value(hasItem(DEFAULT_STREET.toString())))
             .andExpect(jsonPath("$.[*].extnumber").value(hasItem(DEFAULT_EXTNUMBER.toString())))
             .andExpect(jsonPath("$.[*].intnumber").value(hasItem(DEFAULT_INTNUMBER.toString())))
-            .andExpect(jsonPath("$.[*].phone1").value(hasItem(DEFAULT_PHONE_1.toString())))
-            .andExpect(jsonPath("$.[*].phone2").value(hasItem(DEFAULT_PHONE_2.toString())))
+            .andExpect(jsonPath("$.[*].phone1").value(hasItem(DEFAULT_PHONE_1.intValue())))
+            .andExpect(jsonPath("$.[*].phone2").value(hasItem(DEFAULT_PHONE_2.intValue())))
             .andExpect(jsonPath("$.[*].email1").value(hasItem(DEFAULT_EMAIL_1.toString())))
             .andExpect(jsonPath("$.[*].email2").value(hasItem(DEFAULT_EMAIL_2.toString())))
             .andExpect(jsonPath("$.[*].facebook").value(hasItem(DEFAULT_FACEBOOK.toString())))

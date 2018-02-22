@@ -23,12 +23,12 @@
             "symtoms": "Symtoms",
             "medicaments": "Medicaments",
             "cost": "Cost",
+            "appreciation": "Appreciation",
             "pacient": "Pacient",
             "medic": "Medic",
             "status": "Status",
             "payment": "Payment",
             "timers": "Timers",
-            "appreciation": "Appreciation",
             "pacientMedicalAnalysis": "Pacient Medical Analysis"
         }
     }

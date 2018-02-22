@@ -68,7 +68,7 @@ class MedicGatlingTest extends Simulation {
             .exec(http("Create new medic")
             .post("/api/medics")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "colony":"SAMPLE_TEXT", "street":"SAMPLE_TEXT", "streetnumber":"SAMPLE_TEXT", "suitnumber":"SAMPLE_TEXT", "phonenumber1":"0", "phonenumber2":"0", "email1":"SAMPLE_TEXT", "email2":"SAMPLE_TEXT", "facebook":"SAMPLE_TEXT", "twitter":"SAMPLE_TEXT", "instagram":"SAMPLE_TEXT", "snapchat":"SAMPLE_TEXT", "linkedin":"SAMPLE_TEXT", "vine":"SAMPLE_TEXT", "createdat":"2020-01-01T00:00:00.000Z"}""")).asJSON
+            .body(StringBody("""{"id":null, "colony":"SAMPLE_TEXT", "street":"SAMPLE_TEXT", "streetnumber":"SAMPLE_TEXT", "suitnumber":"SAMPLE_TEXT", "phonenumber1":null, "phonenumber2":null, "email1":"SAMPLE_TEXT", "email2":"SAMPLE_TEXT", "facebook":"SAMPLE_TEXT", "twitter":"SAMPLE_TEXT", "instagram":"SAMPLE_TEXT", "snapchat":"SAMPLE_TEXT", "linkedin":"SAMPLE_TEXT", "vine":"SAMPLE_TEXT", "createdat":"2020-01-01T00:00:00.000Z"}""")).asJSON
             .check(status.is(201))
             .check(headerRegex("Location", "(.*)").saveAs("new_medic_url"))).exitHereIfFailed
             .pause(10)

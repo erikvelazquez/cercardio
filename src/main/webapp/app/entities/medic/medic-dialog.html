@@ -13,14 +13,6 @@
             <input type="text" class="form-control" id="id" name="id"
                     ng-model="vm.medic.id" readonly />
         </div>
-
-        <div class="form-group">
-            <label data-translate="cercardiobitiApp.medic.userBD" for="field_userBD">User BD</label>
-            <select class="form-control" id="field_userBD" name="userBD" ng-model="vm.medic.userBD" ng-options="userBD as userBD.name + ' ' + userBD.lastname for userBD in vm.userbds | orderBy:'id' track by userBD.id">
-                <option value=""></option>
-            </select>
-        </div>
-
         <div class="form-group">
             <label class="control-label" data-translate="cercardiobitiApp.medic.colony" for="field_colony">Colony</label>
             <input type="text" class="form-control" name="colony" id="field_colony"
@@ -116,7 +108,12 @@
                 </div>
         </div>
 
-       
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.medic.userBD" for="field_userBD">User BD</label>
+            <select class="form-control" id="field_userBD" name="userBD" ng-model="vm.medic.userBD" ng-options="userBD as userBD.id for userBD in vm.userbds | orderBy:'id' track by userBD.id">
+                <option value=""></option>
+            </select>
+        </div>
         <div class="form-group">
             <label data-translate="cercardiobitiApp.medic.company" for="field_company">Company</label>
             <select class="form-control" id="field_company" name="company" ng-model="vm.medic.company" ng-options="company as company.id for company in vm.companies track by company.id">

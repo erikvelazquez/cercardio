@@ -99,6 +99,7 @@ public class CacheConfiguration {
             cm.createCache(mycercardiopackege.jh.domain.Way_of_Administration.class.getName(), jcacheConfiguration);
             cm.createCache(mycercardiopackege.jh.domain.PacientMedicalAnalysis.class.getName(), jcacheConfiguration);
             cm.createCache(mycercardiopackege.jh.domain.Timers.class.getName(), jcacheConfiguration);
+            cm.createCache(mycercardiopackege.jh.domain.Reservation.class.getName() + ".appreciations", jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

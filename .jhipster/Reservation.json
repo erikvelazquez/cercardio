@@ -2,6 +2,22 @@
     "fluentMethods": true,
     "relationships": [
         {
+            "relationshipType": "one-to-one",
+            "relationshipName": "appreciation",
+            "otherEntityName": "appreciation",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "reservation"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "pacientMedicalAnalysis",
+            "otherEntityName": "pacientMedicalAnalysis",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "reservation"
+        },
+        {
             "relationshipType": "many-to-one",
             "relationshipName": "pacient",
             "otherEntityName": "pacient",
@@ -29,18 +45,6 @@
             "relationshipType": "many-to-one",
             "relationshipName": "timers",
             "otherEntityName": "timers",
-            "otherEntityField": "id"
-        },
-        {
-            "relationshipType": "many-to-one",
-            "relationshipName": "appreciation",
-            "otherEntityName": "appreciation",
-            "otherEntityField": "id"
-        },
-        {
-            "relationshipType": "many-to-one",
-            "relationshipName": "pacientMedicalAnalysis",
-            "otherEntityName": "pacientMedicalAnalysis",
             "otherEntityField": "id"
         }
     ],

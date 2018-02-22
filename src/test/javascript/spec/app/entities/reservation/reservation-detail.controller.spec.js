@@ -4,7 +4,7 @@ describe('Controller Tests', function() {
 
     describe('Reservation Management Detail Controller', function() {
         var $scope, $rootScope;
-        var MockEntity, MockPreviousState, MockReservation, MockPacient, MockMedic, MockStatus, MockPayment, MockTimers, MockAppreciation, MockPacientMedicalAnalysis;
+        var MockEntity, MockPreviousState, MockReservation, MockAppreciation, MockPacientMedicalAnalysis, MockPacient, MockMedic, MockStatus, MockPayment, MockTimers;
         var createController;
 
         beforeEach(inject(function($injector) {
@@ -13,13 +13,13 @@ describe('Controller Tests', function() {
             MockEntity = jasmine.createSpy('MockEntity');
             MockPreviousState = jasmine.createSpy('MockPreviousState');
             MockReservation = jasmine.createSpy('MockReservation');
+            MockAppreciation = jasmine.createSpy('MockAppreciation');
+            MockPacientMedicalAnalysis = jasmine.createSpy('MockPacientMedicalAnalysis');
             MockPacient = jasmine.createSpy('MockPacient');
             MockMedic = jasmine.createSpy('MockMedic');
             MockStatus = jasmine.createSpy('MockStatus');
             MockPayment = jasmine.createSpy('MockPayment');
             MockTimers = jasmine.createSpy('MockTimers');
-            MockAppreciation = jasmine.createSpy('MockAppreciation');
-            MockPacientMedicalAnalysis = jasmine.createSpy('MockPacientMedicalAnalysis');
             
 
             var locals = {
@@ -28,13 +28,13 @@ describe('Controller Tests', function() {
                 'entity': MockEntity,
                 'previousState': MockPreviousState,
                 'Reservation': MockReservation,
+                'Appreciation': MockAppreciation,
+                'PacientMedicalAnalysis': MockPacientMedicalAnalysis,
                 'Pacient': MockPacient,
                 'Medic': MockMedic,
                 'Status': MockStatus,
                 'Payment': MockPayment,
-                'Timers': MockTimers,
-                'Appreciation': MockAppreciation,
-                'PacientMedicalAnalysis': MockPacientMedicalAnalysis
+                'Timers': MockTimers
             };
             createController = function() {
                 $injector.get('$controller')("ReservationDetailController", locals);
