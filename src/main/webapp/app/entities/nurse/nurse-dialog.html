@@ -4,132 +4,106 @@
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 ng-click="vm.clear()">&times;</button>
-
-        <h4 class="modal-title" id="myNurseLabel" ng-show="!vm.nurse.id" data-translate="cercardiobitiApp.nurse.home.create">Create or edit a Nurse</h4>
-    
-        <h4 class="modal-title" id="myNurseLabel" ng-show="vm.nurse.id" data-translate="cercardiobitiApp.nurse.home.editLabel">Create or edit a Nurse</h4>
-    
+        <h4 class="modal-title" id="myNurseLabel" data-translate="cercardiobitiApp.nurse.home.createOrEditLabel">Create or edit a Nurse</h4>
     </div>
     <div class="modal-body">
         <jhi-alert-error></jhi-alert-error>
-        <!-- <div class="form-group" ng-show="vm.nurse.id">
+        <div class="form-group" ng-show="vm.nurse.id">
             <label for="id" data-translate="global.field.id">ID</label>
             <input type="text" class="form-control" id="id" name="id"
                     ng-model="vm.nurse.id" readonly />
-        </div> -->
-
-        <div class="form-group col-md-6">
-            <label data-translate="cercardiobitiApp.nurse.company" for="field_company">Company</label>
-            <select class="form-control" id="field_company" name="company" ng-model="vm.nurse.company" ng-options="company as company.name for company in vm.companies track by company.id">
-                <option value=""></option>
-            </select>
         </div>
-
-        <div class="form-group col-md-6">
-            <label data-translate="cercardiobitiApp.nurse.userBD" for="field_userBD">User BD</label>
-            <select class="form-control" id="field_userBD" name="userBD" ng-model="vm.nurse.userBD" ng-options="userBD as userBD.name + ' ' + userBD.lastname for userBD in vm.userbds | orderBy:'id' track by userBD.id">
-                <option value=""></option>
-            </select>
-        </div>
-        
-        <div class="form-group col-md-3">
-            <label data-translate="cercardiobitiApp.nurse.gender" for="field_gender">Gender</label>
-            <select class="form-control" id="field_gender" name="gender" ng-model="vm.nurse.gender" ng-options="gender as gender.description for gender in vm.genders track by gender.id">
-                <option value=""></option>
-            </select>
-        </div>
-
-        <div class="form-group col-md-2">
+        <div class="form-group">
             <label class="control-label" data-translate="cercardiobitiApp.nurse.cpid" for="field_cpid">Cpid</label>
             <input type="number" class="form-control" name="cpid" id="field_cpid"
                     ng-model="vm.nurse.cpid"
                     />
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group">
             <label class="control-label" data-translate="cercardiobitiApp.nurse.colony" for="field_colony">Colony</label>
             <input type="text" class="form-control" name="colony" id="field_colony"
                     ng-model="vm.nurse.colony"
                     />
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group">
             <label class="control-label" data-translate="cercardiobitiApp.nurse.street" for="field_street">Street</label>
             <input type="text" class="form-control" name="street" id="field_street"
                     ng-model="vm.nurse.street"
                     />
         </div>
-        <div class="form-group col-md-2">
+        <div class="form-group">
             <label class="control-label" data-translate="cercardiobitiApp.nurse.streetnumber" for="field_streetnumber">Streetnumber</label>
             <input type="text" class="form-control" name="streetnumber" id="field_streetnumber"
                     ng-model="vm.nurse.streetnumber"
                     />
         </div>
-        <div class="form-group col-md-2">
+        <div class="form-group">
             <label class="control-label" data-translate="cercardiobitiApp.nurse.suitnumber" for="field_suitnumber">Suitnumber</label>
             <input type="text" class="form-control" name="suitnumber" id="field_suitnumber"
                     ng-model="vm.nurse.suitnumber"
                     />
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group">
             <label class="control-label" data-translate="cercardiobitiApp.nurse.phonenumber1" for="field_phonenumber1">Phonenumber 1</label>
             <input type="number" class="form-control" name="phonenumber1" id="field_phonenumber1"
                     ng-model="vm.nurse.phonenumber1"
                     />
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group">
             <label class="control-label" data-translate="cercardiobitiApp.nurse.phonenumber2" for="field_phonenumber2">Phonenumber 2</label>
             <input type="number" class="form-control" name="phonenumber2" id="field_phonenumber2"
                     ng-model="vm.nurse.phonenumber2"
                     />
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group">
             <label class="control-label" data-translate="cercardiobitiApp.nurse.email1" for="field_email1">Email 1</label>
             <input type="text" class="form-control" name="email1" id="field_email1"
                     ng-model="vm.nurse.email1"
                     />
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group">
             <label class="control-label" data-translate="cercardiobitiApp.nurse.email2" for="field_email2">Email 2</label>
             <input type="text" class="form-control" name="email2" id="field_email2"
                     ng-model="vm.nurse.email2"
                     />
         </div>
-        <div class="form-group col-md-12">
+        <div class="form-group">
             <label class="control-label" data-translate="cercardiobitiApp.nurse.facebook" for="field_facebook">Facebook</label>
             <input type="text" class="form-control" name="facebook" id="field_facebook"
                     ng-model="vm.nurse.facebook"
                     />
         </div>
-        <div class="form-group col-md-12">
+        <div class="form-group">
             <label class="control-label" data-translate="cercardiobitiApp.nurse.twitter" for="field_twitter">Twitter</label>
             <input type="text" class="form-control" name="twitter" id="field_twitter"
                     ng-model="vm.nurse.twitter"
                     />
         </div>
-        <div class="form-group col-md-12">
+        <div class="form-group">
             <label class="control-label" data-translate="cercardiobitiApp.nurse.instagram" for="field_instagram">Instagram</label>
             <input type="text" class="form-control" name="instagram" id="field_instagram"
                     ng-model="vm.nurse.instagram"
                     />
         </div>
-        <div class="form-group col-md-12">
+        <div class="form-group">
             <label class="control-label" data-translate="cercardiobitiApp.nurse.snapchat" for="field_snapchat">Snapchat</label>
             <input type="text" class="form-control" name="snapchat" id="field_snapchat"
                     ng-model="vm.nurse.snapchat"
                     />
         </div>
-        <div class="form-group col-md-12">
+        <div class="form-group">
             <label class="control-label" data-translate="cercardiobitiApp.nurse.linkedin" for="field_linkedin">Linkedin</label>
             <input type="text" class="form-control" name="linkedin" id="field_linkedin"
                     ng-model="vm.nurse.linkedin"
                     />
         </div>
-        <div class="form-group col-md-12">
+        <div class="form-group">
             <label class="control-label" data-translate="cercardiobitiApp.nurse.vine" for="field_vine">Vine</label>
             <input type="text" class="form-control" name="vine" id="field_vine"
                     ng-model="vm.nurse.vine"
                     />
         </div>
-        <!-- <div class="form-group">
+        <div class="form-group">
             <label class="control-label" data-translate="cercardiobitiApp.nurse.createdat" for="field_createdat">Createdat</label>
                 <div class="input-group">
                     <input id="field_createdat" type="text" class="form-control" name="createdat" datetime-picker="{{dateformat}}" ng-model="vm.nurse.createdat" is-open="vm.datePickerOpenStatus.createdat"
@@ -138,11 +112,25 @@
                         <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createdat')"><i class="glyphicon glyphicon-calendar"></i></button>
                     </span>
                 </div>
-        </div> -->
+        </div>
 
         <div class="form-group">
-            <input type="text" class="form-control" id="id" name="id"
-                    ng-model="vm.nurse.id" readonly />
+            <label data-translate="cercardiobitiApp.nurse.userBD" for="field_userBD">User BD</label>
+            <select class="form-control" id="field_userBD" name="userBD" ng-model="vm.nurse.userBD" ng-options="userBD as userBD.id for userBD in vm.userbds | orderBy:'id' track by userBD.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.nurse.company" for="field_company">Company</label>
+            <select class="form-control" id="field_company" name="company" ng-model="vm.nurse.company" ng-options="company as company.id for company in vm.companies track by company.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.nurse.gender" for="field_gender">Gender</label>
+            <select class="form-control" id="field_gender" name="gender" ng-model="vm.nurse.gender" ng-options="gender as gender.id for gender in vm.genders track by gender.id">
+                <option value=""></option>
+            </select>
         </div>
     </div>
     <div class="modal-footer">

@@ -34,30 +34,57 @@
     <div class="table-responsive">
         <table class="jh-table table table-striped">
             <thead>
-                <tr>
-
-                    <th><span data-translate="cercardiobitiApp.nurse.userBD">User BD</span></th>
-                    <th><span data-translate="cercardiobitiApp.nurse.address">Direccion</span></th>
-                    <th><span data-translate="cercardiobitiApp.nurse.email1">Email 1</span></th>
-                    <th><span data-translate="cercardiobitiApp.nurse.phonenumber1">Phonenumber 1</span></th>
-                    <th><span data-translate="cercardiobitiApp.nurse.company">Company</span></th>
-                    <th><span data-translate="cercardiobitiApp.nurse.gender">Genero</span></th>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="cpid"><span data-translate="cercardiobitiApp.nurse.cpid">Cpid</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="colony"><span data-translate="cercardiobitiApp.nurse.colony">Colony</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="street"><span data-translate="cercardiobitiApp.nurse.street">Street</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="streetnumber"><span data-translate="cercardiobitiApp.nurse.streetnumber">Streetnumber</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="suitnumber"><span data-translate="cercardiobitiApp.nurse.suitnumber">Suitnumber</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="phonenumber1"><span data-translate="cercardiobitiApp.nurse.phonenumber1">Phonenumber 1</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="phonenumber2"><span data-translate="cercardiobitiApp.nurse.phonenumber2">Phonenumber 2</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="email1"><span data-translate="cercardiobitiApp.nurse.email1">Email 1</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="email2"><span data-translate="cercardiobitiApp.nurse.email2">Email 2</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="facebook"><span data-translate="cercardiobitiApp.nurse.facebook">Facebook</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="twitter"><span data-translate="cercardiobitiApp.nurse.twitter">Twitter</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="instagram"><span data-translate="cercardiobitiApp.nurse.instagram">Instagram</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="snapchat"><span data-translate="cercardiobitiApp.nurse.snapchat">Snapchat</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="linkedin"><span data-translate="cercardiobitiApp.nurse.linkedin">Linkedin</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="vine"><span data-translate="cercardiobitiApp.nurse.vine">Vine</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdat"><span data-translate="cercardiobitiApp.nurse.createdat">Createdat</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="userBD.id"><span data-translate="cercardiobitiApp.nurse.userBD">User BD</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="company.id"><span data-translate="cercardiobitiApp.nurse.company">Company</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="gender.id"><span data-translate="cercardiobitiApp.nurse.gender">Gender</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="nurse in vm.nurses track by nurse.id">
+                    <td><a ui-sref="nurse-detail({id:nurse.id})">{{nurse.id}}</a></td>
+                    <td>{{nurse.cpid}}</td>
+                    <td>{{nurse.colony}}</td>
+                    <td>{{nurse.street}}</td>
+                    <td>{{nurse.streetnumber}}</td>
+                    <td>{{nurse.suitnumber}}</td>
+                    <td>{{nurse.phonenumber1}}</td>
+                    <td>{{nurse.phonenumber2}}</td>
+                    <td>{{nurse.email1}}</td>
+                    <td>{{nurse.email2}}</td>
+                    <td>{{nurse.facebook}}</td>
+                    <td>{{nurse.twitter}}</td>
+                    <td>{{nurse.instagram}}</td>
+                    <td>{{nurse.snapchat}}</td>
+                    <td>{{nurse.linkedin}}</td>
+                    <td>{{nurse.vine}}</td>
+                    <td>{{nurse.createdat | date:'medium'}}</td>
                     <td>
-                        <span>{{nurse.userBD.name + ' ' + nurse.userBD.lastname }}</span>
+                        <a ui-sref="user-bd-detail({id:nurse.userBD.id})">{{nurse.userBD.id}}</a>
                     </td>
-                    <td>{{nurse.street + ' ' + nurse.streetnumber + ' ' + nurse.suitnumber + ' CP.' + nurse.cpid + ' ' + nurse.colony}}</td>
-                    <td>{{nurse.email1 + ' ' + nurse.email2}}</td>
-                    <td>{{nurse.phonenumber1 + ' ' + nurse.phonenumber2}}</td>
                     <td>
-                        <a ui-sref="company-detail({id:nurse.company.id})">{{nurse.company.name}}</a>
+                        <a ui-sref="company-detail({id:nurse.company.id})">{{nurse.company.id}}</a>
                     </td>
                     <td>
-                        <a ui-sref="gender-detail({id:nurse.gender.id})">{{nurse.gender.description}}</a>
+                        <a ui-sref="gender-detail({id:nurse.gender.id})">{{nurse.gender.id}}</a>
                     </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
@@ -84,5 +111,9 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
     </div>
 </div>

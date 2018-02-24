@@ -11,7 +11,7 @@
         $stateProvider
         .state('reservation', {
             parent: 'entity',
-            url: '/reservation',
+            url: '/reservation?page&sort&search',
             data: {
                 authorities: ['ROLE_USER'],
                 pageTitle: 'cercardiobitiApp.reservation.home.title'
@@ -23,7 +23,27 @@
                     controllerAs: 'vm'
                 }
             },
+            params: {
+                page: {
+                    value: '1',
+                    squash: true
+                },
+                sort: {
+                    value: 'id,asc',
+                    squash: true
+                },
+                search: null
+            },
             resolve: {
+                pagingParams: ['$stateParams', 'PaginationUtil', function ($stateParams, PaginationUtil) {
+                    return {
+                        page: PaginationUtil.parsePage($stateParams.page),
+                        sort: $stateParams.sort,
+                        predicate: PaginationUtil.parsePredicate($stateParams.sort),
+                        ascending: PaginationUtil.parseAscending($stateParams.sort),
+                        search: $stateParams.search
+                    };
+                }],
                 translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
                     $translatePartialLoader.addPart('reservation');
                     $translatePartialLoader.addPart('global');
@@ -170,142 +190,7 @@
                     $state.go('^');
                 });
             }]
-        })
-        .state('agregar_valoracion', {
-            parent: 'reservation',
-            url: '/{id},{pacient_id},{medic_id}/valoracion',
-            data: {
-                authorities: ['ROLE_USER']
-            },
-            onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
-                $uibModal.open({
-                    templateUrl: 'app/entities/appreciation/appreciation-dialog2.html',
-                    controller: 'AppreciationDialogController',
-                    controllerAs: 'vm',
-                    backdrop: 'static',
-                    size: 'lg',
-                    resolve: {
-                        entity: function () {
-                            return {
-                                reservation_id: $stateParams.id, 
-                                pacient_id: $stateParams.pacient_id,
-                                medic_id: $stateParams.medic_id,
-                                height: null,
-                                weight: null,
-                                size: null,
-                                bmi: null,
-                                temperature: null,
-                                saturation: null,
-                                bloodpressuere: null,
-                                heartrate: null,
-                                breathingfrequency: null,
-                                others: null,
-                                head: null,
-                                neck: null,
-                                chest: null,
-                                abdomen: null,
-                                bodypart: null,
-                                genitals: null,
-                                othersphysical: null,
-                                createdat: null,
-                                id: null
-                            };
-                        }
-                    }
-                }).result.then(function() {
-                    $state.go('reservation', null, { reload: 'reservation' });
-                }, function() {
-                    $state.go('reservation');
-                });
-            }]
-        })
-        .state('editar_valoracion', {
-            parent: 'reservation',
-            url: '/{id}/valoracion',
-            data: {
-                authorities: ['ROLE_USER']
-            },
-            onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
-                $uibModal.open({
-                    templateUrl: 'app/entities/appreciation/appreciation-dialog2.html',
-                    controller: 'AppreciationDialogController',
-                    controllerAs: 'vm',
-                    backdrop: 'static',
-                    size: 'lg',
-                    resolve: {
-                        entity: ['Appreciation', function(Appreciation) {
-                            return Appreciation.get({id : $stateParams.id}).$promise;
-                        }]
-                    }
-                }).result.then(function() {
-                    $state.go('reservation', null, { reload: 'reservation' });
-                }, function() {
-                    $state.go('^');
-                });
-            }]
-        })
-        .state('agregar_analisis', {
-            parent: 'reservation',
-            url: '/Analisis',
-            data: {
-                authorities: ['ROLE_USER']
-            },
-            onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
-                $uibModal.open({
-                    templateUrl: 'app/entities/pacient-medical-analysis/pacient-medical-analysis-dialog2.html',
-                    controller: 'PacientMedicalAnalysisDialogController',
-                    controllerAs: 'vm',
-                    backdrop: 'static',
-                    size: 'lg',
-                    resolve: {
-                        entity: function () {
-                            return {
-                                presentation: null,
-                                subjective: null,
-                                objective: null,
-                                analysis: null,
-                                disease: null,
-                                tests: null,
-                                treatment: null,
-                                medicine: null,
-                                daytime: null,
-                                id: null
-                            };
-                        }
-                    }
-                }).result.then(function() {
-                    $state.go('reservation', null, { reload: 'reservation' });
-                }, function() {
-                    $state.go('reservation');
-                });
-            }]
-        })
-        .state('editar_analisis', {
-            parent: 'reservation',
-            url: '/{id}/Analisis',
-            data: {
-                authorities: ['ROLE_USER']
-            },
-            onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
-                $uibModal.open({
-                    templateUrl: 'app/entities/pacient-medical-analysis/pacient-medical-analysis-dialog2.html',
-                    controller: 'PacientMedicalAnalysisDialogController',
-                    controllerAs: 'vm',
-                    backdrop: 'static',
-                    size: 'lg',
-                    resolve: {
-                        entity: ['PacientMedicalAnalysis', function(PacientMedicalAnalysis) {
-                            return PacientMedicalAnalysis.get({id : $stateParams.id}).$promise;
-                        }]
-                    }
-                }).result.then(function() {
-                    $state.go('reservation', null, { reload: 'reservation' });
-                }, function() {
-                    $state.go('^');
-                });
-            }]
-        })
-        ;
+        });
     }
 
 })();

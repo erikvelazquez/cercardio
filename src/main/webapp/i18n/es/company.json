@@ -2,19 +2,19 @@
     "cercardiobitiApp": {
         "company" : {
             "home": {
-                "title": "Companías",
-                "createLabel": "Crear nueva Companía",
-                "createOrEditLabel": "Crear o editar Companía",
+                "title": "Clínicas",
+                "createLabel": "Crear nueva Clínica",
+                "createOrEditLabel": "Crear o editar Clínica",
                 "search": "Buscar por Companía"
             },
-            "created": "Un nuevo Companía ha sido creado con el identificador {{ param }}",
-            "updated": "Un Companía ha sido actualizado con el identificador {{ param }}",
-            "deleted": "Un Companía ha sido eliminado con el identificador {{ param }}",
+            "created": "Un nuevo Clínica ha sido creado con el identificador {{ param }}",
+            "updated": "Un Clínica ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Clínica ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "¿Seguro que quiere eliminar Companía {{ id }}?"
+                "question": "¿Seguro que quiere eliminar Clínica {{ id }}?"
             },
             "detail": {
-                "title": "Companía"
+                "title": "Clínica"
             },
             "name": "Name",
             "rfc": "RFC",

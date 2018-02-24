@@ -7,9 +7,15 @@ import mycercardiopackege.jh.repository.MedicRepository;
 import mycercardiopackege.jh.repository.search.MedicSearchRepository;
 import mycercardiopackege.jh.web.rest.errors.BadRequestAlertException;
 import mycercardiopackege.jh.web.rest.util.HeaderUtil;
+import mycercardiopackege.jh.web.rest.util.PaginationUtil;
+import io.swagger.annotations.ApiParam;
 import io.github.jhipster.web.util.ResponseUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -90,14 +96,17 @@ public class MedicResource {
     /**
      * GET  /medics : get all the medics.
      *
+     * @param pageable the pagination information
      * @return the ResponseEntity with status 200 (OK) and the list of medics in body
      */
     @GetMapping("/medics")
     @Timed
-    public List<Medic> getAllMedics() {
-        log.debug("REST request to get all Medics");
-        return medicRepository.findAll();
-        }
+    public ResponseEntity<List<Medic>> getAllMedics(@ApiParam Pageable pageable) {
+        log.debug("REST request to get a page of Medics");
+        Page<Medic> page = medicRepository.findAll(pageable);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/medics");
+        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
+    }
 
     /**
      * GET  /medics/:id : get the "id" medic.
@@ -133,15 +142,16 @@ public class MedicResource {
      * to the query.
      *
      * @param query the query of the medic search
+     * @param pageable the pagination information
      * @return the result of the search
      */
     @GetMapping("/_search/medics")
     @Timed
-    public List<Medic> searchMedics(@RequestParam String query) {
-        log.debug("REST request to search Medics for query {}", query);
-        return StreamSupport
-            .stream(medicSearchRepository.search(queryStringQuery(query)).spliterator(), false)
-            .collect(Collectors.toList());
+    public ResponseEntity<List<Medic>> searchMedics(@RequestParam String query, @ApiParam Pageable pageable) {
+        log.debug("REST request to search for a page of Medics for query {}", query);
+        Page<Medic> page = medicSearchRepository.search(queryStringQuery(query), pageable);
+        HttpHeaders headers = PaginationUtil.generateSearchPaginationHttpHeaders(query, page, "/api/_search/medics");
+        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 
 }

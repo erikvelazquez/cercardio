@@ -14,7 +14,7 @@
     "changelogDate": "20171127223243",
     "entityTableName": "occupation",
     "dto": "no",
-    "pagination": "no",
+    "pagination": "pagination",
     "service": "no",
     "jpaMetamodelFiltering": false
 }

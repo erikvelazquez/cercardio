@@ -81,7 +81,7 @@
     "changelogDate": "20171127223254",
     "entityTableName": "reservation",
     "dto": "no",
-    "pagination": "no",
+    "pagination": "pagination",
     "service": "no",
     "jpaMetamodelFiltering": false
 }

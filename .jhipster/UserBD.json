@@ -38,7 +38,7 @@
     "changelogDate": "20171127223259",
     "entityTableName": "user_bd",
     "dto": "no",
-    "pagination": "no",
+    "pagination": "pagination",
     "service": "no",
     "jpaMetamodelFiltering": false
 }

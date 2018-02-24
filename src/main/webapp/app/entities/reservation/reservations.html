@@ -6,7 +6,7 @@
             <div class="col-xs-4 no-padding-left">
                 <button class="btn btn-success" ui-sref="reservation.new" >
                     <span class="glyphicon glyphicon-plus"></span>
-                    <span  data-translate="cercardiobitiApp.reservation.home.createLabel">
+                    <span class="hidden-xs-down"  data-translate="cercardiobitiApp.reservation.home.createLabel">
                         Create new Reservation
                     </span>
                 </button>
@@ -34,28 +34,32 @@
     <div class="table-responsive">
         <table class="jh-table table table-striped">
             <thead>
-                <tr>
-                    <th><span data-translate="cercardiobitiApp.reservation.id">id</span></th> 
-                    <th><span data-translate="cercardiobitiApp.reservation.title">Title</span></th>
-                    <th><span data-translate="cercardiobitiApp.reservation.pacient">Pacient</span></th>
-                    <th><span data-translate="cercardiobitiApp.reservation.medic">Medic</span></th>
-                    <th><span data-translate="cercardiobitiApp.reservation.dateat">Dateat</span></th> 
-                    <th><span data-translate="cercardiobitiApp.reservation.status">Status</span></th>
-                    <th><span data-translate="cercardiobitiApp.reservation.payment">Payment</span></th>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
 
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="title"><span data-translate="cercardiobitiApp.reservation.title">Title</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="pacient.id"><span data-translate="cercardiobitiApp.reservation.pacient">Pacient</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="medic.id"><span data-translate="cercardiobitiApp.reservation.medic">Medic</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="dateat"><span data-translate="cercardiobitiApp.reservation.dateat">Dateat</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="status.id"><span data-translate="cercardiobitiApp.reservation.status">Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="payment.id"><span data-translate="cercardiobitiApp.reservation.payment">Payment</span> <span class="glyphicon glyphicon-sort"></span></th>
                     
-                    <!-- <th><span >IDPaciente</span></th>  
-                    <th><span >IDMedico</span></th>
-                    <th><span >Appreciation</span></th>  
-                    <th><span >PacientmedicalAnalysis</span></th> 
-                    -->
 
+                    <!-- <th jh-sort-by="note"><span data-translate="cercardiobitiApp.reservation.note">Note</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="dateat"><span data-translate="cercardiobitiApp.reservation.dateat">Dateat</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdat"><span data-translate="cercardiobitiApp.reservation.createdat">Createdat</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="symtoms"><span data-translate="cercardiobitiApp.reservation.symtoms">Symtoms</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="medicaments"><span data-translate="cercardiobitiApp.reservation.medicaments">Medicaments</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="cost"><span data-translate="cercardiobitiApp.reservation.cost">Cost</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="appreciation.id"><span data-translate="cercardiobitiApp.reservation.appreciation">Appreciation</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="pacientMedicalAnalysis.id"><span data-translate="cercardiobitiApp.reservation.pacientMedicalAnalysis">Pacient Medical Analysis</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="timers.id"><span data-translate="cercardiobitiApp.reservation.timers">Timers</span> <span class="glyphicon glyphicon-sort"></span></th> -->
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="reservation in vm.reservations track by reservation.id">
-                    <td>{{reservation.id}}</td>
+                    <td><a ui-sref="reservation-detail({id:reservation.id})">{{reservation.id}}</a></td>
                     <td>{{reservation.title}}</td>
                     <td><span>{{reservation.pacient.userBD.name +' '+ reservation.pacient.userBD.lastname}}</span></td>
                     <td><span>{{reservation.medic.userBD.name +' '+ reservation.medic.userBD.lastname}}</span></td>
@@ -63,27 +67,42 @@
                     <td><span>{{reservation.status.name}}</span></td>
                     <td><span>{{reservation.payment.name}}</span></td>
 
-                    <!-- <td><span>{{reservation.pacient.id }}</span></td>
-                    <td><span>{{reservation.medic.id }}</span></td>
-                    
-                    <td><span>{{reservation.appreciation.id }}</span></td>
-                    <td><span>{{reservation.pacientMedicalAnalysis.id}}</span></td> -->
-            
+                    <!-- <td>
+                        <a ui-sref="appreciation-detail({id:reservation.appreciation.id})">{{reservation.appreciation.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="pacient-medical-analysis-detail({id:reservation.pacientMedicalAnalysis.id})">{{reservation.pacientMedicalAnalysis.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="pacient-detail({id:reservation.pacient.id})">{{reservation.pacient.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="medic-detail({id:reservation.medic.id})">{{reservation.medic.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="status-detail({id:reservation.status.id})">{{reservation.status.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="payment-detail({id:reservation.payment.id})">{{reservation.payment.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="timers-detail({id:reservation.timers.id})">{{reservation.timers.id}}</a>
+                    </td> -->
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"
-                                    ui-sref="reservation.edit({id:reservation.id, status:false})"
+                                    ui-sref="reservation-detail({id:reservation.id})"
                                     class="btn btn-info btn-sm">
                                 <span class="glyphicon glyphicon-eye-open"></span>
                                 <span class="hidden-sm-down" data-translate="entity.action.view"></span>
                             </button>
-
                             <button type="submit"
-                                    ui-sref="reservation.edit({id:reservation.id, status:true})"
+                                    ui-sref="reservation.edit({id:reservation.id})"
                                     class="btn btn-primary btn-sm">
                                 <span class="glyphicon glyphicon-pencil"></span>
                                 <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
                             </button>
+
                             
                             <button type="submit"
                                     ui-sref="agregar_valoracion({id:reservation.id, pacient_id:reservation.pacient.id, medic_id:reservation.medic.id})"
@@ -108,7 +127,7 @@
 
                             <button type="submit"
                                     ui-sref="editar_analisis({id:reservation.pacientMedicalAnalysis.id})"
-                                    class="btn btn-primary btn-sm" ng-show="reservation.pacientMedicalAnalysis.id">
+                                    class="btn btn-primary btn-sm" > <!-- ng-show="reservation.pacientMedicalAnalysis.id" -->
                                 <span class="glyphicon glyphicon-pencil"></span>
                                 <span class="hidden-sm-down" >Análisis</span>
                             </button>
@@ -118,12 +137,15 @@
                                     class="btn btn-danger btn-sm">
                                 <span class="glyphicon glyphicon-remove-circle"></span>
                                 <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
-                            </button> 
-                           
+                            </button>
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
     </div>
 </div>

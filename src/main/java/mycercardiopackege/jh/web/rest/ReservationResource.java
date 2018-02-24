@@ -7,9 +7,15 @@ import mycercardiopackege.jh.repository.ReservationRepository;
 import mycercardiopackege.jh.repository.search.ReservationSearchRepository;
 import mycercardiopackege.jh.web.rest.errors.BadRequestAlertException;
 import mycercardiopackege.jh.web.rest.util.HeaderUtil;
+import mycercardiopackege.jh.web.rest.util.PaginationUtil;
+import io.swagger.annotations.ApiParam;
 import io.github.jhipster.web.util.ResponseUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -90,14 +96,17 @@ public class ReservationResource {
     /**
      * GET  /reservations : get all the reservations.
      *
+     * @param pageable the pagination information
      * @return the ResponseEntity with status 200 (OK) and the list of reservations in body
      */
     @GetMapping("/reservations")
     @Timed
-    public List<Reservation> getAllReservations() {
-        log.debug("REST request to get all Reservations");
-        return reservationRepository.findAll();
-        }
+    public ResponseEntity<List<Reservation>> getAllReservations(@ApiParam Pageable pageable) {
+        log.debug("REST request to get a page of Reservations");
+        Page<Reservation> page = reservationRepository.findAll(pageable);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/reservations");
+        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
+    }
 
     /**
      * GET  /reservations/:id : get the "id" reservation.
@@ -133,15 +142,16 @@ public class ReservationResource {
      * to the query.
      *
      * @param query the query of the reservation search
+     * @param pageable the pagination information
      * @return the result of the search
      */
     @GetMapping("/_search/reservations")
     @Timed
-    public List<Reservation> searchReservations(@RequestParam String query) {
-        log.debug("REST request to search Reservations for query {}", query);
-        return StreamSupport
-            .stream(reservationSearchRepository.search(queryStringQuery(query)).spliterator(), false)
-            .collect(Collectors.toList());
+    public ResponseEntity<List<Reservation>> searchReservations(@RequestParam String query, @ApiParam Pageable pageable) {
+        log.debug("REST request to search for a page of Reservations for query {}", query);
+        Page<Reservation> page = reservationSearchRepository.search(queryStringQuery(query), pageable);
+        HttpHeaders headers = PaginationUtil.generateSearchPaginationHttpHeaders(query, page, "/api/_search/reservations");
+        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 
 }

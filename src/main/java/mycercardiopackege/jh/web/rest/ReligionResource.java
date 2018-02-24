@@ -7,9 +7,15 @@ import mycercardiopackege.jh.repository.ReligionRepository;
 import mycercardiopackege.jh.repository.search.ReligionSearchRepository;
 import mycercardiopackege.jh.web.rest.errors.BadRequestAlertException;
 import mycercardiopackege.jh.web.rest.util.HeaderUtil;
+import mycercardiopackege.jh.web.rest.util.PaginationUtil;
+import io.swagger.annotations.ApiParam;
 import io.github.jhipster.web.util.ResponseUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -90,14 +96,17 @@ public class ReligionResource {
     /**
      * GET  /religions : get all the religions.
      *
+     * @param pageable the pagination information
      * @return the ResponseEntity with status 200 (OK) and the list of religions in body
      */
     @GetMapping("/religions")
     @Timed
-    public List<Religion> getAllReligions() {
-        log.debug("REST request to get all Religions");
-        return religionRepository.findAll();
-        }
+    public ResponseEntity<List<Religion>> getAllReligions(@ApiParam Pageable pageable) {
+        log.debug("REST request to get a page of Religions");
+        Page<Religion> page = religionRepository.findAll(pageable);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/religions");
+        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
+    }
 
     /**
      * GET  /religions/:id : get the "id" religion.
@@ -133,15 +142,16 @@ public class ReligionResource {
      * to the query.
      *
      * @param query the query of the religion search
+     * @param pageable the pagination information
      * @return the result of the search
      */
     @GetMapping("/_search/religions")
     @Timed
-    public List<Religion> searchReligions(@RequestParam String query) {
-        log.debug("REST request to search Religions for query {}", query);
-        return StreamSupport
-            .stream(religionSearchRepository.search(queryStringQuery(query)).spliterator(), false)
-            .collect(Collectors.toList());
+    public ResponseEntity<List<Religion>> searchReligions(@RequestParam String query, @ApiParam Pageable pageable) {
+        log.debug("REST request to search for a page of Religions for query {}", query);
+        Page<Religion> page = religionSearchRepository.search(queryStringQuery(query), pageable);
+        HttpHeaders headers = PaginationUtil.generateSearchPaginationHttpHeaders(query, page, "/api/_search/religions");
+        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 
 }

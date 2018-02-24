@@ -34,28 +34,28 @@
     <div class="table-responsive">
         <table class="jh-table table table-striped">
             <thead>
-                <tr>
-                    <th><span data-translate="global.field.id">ID</span></th>
-                    <th><span data-translate="cercardiobitiApp.medic.colony">Colony</span></th>
-                    <th><span data-translate="cercardiobitiApp.medic.street">Street</span></th>
-                    <th><span data-translate="cercardiobitiApp.medic.streetnumber">Streetnumber</span></th>
-                    <th><span data-translate="cercardiobitiApp.medic.suitnumber">Suitnumber</span></th>
-                    <th><span data-translate="cercardiobitiApp.medic.phonenumber1">Phonenumber 1</span></th>
-                    <th><span data-translate="cercardiobitiApp.medic.phonenumber2">Phonenumber 2</span></th>
-                    <th><span data-translate="cercardiobitiApp.medic.email1">Email 1</span></th>
-                    <th><span data-translate="cercardiobitiApp.medic.email2">Email 2</span></th>
-                    <th><span data-translate="cercardiobitiApp.medic.facebook">Facebook</span></th>
-                    <th><span data-translate="cercardiobitiApp.medic.twitter">Twitter</span></th>
-                    <th><span data-translate="cercardiobitiApp.medic.instagram">Instagram</span></th>
-                    <th><span data-translate="cercardiobitiApp.medic.snapchat">Snapchat</span></th>
-                    <th><span data-translate="cercardiobitiApp.medic.linkedin">Linkedin</span></th>
-                    <th><span data-translate="cercardiobitiApp.medic.vine">Vine</span></th>
-                    <th><span data-translate="cercardiobitiApp.medic.createdat">Createdat</span></th>
-                    <th><span data-translate="cercardiobitiApp.medic.userBD">User BD</span></th>
-                    <th><span data-translate="cercardiobitiApp.medic.company">Company</span></th>
-                    <th><span data-translate="cercardiobitiApp.medic.ethnicGroup">Ethnic Group</span></th>
-                    <th><span data-translate="cercardiobitiApp.medic.gender">Gender</span></th>
-                    <th><span data-translate="cercardiobitiApp.medic.category">Category</span></th>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="colony"><span data-translate="cercardiobitiApp.medic.colony">Colony</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="street"><span data-translate="cercardiobitiApp.medic.street">Street</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="streetnumber"><span data-translate="cercardiobitiApp.medic.streetnumber">Streetnumber</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="suitnumber"><span data-translate="cercardiobitiApp.medic.suitnumber">Suitnumber</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="phonenumber1"><span data-translate="cercardiobitiApp.medic.phonenumber1">Phonenumber 1</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="phonenumber2"><span data-translate="cercardiobitiApp.medic.phonenumber2">Phonenumber 2</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="email1"><span data-translate="cercardiobitiApp.medic.email1">Email 1</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="email2"><span data-translate="cercardiobitiApp.medic.email2">Email 2</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="facebook"><span data-translate="cercardiobitiApp.medic.facebook">Facebook</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="twitter"><span data-translate="cercardiobitiApp.medic.twitter">Twitter</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="instagram"><span data-translate="cercardiobitiApp.medic.instagram">Instagram</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="snapchat"><span data-translate="cercardiobitiApp.medic.snapchat">Snapchat</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="linkedin"><span data-translate="cercardiobitiApp.medic.linkedin">Linkedin</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="vine"><span data-translate="cercardiobitiApp.medic.vine">Vine</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdat"><span data-translate="cercardiobitiApp.medic.createdat">Createdat</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="userBD.id"><span data-translate="cercardiobitiApp.medic.userBD">User BD</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="company.id"><span data-translate="cercardiobitiApp.medic.company">Company</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="ethnicGroup.id"><span data-translate="cercardiobitiApp.medic.ethnicGroup">Ethnic Group</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="gender.id"><span data-translate="cercardiobitiApp.medic.gender">Gender</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="category.id"><span data-translate="cercardiobitiApp.medic.category">Category</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -117,5 +117,9 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
     </div>
 </div>

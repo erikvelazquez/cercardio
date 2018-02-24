@@ -91,7 +91,7 @@
     "changelogDate": "20171127223242",
     "entityTableName": "nurse",
     "dto": "no",
-    "pagination": "no",
+    "pagination": "pagination",
     "service": "no",
     "jpaMetamodelFiltering": false
 }

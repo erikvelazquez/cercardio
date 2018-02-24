@@ -7,9 +7,15 @@ import mycercardiopackege.jh.repository.AcademicDegreeRepository;
 import mycercardiopackege.jh.repository.search.AcademicDegreeSearchRepository;
 import mycercardiopackege.jh.web.rest.errors.BadRequestAlertException;
 import mycercardiopackege.jh.web.rest.util.HeaderUtil;
+import mycercardiopackege.jh.web.rest.util.PaginationUtil;
+import io.swagger.annotations.ApiParam;
 import io.github.jhipster.web.util.ResponseUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -90,14 +96,17 @@ public class AcademicDegreeResource {
     /**
      * GET  /academic-degrees : get all the academicDegrees.
      *
+     * @param pageable the pagination information
      * @return the ResponseEntity with status 200 (OK) and the list of academicDegrees in body
      */
     @GetMapping("/academic-degrees")
     @Timed
-    public List<AcademicDegree> getAllAcademicDegrees() {
-        log.debug("REST request to get all AcademicDegrees");
-        return academicDegreeRepository.findAll();
-        }
+    public ResponseEntity<List<AcademicDegree>> getAllAcademicDegrees(@ApiParam Pageable pageable) {
+        log.debug("REST request to get a page of AcademicDegrees");
+        Page<AcademicDegree> page = academicDegreeRepository.findAll(pageable);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/academic-degrees");
+        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
+    }
 
     /**
      * GET  /academic-degrees/:id : get the "id" academicDegree.
@@ -133,15 +142,16 @@ public class AcademicDegreeResource {
      * to the query.
      *
      * @param query the query of the academicDegree search
+     * @param pageable the pagination information
      * @return the result of the search
      */
     @GetMapping("/_search/academic-degrees")
     @Timed
-    public List<AcademicDegree> searchAcademicDegrees(@RequestParam String query) {
-        log.debug("REST request to search AcademicDegrees for query {}", query);
-        return StreamSupport
-            .stream(academicDegreeSearchRepository.search(queryStringQuery(query)).spliterator(), false)
-            .collect(Collectors.toList());
+    public ResponseEntity<List<AcademicDegree>> searchAcademicDegrees(@RequestParam String query, @ApiParam Pageable pageable) {
+        log.debug("REST request to search for a page of AcademicDegrees for query {}", query);
+        Page<AcademicDegree> page = academicDegreeSearchRepository.search(queryStringQuery(query), pageable);
+        HttpHeaders headers = PaginationUtil.generateSearchPaginationHttpHeaders(query, page, "/api/_search/academic-degrees");
+        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 
 }

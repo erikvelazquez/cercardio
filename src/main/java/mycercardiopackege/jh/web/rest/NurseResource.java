@@ -7,9 +7,15 @@ import mycercardiopackege.jh.repository.NurseRepository;
 import mycercardiopackege.jh.repository.search.NurseSearchRepository;
 import mycercardiopackege.jh.web.rest.errors.BadRequestAlertException;
 import mycercardiopackege.jh.web.rest.util.HeaderUtil;
+import mycercardiopackege.jh.web.rest.util.PaginationUtil;
+import io.swagger.annotations.ApiParam;
 import io.github.jhipster.web.util.ResponseUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -90,14 +96,17 @@ public class NurseResource {
     /**
      * GET  /nurses : get all the nurses.
      *
+     * @param pageable the pagination information
      * @return the ResponseEntity with status 200 (OK) and the list of nurses in body
      */
     @GetMapping("/nurses")
     @Timed
-    public List<Nurse> getAllNurses() {
-        log.debug("REST request to get all Nurses");
-        return nurseRepository.findAll();
-        }
+    public ResponseEntity<List<Nurse>> getAllNurses(@ApiParam Pageable pageable) {
+        log.debug("REST request to get a page of Nurses");
+        Page<Nurse> page = nurseRepository.findAll(pageable);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/nurses");
+        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
+    }
 
     /**
      * GET  /nurses/:id : get the "id" nurse.
@@ -133,15 +142,16 @@ public class NurseResource {
      * to the query.
      *
      * @param query the query of the nurse search
+     * @param pageable the pagination information
      * @return the result of the search
      */
     @GetMapping("/_search/nurses")
     @Timed
-    public List<Nurse> searchNurses(@RequestParam String query) {
-        log.debug("REST request to search Nurses for query {}", query);
-        return StreamSupport
-            .stream(nurseSearchRepository.search(queryStringQuery(query)).spliterator(), false)
-            .collect(Collectors.toList());
+    public ResponseEntity<List<Nurse>> searchNurses(@RequestParam String query, @ApiParam Pageable pageable) {
+        log.debug("REST request to search for a page of Nurses for query {}", query);
+        Page<Nurse> page = nurseSearchRepository.search(queryStringQuery(query), pageable);
+        HttpHeaders headers = PaginationUtil.generateSearchPaginationHttpHeaders(query, page, "/api/_search/nurses");
+        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 
 }

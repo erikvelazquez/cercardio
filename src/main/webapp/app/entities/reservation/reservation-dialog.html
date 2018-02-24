@@ -4,37 +4,28 @@
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 ng-click="vm.clear()">&times;</button>
-        <h4 class="modal-title" id="myReservationLabel" ng-show="!vm.reservation.id" data-translate="cercardiobitiApp.reservation.home.createLabel">Create or edit a Reservation</h4>
-        <h4 class="modal-title" id="myReservationLabel" ng-show="vm.reservation.id" data-translate="cercardiobitiApp.reservation.home.createOrEditLabel">Create or edit a Reservation</h4>
+        <h4 class="modal-title" id="myReservationLabel" data-translate="cercardiobitiApp.reservation.home.createOrEditLabel">Create or edit a Reservation</h4>
     </div>
     <div class="modal-body">
         <jhi-alert-error></jhi-alert-error>
-        <!-- <div class="form-group" ng-show="vm.reservation.id">
+        <div class="form-group" ng-show="vm.reservation.id">
             <label for="id" data-translate="global.field.id">ID</label>
             <input type="text" class="form-control" id="id" name="id"
                     ng-model="vm.reservation.id" readonly />
-          
-        </div> -->
+        </div>
         <div class="form-group">
             <label class="control-label" data-translate="cercardiobitiApp.reservation.title" for="field_title">Title</label>
-            <textarea type="text" class="form-control" name="title" id="field_title"
+            <input type="text" class="form-control" name="title" id="field_title"
                     ng-model="vm.reservation.title"
                     />
         </div>
-        <div class="form-group col-md-6">
-            <label data-translate="cercardiobitiApp.reservation.pacient" for="field_pacient">Pacient</label>
-            <select class="form-control" id="field_pacient" name="pacient" ng-model="vm.reservation.pacient" ng-options="pacient as pacient.userBD.name + ' ' + pacient.userBD.lastname for pacient in vm.pacients track by pacient.id">
-                <option value=""></option>
-            </select>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.reservation.note" for="field_note">Note</label>
+            <input type="text" class="form-control" name="note" id="field_note"
+                    ng-model="vm.reservation.note"
+                    />
         </div>
-        <div class="form-group col-md-6">
-            <label data-translate="cercardiobitiApp.reservation.medic" for="field_medic">Medic</label>
-            <select class="form-control" id="field_medic" name="medic" ng-model="vm.reservation.medic" ng-options="medic as medic.userBD.name + ' ' + medic.userBD.lastname for medic in vm.medics track by medic.id">
-                <option value=""></option>
-            </select>
-        </div>
-
-        <div class="form-group col-md-6">
+        <div class="form-group">
             <label class="control-label" data-translate="cercardiobitiApp.reservation.dateat" for="field_dateat">Dateat</label>
                 <div class="input-group">
                     <input id="field_dateat" type="text" class="form-control" name="dateat" uib-datepicker-popup="{{dateformat}}" ng-model="vm.reservation.dateat" is-open="vm.datePickerOpenStatus.dateat"
@@ -44,36 +35,7 @@
                     </span>
                 </div>
         </div>
-
-        <div class="form-group col-md-6">
-            <label data-translate="cercardiobitiApp.reservation.timers" for="field_timers">Timers</label>
-            <select class="form-control" id="field_timers" name="timers" ng-model="vm.reservation.timers" ng-options="timers as timers.description for timers in vm.timers track by timers.id">
-                <option value=""></option>
-            </select>
-        </div>
-
         <div class="form-group">
-            <label class="control-label" data-translate="cercardiobitiApp.reservation.note" for="field_note">Note</label>
-            <textarea type="text" class="form-control" name="note" id="field_note"
-                    ng-model="vm.reservation.note"
-                    />
-        </div>
-
-        <div class="form-group">
-            <label class="control-label" data-translate="cercardiobitiApp.reservation.symtoms" for="field_symtoms">Symtoms</label>
-            <textarea type="text" class="form-control" name="symtoms" id="field_symtoms"
-                    ng-model="vm.reservation.symtoms"
-                    />
-        </div>
-
-        <div class="form-group">
-            <label class="control-label" data-translate="cercardiobitiApp.reservation.medicaments" for="field_medicaments">Medicaments</label>
-            <textarea type="text" class="form-control" name="medicaments" id="field_medicaments"
-                    ng-model="vm.reservation.medicaments"
-                    />
-        </div>
-      
-        <!-- <div class="form-group">
             <label class="control-label" data-translate="cercardiobitiApp.reservation.createdat" for="field_createdat">Createdat</label>
                 <div class="input-group">
                     <input id="field_createdat" type="text" class="form-control" name="createdat" datetime-picker="{{dateformat}}" ng-model="vm.reservation.createdat" is-open="vm.datePickerOpenStatus.createdat"
@@ -82,45 +44,68 @@
                         <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createdat')"><i class="glyphicon glyphicon-calendar"></i></button>
                     </span>
                 </div>
-        </div>  -->
-       
-        <div class="form-group">
-            <label data-translate="cercardiobitiApp.reservation.status" for="field_status">Status</label>
-            <select class="form-control" id="field_status" name="status" ng-model="vm.reservation.status" ng-options="status as status.name for status in vm.statuses track by status.id">
-                <option value=""></option>
-            </select>
         </div>
-        
-<!--        
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.reservation.symtoms" for="field_symtoms">Symtoms</label>
+            <input type="text" class="form-control" name="symtoms" id="field_symtoms"
+                    ng-model="vm.reservation.symtoms"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cercardiobitiApp.reservation.medicaments" for="field_medicaments">Medicaments</label>
+            <input type="text" class="form-control" name="medicaments" id="field_medicaments"
+                    ng-model="vm.reservation.medicaments"
+                    />
+        </div>
         <div class="form-group">
             <label class="control-label" data-translate="cercardiobitiApp.reservation.cost" for="field_cost">Cost</label>
             <input type="number" class="form-control" name="cost" id="field_cost"
                     ng-model="vm.reservation.cost"
                     />
-        </div> -->
-  
+        </div>
+
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.reservation.appreciation" for="field_appreciation">Appreciation</label>
+            <select class="form-control" id="field_appreciation" name="appreciation" ng-model="vm.reservation.appreciation" ng-options="appreciation as appreciation.id for appreciation in vm.appreciations | orderBy:'id' track by appreciation.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.reservation.pacientMedicalAnalysis" for="field_pacientMedicalAnalysis">Pacient Medical Analysis</label>
+            <select class="form-control" id="field_pacientMedicalAnalysis" name="pacientMedicalAnalysis" ng-model="vm.reservation.pacientMedicalAnalysis" ng-options="pacientMedicalAnalysis as pacientMedicalAnalysis.id for pacientMedicalAnalysis in vm.pacientmedicalanalyses | orderBy:'id' track by pacientMedicalAnalysis.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.reservation.pacient" for="field_pacient">Pacient</label>
+            <select class="form-control" id="field_pacient" name="pacient" ng-model="vm.reservation.pacient" ng-options="pacient as pacient.id for pacient in vm.pacients track by pacient.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.reservation.medic" for="field_medic">Medic</label>
+            <select class="form-control" id="field_medic" name="medic" ng-model="vm.reservation.medic" ng-options="medic as medic.id for medic in vm.medics track by medic.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="cercardiobitiApp.reservation.status" for="field_status">Status</label>
+            <select class="form-control" id="field_status" name="status" ng-model="vm.reservation.status" ng-options="status as status.id for status in vm.statuses track by status.id">
+                <option value=""></option>
+            </select>
+        </div>
         <div class="form-group">
             <label data-translate="cercardiobitiApp.reservation.payment" for="field_payment">Payment</label>
-            <select class="form-control" id="field_payment" name="payment" ng-model="vm.reservation.payment" ng-options="payment as payment.name for payment in vm.payments track by payment.id">
-                <option value=""></option>
-            </select>
-        </div>
-<!-- 
-        <div class="form-group">
-            <label data-translate="cercardiobitiApp.reservation.appreciation" for="field_appreciation">appreciation</label>
-            <select class="form-control" id="field_appreciation" name="appreciation" ng-model="vm.reservation.appreciation" 
-                    ng-options="appreciation as appreciation.id for appreciation in vm.appreciations track by appreciations.id">
+            <select class="form-control" id="field_payment" name="payment" ng-model="vm.reservation.payment" ng-options="payment as payment.id for payment in vm.payments track by payment.id">
                 <option value=""></option>
             </select>
         </div>
         <div class="form-group">
-            <label data-translate="cercardiobitiApp.reservation.pacientMedicalAnalysis" for="field_pacientMedicalAnalysis">pacientMedicalAnalysis</label>
-            <select class="form-control" id="field_pacientMedicalAnalysis" name="pacientMedicalAnalysis" ng-model="vm.reservation.pacientMedicalAnalysis" 
-                    ng-options="pacientMedicalAnalysis as pacientMedicalAnalysis.id for pacientMedicalAnalysis in vm.pacientMedicalAnalyses track by pacientMedicalAnalysis.id">
+            <label data-translate="cercardiobitiApp.reservation.timers" for="field_timers">Timers</label>
+            <select class="form-control" id="field_timers" name="timers" ng-model="vm.reservation.timers" ng-options="timers as timers.id for timers in vm.timers track by timers.id">
                 <option value=""></option>
             </select>
-        </div> -->
-       
+        </div>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">

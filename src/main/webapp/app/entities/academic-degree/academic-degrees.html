@@ -34,11 +34,11 @@
     <div class="table-responsive">
         <table class="jh-table table table-striped">
             <thead>
-                <tr>
-                    <th><span data-translate="global.field.id">ID</span></th>
-                    <th><span data-translate="cercardiobitiApp.academicDegree.description">Description</span></th>
-                    <th><span data-translate="cercardiobitiApp.academicDegree.isactive">Isactive</span></th>
-                    <!-- <th><span data-translate="cercardiobitiApp.academicDegree.createdat">Createdat</span></th> -->
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="description"><span data-translate="cercardiobitiApp.academicDegree.description">Description</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="isactive"><span data-translate="cercardiobitiApp.academicDegree.isactive">Isactive</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdat"><span data-translate="cercardiobitiApp.academicDegree.createdat">Createdat</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -47,7 +47,7 @@
                     <td><a ui-sref="academic-degree-detail({id:academicDegree.id})">{{academicDegree.id}}</a></td>
                     <td>{{academicDegree.description}}</td>
                     <td>{{academicDegree.isactive}}</td>
-                    <!-- <td>{{academicDegree.createdat | date:'medium'}}</td> -->
+                    <td>{{academicDegree.createdat | date:'medium'}}</td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"
@@ -73,5 +73,9 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
     </div>
 </div>

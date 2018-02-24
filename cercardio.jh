@@ -510,3 +510,5 @@ relationship ManyToOne {
 enum Language {
     FRENCH, ENGLISH, SPANISH
 }
+
+paginate Reservation, UserBD, AcademicDegree, Medic, Nurse, Occupation, Religion with pagination

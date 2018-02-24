@@ -1,19 +1,17 @@
 
 <div>
-    <h2><span data-translate="cercardiobitiApp.nurse.detail.title">Nurse</span> {{vm.nurse.id + ' - ' + vm.nurse.userBD.name + ' ' + vm.nurse.userBD.lastname}}</h2>
+    <h2><span data-translate="cercardiobitiApp.nurse.detail.title">Nurse</span> {{vm.nurse.id}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="dl-horizontal jh-entity-details">
-       
-        <dt><span data-translate="cercardiobitiApp.nurse.company">Company</span></dt>
+        <dt><span data-translate="cercardiobitiApp.nurse.cpid">Cpid</span></dt>
         <dd>
-            <span>{{vm.nurse.company.name}}</span>
+            <span>{{vm.nurse.cpid}}</span>
         </dd>
-        <dt><span data-translate="cercardiobitiApp.nurse.gender">Gender</span></dt>
+        <dt><span data-translate="cercardiobitiApp.nurse.colony">Colony</span></dt>
         <dd>
-            <span>{{vm.nurse.gender.description}}</span>
+            <span>{{vm.nurse.colony}}</span>
         </dd>
-
         <dt><span data-translate="cercardiobitiApp.nurse.street">Street</span></dt>
         <dd>
             <span>{{vm.nurse.street}}</span>
@@ -26,16 +24,6 @@
         <dd>
             <span>{{vm.nurse.suitnumber}}</span>
         </dd>
-
-        <dt><span data-translate="cercardiobitiApp.nurse.cpid">Cpid</span></dt>
-        <dd>
-            <span>{{vm.nurse.cpid}}</span>
-        </dd>
-        <dt><span data-translate="cercardiobitiApp.nurse.colony">Colony</span></dt>
-        <dd>
-            <span>{{vm.nurse.colony}}</span>
-        </dd>
-        
         <dt><span data-translate="cercardiobitiApp.nurse.phonenumber1">Phonenumber 1</span></dt>
         <dd>
             <span>{{vm.nurse.phonenumber1}}</span>
@@ -80,7 +68,18 @@
         <dd>
             <span>{{vm.nurse.createdat | date:'medium'}}</span>
         </dd>
-        
+        <dt><span data-translate="cercardiobitiApp.nurse.userBD">User BD</span></dt>
+        <dd>
+            <a ui-sref="user-bd-detail({id:vm.nurse.userBD.id})">{{vm.nurse.userBD.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.nurse.company">Company</span></dt>
+        <dd>
+            <a ui-sref="company-detail({id:vm.nurse.company.id})">{{vm.nurse.company.id}}</a>
+        </dd>
+        <dt><span data-translate="cercardiobitiApp.nurse.gender">Gender</span></dt>
+        <dd>
+            <a ui-sref="gender-detail({id:vm.nurse.gender.id})">{{vm.nurse.gender.id}}</a>
+        </dd>
     </dl>
 
     <button type="submit"

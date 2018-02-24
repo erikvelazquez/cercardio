@@ -2,22 +2,22 @@
     "cercardiobitiApp": {
         "religion" : {
             "home": {
-                "title": "Religiones",
-                "createLabel": "Crear nueva Religión",
-                "createOrEditLabel": "Crear o editar Religión",
-                "search": "Search for Religión"
+                "title": "Religions",
+                "createLabel": "Crear nuevo Religion",
+                "createOrEditLabel": "Crear o editar Religion",
+                "search": "Search for Religion"
             },
-            "created": "Un nuevo Religión ha sido creado con el identificador {{ param }}",
-            "updated": "Un Religión ha sido actualizado con el identificador {{ param }}",
-            "deleted": "Un Religión ha sido eliminado con el identificador {{ param }}",
+            "created": "Un nuevo Religion ha sido creado con el identificador {{ param }}",
+            "updated": "Un Religion ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Religion ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "¿Seguro que quiere eliminar Religión {{ id }}?"
+                "question": "¿Seguro que quiere eliminar Religion {{ id }}?"
             },
             "detail": {
-                "title": "Religión"
+                "title": "Religion"
             },
-            "religion": "Religión",
-            "isactive": "Activo"
+            "religion": "Religion",
+            "isactive": "Isactive"
         }
     }
 }
