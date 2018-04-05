@@ -1,6 +1,6 @@
 package mycercardiopackege.jh.repository;
 
-import mycercardiopackege.jh.domain.SocioeconomicLevel;
+import mycercardiopackege.jh.domain.SocioEconomicLevel;
 import org.springframework.stereotype.Repository;
 
 import org.springframework.data.jpa.repository.*;
@@ -11,6 +11,6 @@ import org.springframework.data.jpa.repository.*;
  */
 @SuppressWarnings("unused")
 @Repository
-public interface SocioeconomicLevelRepository extends JpaRepository<SocioeconomicLevel, Long> {
+public interface SocioEconomicLevelRepository extends JpaRepository<SocioEconomicLevel, Long> {
 
 }

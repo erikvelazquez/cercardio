@@ -63,7 +63,7 @@ public class PacientGenerals implements Serializable {
     private AcademicDegree academicDegree;
 
     @ManyToOne
-    private SocioeconomicLevel socioeconomicLevel;
+    private SocioEconomicLevel socioEconomicLevel;
 
     @ManyToOne
     private Occupation occupation;
@@ -242,17 +242,17 @@ public class PacientGenerals implements Serializable {
         this.academicDegree = academicDegree;
     }
 
-    public SocioeconomicLevel getSocioeconomicLevel() {
-        return socioeconomicLevel;
+    public SocioEconomicLevel getSocioEconomicLevel() {
+        return socioEconomicLevel;
     }
 
-    public PacientGenerals socioeconomicLevel(SocioeconomicLevel socioeconomicLevel) {
-        this.socioeconomicLevel = socioeconomicLevel;
+    public PacientGenerals socioEconomicLevel(SocioEconomicLevel socioEconomicLevel) {
+        this.socioEconomicLevel = socioEconomicLevel;
         return this;
     }
 
-    public void setSocioeconomicLevel(SocioeconomicLevel socioeconomicLevel) {
-        this.socioeconomicLevel = socioeconomicLevel;
+    public void setSocioEconomicLevel(SocioEconomicLevel socioEconomicLevel) {
+        this.socioEconomicLevel = socioEconomicLevel;
     }
 
     public Occupation getOccupation() {

@@ -12,10 +12,10 @@ import java.util.Objects;
  * A SocioeconomicLevel.
  */
 @Entity
-@Table(name = "socioeconomic_level")
+@Table(name = "socioEconomic_level")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-@Document(indexName = "socioeconomiclevel")
-public class SocioeconomicLevel implements Serializable {
+@Document(indexName = "socioEconomiclevel")
+public class SocioEconomicLevel implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -46,7 +46,7 @@ public class SocioeconomicLevel implements Serializable {
         return code;
     }
 
-    public SocioeconomicLevel code(String code) {
+    public SocioEconomicLevel code(String code) {
         this.code = code;
         return this;
     }
@@ -59,7 +59,7 @@ public class SocioeconomicLevel implements Serializable {
         return name;
     }
 
-    public SocioeconomicLevel name(String name) {
+    public SocioEconomicLevel name(String name) {
         this.name = name;
         return this;
     }
@@ -72,7 +72,7 @@ public class SocioeconomicLevel implements Serializable {
         return isactive;
     }
 
-    public SocioeconomicLevel isactive(Boolean isactive) {
+    public SocioEconomicLevel isactive(Boolean isactive) {
         this.isactive = isactive;
         return this;
     }
@@ -90,11 +90,11 @@ public class SocioeconomicLevel implements Serializable {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        SocioeconomicLevel socioeconomicLevel = (SocioeconomicLevel) o;
-        if (socioeconomicLevel.getId() == null || getId() == null) {
+        SocioEconomicLevel socioEconomicLevel = (SocioEconomicLevel) o;
+        if (socioEconomicLevel.getId() == null || getId() == null) {
             return false;
         }
-        return Objects.equals(getId(), socioeconomicLevel.getId());
+        return Objects.equals(getId(), socioEconomicLevel.getId());
     }
 
     @Override
@@ -104,7 +104,7 @@ public class SocioeconomicLevel implements Serializable {
 
     @Override
     public String toString() {
-        return "SocioeconomicLevel{" +
+        return "SocioEconomicLevel{" +
             "id=" + getId() +
             ", code='" + getCode() + "'" +
             ", name='" + getName() + "'" +

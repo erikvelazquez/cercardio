@@ -1,10 +1,10 @@
 package mycercardiopackege.jh.repository.search;
 
-import mycercardiopackege.jh.domain.SocioeconomicLevel;
+import mycercardiopackege.jh.domain.SocioEconomicLevel;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 
 /**
  * Spring Data Elasticsearch repository for the SocioeconomicLevel entity.
  */
-public interface SocioeconomicLevelSearchRepository extends ElasticsearchRepository<SocioeconomicLevel, Long> {
+public interface SocioEconomicLevelSearchRepository extends ElasticsearchRepository<SocioEconomicLevel, Long> {
 }

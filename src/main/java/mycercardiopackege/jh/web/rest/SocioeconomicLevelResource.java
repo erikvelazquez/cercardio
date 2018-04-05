@@ -1,10 +1,10 @@
 package mycercardiopackege.jh.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
-import mycercardiopackege.jh.domain.SocioeconomicLevel;
+import mycercardiopackege.jh.domain.SocioEconomicLevel;
 
-import mycercardiopackege.jh.repository.SocioeconomicLevelRepository;
-import mycercardiopackege.jh.repository.search.SocioeconomicLevelSearchRepository;
+import mycercardiopackege.jh.repository.SocioEconomicLevelRepository;
+import mycercardiopackege.jh.repository.search.SocioEconomicLevelSearchRepository;
 import mycercardiopackege.jh.web.rest.errors.BadRequestAlertException;
 import mycercardiopackege.jh.web.rest.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;
@@ -24,123 +24,123 @@ import java.util.stream.StreamSupport;
 import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
- * REST controller for managing SocioeconomicLevel.
+ * REST controller for managing SocioEconomicLevel.
  */
 @RestController
 @RequestMapping("/api")
-public class SocioeconomicLevelResource {
+public class SocioEconomicLevelResource {
 
-    private final Logger log = LoggerFactory.getLogger(SocioeconomicLevelResource.class);
+    private final Logger log = LoggerFactory.getLogger(SocioEconomicLevelResource.class);
 
-    private static final String ENTITY_NAME = "socioeconomicLevel";
+    private static final String ENTITY_NAME = "SocioEconomicLevel";
 
-    private final SocioeconomicLevelRepository socioeconomicLevelRepository;
+    private final SocioEconomicLevelRepository socioEconomicLevelRepository;
 
-    private final SocioeconomicLevelSearchRepository socioeconomicLevelSearchRepository;
+    private final SocioEconomicLevelSearchRepository socioEconomicLevelSearchRepository;
 
-    public SocioeconomicLevelResource(SocioeconomicLevelRepository socioeconomicLevelRepository, SocioeconomicLevelSearchRepository socioeconomicLevelSearchRepository) {
-        this.socioeconomicLevelRepository = socioeconomicLevelRepository;
-        this.socioeconomicLevelSearchRepository = socioeconomicLevelSearchRepository;
+    public SocioEconomicLevelResource(SocioEconomicLevelRepository socioEconomicLevelRepository, SocioEconomicLevelSearchRepository socioEconomicLevelSearchRepository) {
+        this.socioEconomicLevelRepository = socioEconomicLevelRepository;
+        this.socioEconomicLevelSearchRepository = socioEconomicLevelSearchRepository;
     }
 
     /**
-     * POST  /socioeconomic-levels : Create a new socioeconomicLevel.
+     * POST  /socioEconomic-levels : Create a new socioEconomicLevel.
      *
-     * @param socioeconomicLevel the socioeconomicLevel to create
-     * @return the ResponseEntity with status 201 (Created) and with body the new socioeconomicLevel, or with status 400 (Bad Request) if the socioeconomicLevel has already an ID
+     * @param socioEconomicLevel the socioEconomicLevel to create
+     * @return the ResponseEntity with status 201 (Created) and with body the new socioEconomicLevel, or with status 400 (Bad Request) if the socioEconomicLevel has already an ID
      * @throws URISyntaxException if the Location URI syntax is incorrect
      */
-    @PostMapping("/socioeconomic-levels")
+    @PostMapping("/socioEconomic-levels")
     @Timed
-    public ResponseEntity<SocioeconomicLevel> createSocioeconomicLevel(@RequestBody SocioeconomicLevel socioeconomicLevel) throws URISyntaxException {
-        log.debug("REST request to save SocioeconomicLevel : {}", socioeconomicLevel);
-        if (socioeconomicLevel.getId() != null) {
-            throw new BadRequestAlertException("A new socioeconomicLevel cannot already have an ID", ENTITY_NAME, "idexists");
+    public ResponseEntity<SocioEconomicLevel> createSocioEconomicLevel(@RequestBody SocioEconomicLevel socioEconomicLevel) throws URISyntaxException {
+        log.debug("REST request to save SocioEconomicLevel : {}", socioEconomicLevel);
+        if (socioEconomicLevel.getId() != null) {
+            throw new BadRequestAlertException("A new socioEconomicLevel cannot already have an ID", ENTITY_NAME, "idexists");
         }
-        SocioeconomicLevel result = socioeconomicLevelRepository.save(socioeconomicLevel);
-        socioeconomicLevelSearchRepository.save(result);
-        return ResponseEntity.created(new URI("/api/socioeconomic-levels/" + result.getId()))
+        SocioEconomicLevel result = socioEconomicLevelRepository.save(socioEconomicLevel);
+        socioEconomicLevelSearchRepository.save(result);
+        return ResponseEntity.created(new URI("/api/socio-economic-levels/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
             .body(result);
     }
 
     /**
-     * PUT  /socioeconomic-levels : Updates an existing socioeconomicLevel.
+     * PUT  /socioEconomic-levels : Updates an existing socioEconomicLevel.
      *
-     * @param socioeconomicLevel the socioeconomicLevel to update
-     * @return the ResponseEntity with status 200 (OK) and with body the updated socioeconomicLevel,
-     * or with status 400 (Bad Request) if the socioeconomicLevel is not valid,
-     * or with status 500 (Internal Server Error) if the socioeconomicLevel couldn't be updated
+     * @param socioEconomicLevel the socioEconomicLevel to update
+     * @return the ResponseEntity with status 200 (OK) and with body the updated socioEconomicLevel,
+     * or with status 400 (Bad Request) if the socioEconomicLevel is not valid,
+     * or with status 500 (Internal Server Error) if the socioEconomicLevel couldn't be updated
      * @throws URISyntaxException if the Location URI syntax is incorrect
      */
-    @PutMapping("/socioeconomic-levels")
+    @PutMapping("/socio-economic-levels")
     @Timed
-    public ResponseEntity<SocioeconomicLevel> updateSocioeconomicLevel(@RequestBody SocioeconomicLevel socioeconomicLevel) throws URISyntaxException {
-        log.debug("REST request to update SocioeconomicLevel : {}", socioeconomicLevel);
-        if (socioeconomicLevel.getId() == null) {
-            return createSocioeconomicLevel(socioeconomicLevel);
+    public ResponseEntity<SocioEconomicLevel> updateSocioEconomicLevel(@RequestBody SocioEconomicLevel socioEconomicLevel) throws URISyntaxException {
+        log.debug("REST request to update SocioEconomicLevel : {}", socioEconomicLevel);
+        if (socioEconomicLevel.getId() == null) {
+            return createSocioEconomicLevel(socioEconomicLevel);
         }
-        SocioeconomicLevel result = socioeconomicLevelRepository.save(socioeconomicLevel);
-        socioeconomicLevelSearchRepository.save(result);
+        SocioEconomicLevel result = socioEconomicLevelRepository.save(socioEconomicLevel);
+        socioEconomicLevelSearchRepository.save(result);
         return ResponseEntity.ok()
-            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, socioeconomicLevel.getId().toString()))
+            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, socioEconomicLevel.getId().toString()))
             .body(result);
     }
 
     /**
-     * GET  /socioeconomic-levels : get all the socioeconomicLevels.
+     * GET  /socioEconomic-levels : get all the socioEconomicLevels.
      *
-     * @return the ResponseEntity with status 200 (OK) and the list of socioeconomicLevels in body
+     * @return the ResponseEntity with status 200 (OK) and the list of socioEconomicLevels in body
      */
-    @GetMapping("/socioeconomic-levels")
+    @GetMapping("/socioEconomic-levels")
     @Timed
-    public List<SocioeconomicLevel> getAllSocioeconomicLevels() {
-        log.debug("REST request to get all SocioeconomicLevels");
-        return socioeconomicLevelRepository.findAll();
+    public List<SocioEconomicLevel> getAllSocioEconomicLevels() {
+        log.debug("REST request to get all SocioEconomicLevels");
+        return socioEconomicLevelRepository.findAll();
         }
 
     /**
-     * GET  /socioeconomic-levels/:id : get the "id" socioeconomicLevel.
+     * GET  /socioEconomic-levels/:id : get the "id" socioEconomicLevel.
      *
-     * @param id the id of the socioeconomicLevel to retrieve
-     * @return the ResponseEntity with status 200 (OK) and with body the socioeconomicLevel, or with status 404 (Not Found)
+     * @param id the id of the socioEconomicLevel to retrieve
+     * @return the ResponseEntity with status 200 (OK) and with body the socioEconomicLevel, or with status 404 (Not Found)
      */
-    @GetMapping("/socioeconomic-levels/{id}")
+    @GetMapping("/socio-economic-levels/{id}")
     @Timed
-    public ResponseEntity<SocioeconomicLevel> getSocioeconomicLevel(@PathVariable Long id) {
-        log.debug("REST request to get SocioeconomicLevel : {}", id);
-        SocioeconomicLevel socioeconomicLevel = socioeconomicLevelRepository.findOne(id);
-        return ResponseUtil.wrapOrNotFound(Optional.ofNullable(socioeconomicLevel));
+    public ResponseEntity<SocioEconomicLevel> getSocioEconomicLevel(@PathVariable Long id) {
+        log.debug("REST request to get SocioEconomicLevel : {}", id);
+        SocioEconomicLevel socioEconomicLevel = socioEconomicLevelRepository.findOne(id);
+        return ResponseUtil.wrapOrNotFound(Optional.ofNullable(socioEconomicLevel));
     }
 
     /**
-     * DELETE  /socioeconomic-levels/:id : delete the "id" socioeconomicLevel.
+     * DELETE  /socioEconomic-levels/:id : delete the "id" socioEconomicLevel.
      *
-     * @param id the id of the socioeconomicLevel to delete
+     * @param id the id of the socioEconomicLevel to delete
      * @return the ResponseEntity with status 200 (OK)
      */
-    @DeleteMapping("/socioeconomic-levels/{id}")
+    @DeleteMapping("/socio-economic-levels/{id}")
     @Timed
-    public ResponseEntity<Void> deleteSocioeconomicLevel(@PathVariable Long id) {
-        log.debug("REST request to delete SocioeconomicLevel : {}", id);
-        socioeconomicLevelRepository.delete(id);
-        socioeconomicLevelSearchRepository.delete(id);
+    public ResponseEntity<Void> deleteSocioEconomicLevel(@PathVariable Long id) {
+        log.debug("REST request to delete SocioEconomicLevel : {}", id);
+        socioEconomicLevelRepository.delete(id);
+        socioEconomicLevelSearchRepository.delete(id);
         return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();
     }
 
     /**
-     * SEARCH  /_search/socioeconomic-levels?query=:query : search for the socioeconomicLevel corresponding
+     * SEARCH  /_search/socioEconomic-levels?query=:query : search for the socioEconomicLevel corresponding
      * to the query.
      *
-     * @param query the query of the socioeconomicLevel search
+     * @param query the query of the socioEconomicLevel search
      * @return the result of the search
      */
-    @GetMapping("/_search/socioeconomic-levels")
+    @GetMapping("/_search/socio-economic-levels")
     @Timed
-    public List<SocioeconomicLevel> searchSocioeconomicLevels(@RequestParam String query) {
-        log.debug("REST request to search SocioeconomicLevels for query {}", query);
+    public List<SocioEconomicLevel> searchSocioEconomicLevels(@RequestParam String query) {
+        log.debug("REST request to search SocioEconomicLevels for query {}", query);
         return StreamSupport
-            .stream(socioeconomicLevelSearchRepository.search(queryStringQuery(query)).spliterator(), false)
+            .stream(socioEconomicLevelSearchRepository.search(queryStringQuery(query)).spliterator(), false)
             .collect(Collectors.toList());
     }
 

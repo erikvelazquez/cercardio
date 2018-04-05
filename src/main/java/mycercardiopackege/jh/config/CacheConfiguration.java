@@ -75,7 +75,7 @@ public class CacheConfiguration {
             cm.createCache(mycercardiopackege.jh.domain.Religion.class.getName(), jcacheConfiguration);
             cm.createCache(mycercardiopackege.jh.domain.Reservation.class.getName(), jcacheConfiguration);
             cm.createCache(mycercardiopackege.jh.domain.SocialHealthInsurance.class.getName(), jcacheConfiguration);
-            cm.createCache(mycercardiopackege.jh.domain.SocioeconomicLevel.class.getName(), jcacheConfiguration);
+            cm.createCache(mycercardiopackege.jh.domain.SocioEconomicLevel.class.getName(), jcacheConfiguration);
             cm.createCache(mycercardiopackege.jh.domain.Status.class.getName(), jcacheConfiguration);
             cm.createCache(mycercardiopackege.jh.domain.Time.class.getName(), jcacheConfiguration);
             cm.createCache(mycercardiopackege.jh.domain.UserBD.class.getName(), jcacheConfiguration);
